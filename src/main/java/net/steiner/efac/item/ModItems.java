@@ -13,9 +13,11 @@ import net.steiner.efac.EFAC;
 public class ModItems {
 
     public static final Item SLIPULON_INGOT = registerItem("slipulon_ingot", new Item(new FabricItemSettings()));
+    public static final Item RAW_SLIPULON = registerItem("raw_slipulon", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(SLIPULON_INGOT);
+        entries.add(RAW_SLIPULON);
     }
 
     private static Item registerItem(String name ,Item item) {
