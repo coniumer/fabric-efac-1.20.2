@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "":[
+    {
+      "model": "minecraft:block/sugar_cane"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_1"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_2"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_3"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_4"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_5"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_6"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_7"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_8"
+    },
+    {
+      "model": "minecraft:block/sugar_cane_9"
+    }]
+  }
+}

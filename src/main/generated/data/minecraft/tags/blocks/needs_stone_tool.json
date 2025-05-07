@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "efac:slipulon_block",
+    "efac:slipulon_ore",
+    "efac:alb_gem_ore",
+    "efac:gelwood_ore",
+    "efac:yes"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "efac:block/gelwood_slab"
+    },
+    "type=double": {
+      "model": "efac:block/gelwood_planks"
+    },
+    "type=top": {
+      "model": "efac:block/gelwood_slab_top"
+    }
+  }
+}

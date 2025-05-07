@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "efac:slipulon_ore",
+    "efac:slipulon_block",
+    "efac:butter",
+    "#minecraft:gold_ores",
+    "minecraft:gold_block",
+    "minecraft:raw_gold_block",
+    "#minecraft:copper_ores",
+    "minecraft:copper_block",
+    "minecraft:raw_copper_block",
+    "#minecraft:diamond_ores",
+    "minecraft:diamond_block"
+  ]
+}

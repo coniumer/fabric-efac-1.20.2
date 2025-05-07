@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "clumb_materia",
+  "ingredient": {
+    "item": "efac:compact_dom"
+  },
+  "result": "efac:clumb_materia"
+}

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_butter_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:butter_stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_clumb_materia": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumb_materia"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cooked_beef": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cooked_beef"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:clumburger"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clumb_materia",
+      "has_butter_stick",
+      "has_cooked_beef"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:clumburger"
+    ]
+  },
+  "sends_telemetry_event": false
+}

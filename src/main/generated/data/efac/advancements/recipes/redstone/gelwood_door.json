@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gelwood_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:gelwood_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:gelwood_door"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gelwood_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:gelwood_door"
+    ]
+  },
+  "sends_telemetry_event": false
+}

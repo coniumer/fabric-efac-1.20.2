@@ -1,0 +1,20 @@
+// 1.20.2	2025-05-06T19:38:15.586543	EFAC/Block Loot Tables
+f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
+79ee5e2fc1b3f745b349bb91bdfba4382ab1e4ba data/efac/loot_tables/blocks/gelwood_fence.json
+a425bcdcafeb5755dcc3b102ce841a1b199e97a1 data/efac/loot_tables/blocks/gelwood_button.json
+e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
+95bbe02265bf5bcfa49dae964d14d4a09653c459 data/efac/loot_tables/blocks/slipulon_ore.json
+e5d19df4193c14bad32395d837916efc660bde04 data/efac/loot_tables/blocks/gelwood_stairs.json
+e9bd9b8c0ec8a9e65c8e6581e36143906621ce0e data/efac/loot_tables/blocks/gelwood_planks.json
+7c48f20fb5aae84dac4b3d69f8de71532dfcbd09 data/efac/loot_tables/blocks/rub_gem_ore.json
+29d82232fff1b22c013e1bc33da91e64f596b259 data/efac/loot_tables/blocks/alb_gem_ore.json
+9534675ffe18af924e7a250b524fe4a325ec227b data/efac/loot_tables/blocks/clumbrot_crop.json
+17b419249b8804c4f949de4f20c5773100151b54 data/efac/loot_tables/blocks/gelwood_slab.json
+349e9c77816e8d0d72e39e021224e8a47bf6b157 data/efac/loot_tables/blocks/gelwood_trapdoor.json
+1315f90c4e286b709222ecc44a16b9d47ab67067 data/efac/loot_tables/blocks/compact_dom.json
+85650499c53a3df92e2a803dabbf79088307e733 data/efac/loot_tables/blocks/gelwood_door.json
+22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
+42628c6879dc0e9f43b570a1c620d408b99db874 data/efac/loot_tables/blocks/butter.json
+a5bfe2ce91e4ae06d39673c9ce7caf8367352fb9 data/efac/loot_tables/blocks/cit_gem_ore.json
+875e317062a11e6e7554393e64aaa7e6e71020e7 data/efac/loot_tables/blocks/yes.json
+7e725010461ccb99464ef25f4d85e2e3adbabe23 data/efac/loot_tables/blocks/gelwood_ore.json

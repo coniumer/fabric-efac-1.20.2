@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "efac:clumb_materia"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "efac:butter_stick"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "item": "efac:gold_clumble"
+  }
+}

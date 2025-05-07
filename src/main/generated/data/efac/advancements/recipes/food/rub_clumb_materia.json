@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clumb_materia": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumb_materia"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rub_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:rub_gem"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rub_clumb_materia"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clumb_materia",
+      "has_rub_gem"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rub_clumb_materia"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "efac:block/clumbrot_crop_stage3"
+  }
+}

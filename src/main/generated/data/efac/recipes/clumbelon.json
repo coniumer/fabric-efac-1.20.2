@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "efac:clumb_materia"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "efac:butter_stick"
+    }
+  ],
+  "result": {
+    "item": "efac:clumbelon"
+  }
+}

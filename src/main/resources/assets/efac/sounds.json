@@ -1,0 +1,97 @@
+{
+  "yes_break": {
+    "subtitle": "efac.yes_break",
+    "sounds": [
+      {
+        "name": "efac:block/yes/yes1",
+        "weight": 1000
+      },
+      {
+        "name": "efac:block/yes/yes2",
+        "weight": 1000
+      },
+      {
+        "name": "efac:block/yes/yes3",
+        "weight": 5
+      },
+      {
+        "name": "efac:block/yes/yes4",
+        "weight": 250
+      },
+      {
+        "name": "efac:block/yes/yes5",
+        "weight": 250
+      },
+      {
+        "name": "efac:block/yes/yes6",
+        "weight": 500
+      },
+      {
+        "name": "efac:block/yes/yes7",
+        "weight": 500
+      },
+      {
+        "name": "efac:block/yes/yes8",
+        "weight": 500
+      },
+      {
+        "name": "efac:block/yes/yes9",
+        "weight": 500
+      },
+      {
+        "name": "efac:block/yes/yes10",
+        "weight": 500
+      },
+      {
+        "name": "efac:block/yes/yes11",
+        "weight": 500
+      }
+    ]
+  },
+  "yes_step": {
+    "subtitle": "efac.yes_step",
+    "sounds": [
+      "efac:block/yes/yes1",
+      "efac:block/yes/yes2"
+    ]
+  },
+  "yes_place": {
+    "subtitle": "efac.yes_place",
+    "sounds": [
+      {
+        "name": "efac:block/yes/yes1",
+        "weight": 1000
+      },
+      {
+        "name": "efac:block/yes/yes1",
+        "weight": 1000
+      },
+      {
+        "name": "efac:block/yes/yes3",
+        "weight": 5
+      },
+      {
+        "name": "efac:block/yes/yes7",
+        "weight": 1000
+      },
+      {
+        "name": "efac:block/yes/yes8",
+        "weight": 1000
+      }
+    ]
+  },
+  "yes_hit": {
+    "subtitle": "efac.yes_hit",
+    "sounds": [
+      "efac:block/yes/yes1",
+      "efac:block/yes/yes2"
+    ]
+  },
+  "yes_fall": {
+    "subtitle": "efac.yes_fall",
+    "sounds": [
+      "efac:block/yes/yes1",
+      "efac:block/yes/yes2"
+    ]
+  }
+}
