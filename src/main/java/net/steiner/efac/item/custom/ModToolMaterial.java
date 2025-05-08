@@ -9,13 +9,13 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
     CLUMB_MATERIA(59, 2.0f, 0.0f, MiningLevels.WOOD, 0,
-            () -> Ingredient.ofItems(ModItems.CLUMB_MATERIA), 35),
+            () -> Ingredient.ofItems(ModItems.CLUMB_MATERIA), 35, 5),
     ALEBEDIZED(250, 6.5f, 2.5f, MiningLevels.IRON, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 25),
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 25, 15),
     CITRINIZED(1561, 8.5f, 3.5f, MiningLevels.DIAMOND, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 15),
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 15, 25),
     RUBEDIZED(2031, 9.5f, 4.5f, MiningLevels.NETHERITE, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 5);
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 5, 35);
 
     private final int itemDurability;
     private final float miningSpeed;
@@ -24,8 +24,9 @@ public enum ModToolMaterial implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
     private final int cooldown;
+    private final int decay;
 
-    ModToolMaterial(int itemDurability, float miningSpeed, float attackDamage, int miningLevel, int enchantability, Supplier<Ingredient> repairIngredient, int cooldown) {
+    ModToolMaterial(int itemDurability, float miningSpeed, float attackDamage, int miningLevel, int enchantability, Supplier<Ingredient> repairIngredient, int cooldown, int decay) {
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
@@ -33,6 +34,7 @@ public enum ModToolMaterial implements ToolMaterial {
         this.enchantability = enchantability;
         this.repairIngredient = repairIngredient;
         this.cooldown = cooldown;
+        this.decay = decay;
     }
 
     @Override
@@ -67,5 +69,10 @@ public enum ModToolMaterial implements ToolMaterial {
 
     public int getCooldown() {
         return this.cooldown;
+    }
+
+    // mfw unused stat
+    public int getDecay() {
+        return this.decay;
     }
 }

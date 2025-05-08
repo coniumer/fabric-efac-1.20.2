@@ -1,7 +1,3 @@
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace efac:gelwood_ore
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace efac:butter
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:deepslate_copper_ore
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:deepslate_iron_ore
 /fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:deepslate_gold_ore
 /fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:deepslate_coal_ore
 /fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:water
@@ -48,3 +44,7 @@
 /gamemode creative
 /gamemode survival
 /summon minecraft:cow ~ ~ ~3
+/gamemode creative
+/summon minecraft:ender_dragon
+/gamemode survival
+/gamemode creative
