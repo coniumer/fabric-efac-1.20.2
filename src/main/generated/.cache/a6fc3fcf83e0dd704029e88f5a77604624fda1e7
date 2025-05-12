@@ -1,6 +1,6 @@
-// 1.20.2	2025-05-08T10:55:26.102539	EFAC/Block Loot Tables
-f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
+// 1.20.2	2025-05-12T11:07:03.863922	EFAC/Block Loot Tables
 79ee5e2fc1b3f745b349bb91bdfba4382ab1e4ba data/efac/loot_tables/blocks/gelwood_fence.json
+f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 a425bcdcafeb5755dcc3b102ce841a1b199e97a1 data/efac/loot_tables/blocks/gelwood_button.json
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 95bbe02265bf5bcfa49dae964d14d4a09653c459 data/efac/loot_tables/blocks/slipulon_ore.json
@@ -16,5 +16,5 @@ e9bd9b8c0ec8a9e65c8e6581e36143906621ce0e data/efac/loot_tables/blocks/gelwood_pl
 22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
 42628c6879dc0e9f43b570a1c620d408b99db874 data/efac/loot_tables/blocks/butter.json
 a5bfe2ce91e4ae06d39673c9ce7caf8367352fb9 data/efac/loot_tables/blocks/cit_gem_ore.json
-875e317062a11e6e7554393e64aaa7e6e71020e7 data/efac/loot_tables/blocks/yes.json
 7e725010461ccb99464ef25f4d85e2e3adbabe23 data/efac/loot_tables/blocks/gelwood_ore.json
+875e317062a11e6e7554393e64aaa7e6e71020e7 data/efac/loot_tables/blocks/yes.json

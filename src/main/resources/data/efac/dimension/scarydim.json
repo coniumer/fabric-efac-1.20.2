@@ -1,0 +1,36 @@
+{
+  "type": "efac:scarydim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "minecraft:nether",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:nether_wastes",
+          "parameters": {
+            "temperature": 0.05,
+            "humidity": 0.1,
+            "continentalness": 0,
+            "erosion": 0.3,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:plains",
+          "parameters": {
+            "temperature": 0.1,
+            "humidity": 0.3,
+            "continentalness": 0.2,
+            "erosion": 0,
+            "weirdness": 0.01,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,15 +1,3 @@
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:redstone_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_redstone_ore
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:deepslate
-/gamemode creative
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:deepslate
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:stone
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:dirt
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:gravel
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:granite
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:diorite
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace tuff
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:grass_block
 /fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:dirt
 /fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:andesite
 /gamemode survival
@@ -48,3 +36,15 @@
 /gamemode survival
 /gamemode creative
 /time set night
+/give @a minecraft:debug_stick
+/time set night
+/kill
+/execute in efac:scarydim run tp Player684 ~ ~ ~
+/locate biome minecraft:plains
+/tp @s 57 48 5
+/kill
+/locate biome minecraft:dripstone_caves
+/tp @s 621 49 -235
+/gamemode spectator
+/kill
+/gamemode creative
