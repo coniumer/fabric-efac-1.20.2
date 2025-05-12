@@ -11,6 +11,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.EFAC;
 import net.steiner.efac.block.custom.ClumbrotCropBlock;
+import net.steiner.efac.block.custom.YesBlock;
 import net.steiner.efac.sound.ModSounds;
 
 public class ModBlocks {
@@ -64,7 +65,7 @@ public class ModBlocks {
     public static final Block BUTTER = registerBlock("butter",
             new Block(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SLIME)));
     public static final Block YES = registerBlock("yes",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(ModSounds.YES_SOUNDS)));
+            new YesBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(ModSounds.YES_SOUNDS)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

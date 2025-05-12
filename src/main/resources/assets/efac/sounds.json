@@ -93,5 +93,11 @@
       "efac:block/yes/yes1",
       "efac:block/yes/yes2"
     ]
+  },
+  "ready_for_bed": {
+    "subtitle": "efac.ready_for_bed",
+    "sounds": [
+      "efac:block/bed/ready_for_bed"
+    ]
   }
 }

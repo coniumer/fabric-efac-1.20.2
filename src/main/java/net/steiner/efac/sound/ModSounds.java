@@ -9,6 +9,9 @@ import net.steiner.efac.EFAC;
 
 public class ModSounds {
 
+    // readyforbed
+    public static final SoundEvent READY_FOR_BED = registerSoundEvent("ready_for_bed");
+    // yes block
     public static final SoundEvent YES_BREAK = registerSoundEvent("yes_break");
     public static final SoundEvent YES_STEP = registerSoundEvent("yes_step");
     public static final SoundEvent YES_PLACE = registerSoundEvent("yes_place");
