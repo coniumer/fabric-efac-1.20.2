@@ -1,29 +1,3 @@
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:deepslate_gold_ore
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:deepslate_coal_ore
-/fill ~ ~ ~ ~16 ~-64 ~16 minecraft:air replace minecraft:water
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:stone
-/fill ~ ~ ~ ~-16 -50 16 minecraft:air replace minecraft:stone
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:stone
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:dirt
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace grass_block
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:andesite
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:granite
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:diorite
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:gravel
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:sand
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:coal_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:iron_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:gold_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:copper_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:diamond_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_coal_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_copper_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_iron_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_gold_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_diamond_ore
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace tugg
-/fill ~ ~ ~ ~-16 -40 16 minecraft:air replace tuff
 /fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:redstone_ore
 /fill ~ ~ ~ ~-16 -40 16 minecraft:air replace minecraft:deepslate_redstone_ore
 /fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:deepslate
@@ -48,3 +22,29 @@
 /summon minecraft:ender_dragon
 /gamemode survival
 /gamemode creative
+/kill
+/time set night
+/time set day
+/kill
+/time set night
+/gamemode survival
+/gamemode creative
+/gamerule doDaylightCycle true
+/time set night
+/gamemode survival
+/time set night
+/gamemode creative
+/time set night
+/time set day
+/time set night
+/playsound clear
+/stopsound @a
+/time set night
+/stopsound @a
+/time set night
+/stopsound @a
+/time set night
+/kill
+/gamemode survival
+/gamemode creative
+/time set night
