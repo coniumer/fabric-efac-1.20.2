@@ -63,6 +63,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GELWOOD_TRAPDOOR);
                         entries.add(ModBlocks.GELWOOD_BUTTON);
                         entries.add(ModBlocks.GELWOOD_PRESSURE_PLATE);
+                        entries.add(ModBlocks.PRIMA_LOG);
+                        entries.add(ModBlocks.STRIPPED_PRIMA_LOG);
+                        entries.add(ModBlocks.PRIMA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_PRIMA_WOOD);
+                        entries.add(ModBlocks.PRIMA_PLANKS);
+                        entries.add(ModBlocks.PRIMA_LEAVES);
+                        entries.add(ModItems.PRIMA_SIGN);
+                        entries.add(ModItems.PRIMA_HANGING_SIGN);
                         entries.add(ModBlocks.COMPACT_DOM);
                         entries.add(ModBlocks.BUTTER);
                         entries.add(ModBlocks.YES);

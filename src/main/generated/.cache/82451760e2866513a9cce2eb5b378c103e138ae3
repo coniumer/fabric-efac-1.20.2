@@ -1,8 +1,8 @@
-// 1.20.2	2025-05-12T11:07:03.861363	EFAC/Tags for minecraft:block
+// 1.20.2	2025-05-12T19:43:55.203211	EFAC/Tags for minecraft:block
 bcab975c4282eef72f806fda0eb9384a11a6f07e data/minecraft/tags/blocks/fence_gates.json
 1b2ffe54b7232b9aabacb16cf388c5abba946cad data/minecraft/tags/blocks/mineable/shovel.json
-28fe2081dc5ebfe7e8cea93a535ddd1e54bed8d0 data/efac/tags/blocks/clumbvestigatable.json
 761cadedd6fb975336aeedbc9f20cb8273cee496 data/minecraft/tags/blocks/mineable/pickaxe.json
+28fe2081dc5ebfe7e8cea93a535ddd1e54bed8d0 data/efac/tags/blocks/clumbvestigatable.json
 5b22170d3eef0b5a1582805812691afdc340b764 data/minecraft/tags/blocks/needs_iron_tool.json
 d8e15d17df289fdec38a2414399e3e1b0d5f5e8f data/minecraft/tags/blocks/needs_stone_tool.json
 cf5d8f856baa8674f958af2fd6e8411a10784bfd data/minecraft/tags/blocks/needs_diamond_tool.json

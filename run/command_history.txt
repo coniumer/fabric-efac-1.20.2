@@ -1,9 +1,3 @@
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:dirt
-/fill ~ ~ ~ ~-16 -60 16 minecraft:air replace minecraft:andesite
-/gamemode survival
-/gamemode creative
-/gamemode survival
-/gamemode creative
 /gamemode survival
 /summon minecraft:cow ~ ~ ~3
 /gamemode creative
@@ -48,3 +42,9 @@
 /gamemode spectator
 /kill
 /gamemode creative
+/kill
+/gamemode survival
+/gamemode creative
+/kill
+/clear
+/kill

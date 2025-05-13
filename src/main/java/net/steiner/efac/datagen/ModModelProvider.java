@@ -26,6 +26,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUTTER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YES);
 
+        blockStateModelGenerator.registerLog(ModBlocks.PRIMA_LOG).log(ModBlocks.PRIMA_LOG).wood(ModBlocks.PRIMA_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PRIMA_LOG).log(ModBlocks.STRIPPED_PRIMA_LOG).wood(ModBlocks.STRIPPED_PRIMA_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRIMA_LEAVES);
+
+        BlockStateModelGenerator.BlockTexturePool prima_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PRIMA_PLANKS);
+        prima_pool.family(ModBlocks.PRIMA_FAMILY);
+
         BlockStateModelGenerator.BlockTexturePool gelwoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GELWOOD_PLANKS);
         gelwoodPool.stairs(ModBlocks.GELWOOD_STAIRS);
         gelwoodPool.slab(ModBlocks.GELWOOD_SLAB);
@@ -67,5 +74,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CIT_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUB_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CLUMBVESTIGATOR, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.PRIMA_HANGING_SIGN, Models.GENERATED);
     }
 }

@@ -39,6 +39,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GELWOOD_DOOR, doorDrops(ModBlocks.GELWOOD_DOOR));
         addDrop(ModBlocks.GELWOOD_SLAB, slabDrops(ModBlocks.GELWOOD_SLAB));
 
+        addDrop(ModBlocks.PRIMA_LOG);
+        addDrop(ModBlocks.STRIPPED_PRIMA_LOG);
+        addDrop(ModBlocks.PRIMA_WOOD);
+        addDrop(ModBlocks.STRIPPED_PRIMA_WOOD);
+        addDrop(ModBlocks.PRIMA_PLANKS);
+        addDrop(ModBlocks.PRIMA_LEAVES, leavesDrops(ModBlocks.PRIMA_LEAVES, ModBlocks.BUTTER, 0.005f)); // TODO leaves
+
         //ore
         addDrop(ModBlocks.SLIPULON_ORE, multiOreDrops(ModBlocks.SLIPULON_ORE, ModItems.RAW_SLIPULON, 2.0f, 5.0f));
         addDrop(ModBlocks.ALB_GEM_ORE, multiOreDrops(ModBlocks.ALB_GEM_ORE, ModItems.ALB_GEM, 1.0f, 4.0f));

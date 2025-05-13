@@ -46,5 +46,15 @@
       <option name="name" value="maven" />
       <option name="url" value="https://maven.kyrptonaught.dev" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://maven.shedaniel.me" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="TerraformersMC" />
+      <option name="name" value="TerraformersMC" />
+      <option name="url" value="https://maven.terraformersmc.com/" />
+    </remote-repository>
   </component>
 </project>

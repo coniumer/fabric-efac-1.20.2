@@ -1,9 +1,7 @@
 package net.steiner.efac.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -49,6 +47,11 @@ public class ModItems {
     //misc
     public static final Item CLUMBVESTIGATOR = registerItem("clumbvestigator",
             new ClumbvestigatorItem(new FabricItemSettings().maxCount(1)));
+    //signs
+    public static final Item PRIMA_SIGN = registerItem("prima_sign",
+            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.PRIMA_SIGN, ModBlocks.PRIMA_WALL_SIGN));
+    public static final Item PRIMA_HANGING_SIGN = registerItem("prima_hanging_sign",
+            new HangingSignItem(ModBlocks.PRIMA_HANGING_SIGN, ModBlocks.PRIMA_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
 
     private static Item registerItem(String name ,Item item) {
         return Registry.register(Registries.ITEM, new Identifier(EFAC.MOD_ID, name), item);

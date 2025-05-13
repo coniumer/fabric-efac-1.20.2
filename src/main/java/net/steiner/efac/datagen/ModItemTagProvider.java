@@ -17,6 +17,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.GELWOOD_PLANKS.asItem());
+                .add(ModBlocks.GELWOOD_PLANKS.asItem())
+                .add(ModBlocks.PRIMA_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PRIMA_LOG.asItem())
+                .add(ModBlocks.PRIMA_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_PRIMA_LOG.asItem())
+                .add(ModBlocks.STRIPPED_PRIMA_WOOD.asItem());
     }
 }

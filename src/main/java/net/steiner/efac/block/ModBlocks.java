@@ -1,8 +1,13 @@
 package net.steiner.efac.block;
 
+import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -29,13 +34,14 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
     public static final Block RUB_GEM_ORE = registerBlock("rub_gem_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+
     //gelwood
     public static final Block GELWOOD_ORE = registerBlock("gelwood_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE)));
     public static final Block GELWOOD_PLANKS = registerBlock("gelwood_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
-    //woods
+    //wood products
     public static final Block GELWOOD_STAIRS = registerBlock("gelwood_stairs",
             new StairsBlock(ModBlocks.GELWOOD_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
     public static final Block GELWOOD_SLAB = registerBlock("gelwood_slab",
@@ -56,6 +62,38 @@ public class ModBlocks {
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.IRON));
     public static final Block GELWOOD_TRAPDOOR = registerBlock("gelwood_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.IRON));
+
+    // Prima Wood
+    public static final Block PRIMA_LOG = registerBlock("prima_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)));
+    public static final Block STRIPPED_PRIMA_LOG = registerBlock("stripped_prima_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4f)));
+    public static final Block PRIMA_WOOD = registerBlock("prima_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)));
+    public static final Block STRIPPED_PRIMA_WOOD = registerBlock("stripped_prima_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4f)));
+    public static final Block PRIMA_PLANKS = registerBlock("prima_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)));
+    public static final Block PRIMA_LEAVES = registerBlock("prima_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+
+    public static final Identifier PRIMA_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/prima");
+    public static final Identifier PRIMA_HANGING_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/prima/hanging");
+    public static final Identifier PRIMA_HANGING_SIGN_GUI_TEXTURE = new Identifier(EFAC.MOD_ID, "textures/gui/hanging_signs/prima");
+
+    public static final Block PRIMA_SIGN = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "prima_sign"),
+            new TerraformSignBlock(PRIMA_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN)));
+    public static final Block PRIMA_WALL_SIGN = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "prima_wall_sign"),
+            new TerraformWallSignBlock(PRIMA_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN)));
+    public static final Block PRIMA_HANGING_SIGN = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "prima_hanging_sign"),
+            new TerraformHangingSignBlock(PRIMA_HANGING_SIGN_TEXTURE, PRIMA_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN)));
+    public static final Block PRIMA_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "prima_wall_hanging_sign"),
+            new TerraformHangingSignBlock(PRIMA_HANGING_SIGN_TEXTURE, PRIMA_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final BlockFamily PRIMA_FAMILY = BlockFamilies.register(ModBlocks.PRIMA_PLANKS)
+            .sign(ModBlocks.PRIMA_SIGN, ModBlocks.PRIMA_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+
     //crops
     public static final Block CLUMBROT_CROP = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID,
             "clumbrot_crop"), new ClumbrotCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
