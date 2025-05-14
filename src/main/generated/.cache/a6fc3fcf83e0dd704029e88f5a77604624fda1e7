@@ -1,4 +1,4 @@
-// 1.20.2	2025-05-12T19:43:55.206805	EFAC/Block Loot Tables
+// 1.20.2	2025-05-14T13:43:10.190051	EFAC/Block Loot Tables
 a425bcdcafeb5755dcc3b102ce841a1b199e97a1 data/efac/loot_tables/blocks/gelwood_button.json
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 95bbe02265bf5bcfa49dae964d14d4a09653c459 data/efac/loot_tables/blocks/slipulon_ore.json
@@ -22,5 +22,5 @@ f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pr
 85650499c53a3df92e2a803dabbf79088307e733 data/efac/loot_tables/blocks/gelwood_door.json
 1ca68d007ca65b30e834b630c8bb96f8d4cad73a data/efac/loot_tables/blocks/prima_planks.json
 22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
-7e725010461ccb99464ef25f4d85e2e3adbabe23 data/efac/loot_tables/blocks/gelwood_ore.json
 875e317062a11e6e7554393e64aaa7e6e71020e7 data/efac/loot_tables/blocks/yes.json
+7e725010461ccb99464ef25f4d85e2e3adbabe23 data/efac/loot_tables/blocks/gelwood_ore.json

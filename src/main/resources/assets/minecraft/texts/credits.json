@@ -38,6 +38,21 @@
             ]
           }
         ]
+      },
+      {
+        "discipline": "Playtesters",
+        "titles": [
+          {
+            "title": "v0.1a",
+            "names": [
+              "Bosch Eggman",
+              "croid",
+              "gauze_",
+              "haiipara",
+              "Monte Hills"
+            ]
+          }
+        ]
       }
     ]
   },

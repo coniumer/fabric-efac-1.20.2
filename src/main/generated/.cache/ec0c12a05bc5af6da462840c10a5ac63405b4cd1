@@ -1,4 +1,4 @@
-// 1.20.2	2025-05-12T19:43:55.205567	EFAC/Model Definitions
+// 1.20.2	2025-05-14T13:43:10.189126	EFAC/Model Definitions
 70e4e91b3b18f3162c2fffd24ee57638e27f01c2 assets/efac/models/item/prima_log.json
 547364648ce0916f3a8069e730bce1f2c9ecbc34 assets/efac/models/item/gelwood_pressure_plate.json
 2160421efb6ff152ed54bb8aece8ee1327f5af1d assets/efac/models/block/slipulon_block.json
@@ -16,14 +16,14 @@ fb79013d364fe6538a88bff6ee952dad54981e41 assets/efac/models/block/rub_gem_ore.js
 c4137dcc99b2cd5e3ccdefef1cab9d5a681e4057 assets/efac/models/item/rub_gem_ore.json
 e1f5e5cb7962a7fb07d4babcb60756d7319a2f7a assets/efac/models/block/gelwood_slab.json
 1d26622950d242607027819a07e425889450f070 assets/efac/blockstates/prima_log.json
-ca12df310af0cf0abe86d31b6dd676bd54e6d604 assets/efac/models/item/gelwood_fence.json
 552e1ad1def2ba2f1266947512460174259a6155 assets/efac/models/item/prima_hanging_sign.json
+ca12df310af0cf0abe86d31b6dd676bd54e6d604 assets/efac/models/item/gelwood_fence.json
 3ce643e80becd5019a16c82c0ed509f0e0429f86 assets/efac/models/item/butter.json
 04e1b2c7b9c115aae3b340000e99f6f6485da1c7 assets/efac/models/block/gelwood_pressure_plate_down.json
 3f776b4413fe6a684fec508f0d45b4026333fffd assets/efac/models/block/prima_log.json
 04c727ce56f272340c3532aba75608257757657f assets/efac/models/block/gelwood_fence_gate_wall_open.json
-eec3996674a0e5093b0f8f32db96439e4050d5dd assets/efac/models/block/clumbrot_crop_stage3.json
 eaab009196ce9bc961dc9d08b418dafa4b669426 assets/efac/models/block/gelwood_trapdoor_top.json
+eec3996674a0e5093b0f8f32db96439e4050d5dd assets/efac/models/block/clumbrot_crop_stage3.json
 09c8b7f06caf83b3b471448900fd8720d0aff005 assets/efac/models/item/rub_gem.json
 685e32ac8310e15d88014a39f90ece0b0d7f4da0 assets/efac/models/block/gelwood_door_top_left_open.json
 c859980876c82beeb78611911bebc506ce02683c assets/efac/models/item/slipulon_ingot.json
@@ -41,10 +41,10 @@ f767e3aa5a57549ef3ac85cdacce56df615e7d41 assets/efac/models/item/gelwood_ore.jso
 e68db76286e56bd92daaf82c789574fa1c7569e3 assets/efac/models/block/gelwood_slab_top.json
 e275d5ef47f86e37cce29d63b578629ea1e12be8 assets/efac/blockstates/gelwood_planks.json
 b71ff9d5769e27cf6d48e08b00f62d65433eeee4 assets/efac/models/block/gelwood_ore.json
-93248dfd5084c801bcfa1c85665ee0c6fc87e9f3 assets/efac/blockstates/prima_wood.json
 e61e1b36a8cae5c8b51afa42ad9c9d7625a9a869 assets/efac/blockstates/clumbrot_crop.json
-a793052238e36d5021dd2864bb7a85720ef70aea assets/efac/blockstates/yes.json
+93248dfd5084c801bcfa1c85665ee0c6fc87e9f3 assets/efac/blockstates/prima_wood.json
 31eec494ff5ca89dc737a337c624039b9bea4695 assets/efac/models/item/butter_stick.json
+a793052238e36d5021dd2864bb7a85720ef70aea assets/efac/blockstates/yes.json
 e858c987c4e54674a1f7f13c19ff421dde79c688 assets/efac/models/block/gelwood_door_top_left.json
 01947e15115b8feddcdf81bd8fa9e9eed9d6be05 assets/efac/blockstates/gelwood_slab.json
 f3f92980ea190972343f6730046e1842d57279fd assets/efac/models/block/stripped_prima_log_horizontal.json

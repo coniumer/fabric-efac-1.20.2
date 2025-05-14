@@ -44,12 +44,14 @@ public class EFAC implements ModInitializer {
 
 		CustomPortalBuilder.beginPortal() // scary portal
 				.destDimID(new Identifier(EFAC.MOD_ID, "scarydim"))
+				.setPortalSearchYRange(10, 110)
 				.frameBlock(Blocks.BONE_BLOCK)
 				.lightWithItem(Items.BONE)
 				.tintColor(0xc76efa)
 				.registerPortal();
 		CustomPortalBuilder.beginPortal() // tunnel portal
 				.destDimID(new Identifier(EFAC.MOD_ID, "tunneldim"))
+				.setPortalSearchYRange(-50, 110)
 				.frameBlock(ModBlocks.SLIPULON_BLOCK)
 				.lightWithWater()
 				.tintColor(0x9baaa2)

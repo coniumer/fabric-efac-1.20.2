@@ -1,6 +1,6 @@
-// 1.20.2	2025-05-12T19:43:55.204421	EFAC/Recipes
-2b84d3490d3758f247162628475dd73e3a38d855 data/efac/recipes/gelwood_trapdoor.json
+// 1.20.2	2025-05-14T13:43:10.187797	EFAC/Recipes
 959a66473d8b6163f9ce15f49af15082336e4157 data/efac/advancements/recipes/misc/dirt.json
+2b84d3490d3758f247162628475dd73e3a38d855 data/efac/recipes/gelwood_trapdoor.json
 433daee84443995486f10dc6d42314b4e86da086 data/efac/recipes/gelwood_planks.json
 eb67671f364b68a7b14716090f2b557d6bf82857 data/efac/recipes/cit_clumb_wand.json
 9ea6031eaf36a9d404aecfff43ac821b20c255d7 data/efac/recipes/gelwood_door.json
@@ -10,8 +10,8 @@ e1ea6ab09b256de642f614b0fb37801a20e9a6a0 data/efac/recipes/gelwood_fence_gate.js
 cd11daf8d2e99c45b3a483257bbbecd965db8199 data/efac/advancements/recipes/food/cit_clumb_materia.json
 7dae53c96b439ce54d81c7a3f13c837ca47d48c9 data/efac/recipes/clumbkie.json
 56ef9f888c517eb8b3a2ce9fe96bd319976a5beb data/efac/advancements/recipes/food/clumbkie.json
-3e5d82a7e95c85ee3a462ad912e2e4690d9417b2 data/efac/recipes/clumbvestigator.json
 e56cdb79ce48bb81da1b9f7d959cf7fcabe12c42 data/efac/advancements/recipes/misc/cit_clumb_wand.json
+3e5d82a7e95c85ee3a462ad912e2e4690d9417b2 data/efac/recipes/clumbvestigator.json
 af6895b72554b43652eb794279d27505de67bde8 data/efac/recipes/gelwood_fence.json
 e25193a98b607cf85aa3cb8f9ebd8dd3e370ee48 data/efac/recipes/clumb_materia_from_smelting_compact_dom.json
 3e095fcf12bdb3770f14a567d5455c2477e1d8ce data/efac/recipes/slipulon_block.json

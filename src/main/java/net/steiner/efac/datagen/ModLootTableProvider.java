@@ -44,7 +44,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PRIMA_WOOD);
         addDrop(ModBlocks.STRIPPED_PRIMA_WOOD);
         addDrop(ModBlocks.PRIMA_PLANKS);
-        addDrop(ModBlocks.PRIMA_LEAVES, leavesDrops(ModBlocks.PRIMA_LEAVES, ModBlocks.BUTTER, 0.005f)); // TODO leaves
+        addDrop(ModBlocks.PRIMA_LEAVES, leavesDrops(ModBlocks.PRIMA_LEAVES, ModBlocks.BUTTER, 0.005f)); // TODO sapling
 
         //ore
         addDrop(ModBlocks.SLIPULON_ORE, multiOreDrops(ModBlocks.SLIPULON_ORE, ModItems.RAW_SLIPULON, 2.0f, 5.0f));
