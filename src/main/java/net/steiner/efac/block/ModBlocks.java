@@ -77,6 +77,27 @@ public class ModBlocks {
     public static final Block PRIMA_LEAVES = registerBlock("prima_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
 
+    public static final Block PRIMA_STAIRS = registerBlock("prima_stairs",
+            new StairsBlock(ModBlocks.PRIMA_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block PRIMA_SLAB = registerBlock("prima_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+
+    public static final Block PRIMA_BUTTON = registerBlock("prima_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.OAK, 10, true));
+    public static final Block PRIMA_PRESSURE_PLATE = registerBlock("prima_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.OAK));
+
+    public static final Block PRIMA_FENCE = registerBlock("prima_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block PRIMA_FENCE_GATE = registerBlock("prima_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), WoodType.OAK));
+
+    public static final Block PRIMA_DOOR = registerBlock("prima_door",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.OAK));
+    public static final Block PRIMA_TRAPDOOR = registerBlock("prima_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.OAK));
+
     public static final Identifier PRIMA_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/prima");
     public static final Identifier PRIMA_HANGING_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/prima/hanging");
     public static final Identifier PRIMA_HANGING_SIGN_GUI_TEXTURE = new Identifier(EFAC.MOD_ID, "textures/gui/hanging_signs/prima");

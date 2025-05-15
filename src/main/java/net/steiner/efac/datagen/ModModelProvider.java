@@ -31,15 +31,23 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRIMA_LEAVES);
 
         BlockStateModelGenerator.BlockTexturePool prima_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PRIMA_PLANKS);
+        prima_pool.stairs(ModBlocks.PRIMA_STAIRS);
+        prima_pool.slab(ModBlocks.PRIMA_SLAB);
+        prima_pool.button(ModBlocks.PRIMA_BUTTON);
+        prima_pool.pressurePlate(ModBlocks.PRIMA_PRESSURE_PLATE);
+        prima_pool.fence(ModBlocks.PRIMA_FENCE);
+        prima_pool.fenceGate(ModBlocks.PRIMA_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.PRIMA_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.PRIMA_TRAPDOOR);
         prima_pool.family(ModBlocks.PRIMA_FAMILY);
 
-        BlockStateModelGenerator.BlockTexturePool gelwoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GELWOOD_PLANKS);
-        gelwoodPool.stairs(ModBlocks.GELWOOD_STAIRS);
-        gelwoodPool.slab(ModBlocks.GELWOOD_SLAB);
-        gelwoodPool.button(ModBlocks.GELWOOD_BUTTON);
-        gelwoodPool.pressurePlate(ModBlocks.GELWOOD_PRESSURE_PLATE);
-        gelwoodPool.fence(ModBlocks.GELWOOD_FENCE);
-        gelwoodPool.fenceGate(ModBlocks.GELWOOD_FENCE_GATE);
+        BlockStateModelGenerator.BlockTexturePool gelwood_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GELWOOD_PLANKS);
+        gelwood_pool.stairs(ModBlocks.GELWOOD_STAIRS);
+        gelwood_pool.slab(ModBlocks.GELWOOD_SLAB);
+        gelwood_pool.button(ModBlocks.GELWOOD_BUTTON);
+        gelwood_pool.pressurePlate(ModBlocks.GELWOOD_PRESSURE_PLATE);
+        gelwood_pool.fence(ModBlocks.GELWOOD_FENCE);
+        gelwood_pool.fenceGate(ModBlocks.GELWOOD_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.GELWOOD_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GELWOOD_TRAPDOOR);
 

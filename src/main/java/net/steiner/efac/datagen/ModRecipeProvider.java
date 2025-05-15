@@ -6,13 +6,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.item.ModItems;
@@ -65,6 +63,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createTrapdoorRecipe(ModBlocks.GELWOOD_TRAPDOOR, Ingredient.ofItems(ModBlocks.GELWOOD_PLANKS))
                 .criterion(hasItem(ModBlocks.GELWOOD_PLANKS), conditionsFromItem(ModBlocks.GELWOOD_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GELWOOD_TRAPDOOR)));
+
+        //prima
+        createDoorRecipe(ModBlocks.PRIMA_DOOR, Ingredient.ofItems(ModBlocks.PRIMA_PLANKS))
+                .criterion(hasItem(ModBlocks.PRIMA_PLANKS), conditionsFromItem(ModBlocks.PRIMA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_DOOR)));
+        createFenceRecipe(ModBlocks.PRIMA_FENCE, Ingredient.ofItems(ModBlocks.PRIMA_PLANKS))
+                .criterion(hasItem(ModBlocks.PRIMA_PLANKS), conditionsFromItem(ModBlocks.PRIMA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_FENCE)));
+        createFenceGateRecipe(ModBlocks.PRIMA_FENCE_GATE, Ingredient.ofItems(ModBlocks.PRIMA_PLANKS))
+                .criterion(hasItem(ModBlocks.PRIMA_PLANKS), conditionsFromItem(ModBlocks.PRIMA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_FENCE_GATE)));
+        offerPressurePlateRecipe(exporter, ModBlocks.PRIMA_PRESSURE_PLATE, ModBlocks.PRIMA_PLANKS);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRIMA_SLAB, ModBlocks.PRIMA_PLANKS);
+        createStairsRecipe(ModBlocks.PRIMA_STAIRS, Ingredient.ofItems(ModBlocks.PRIMA_PLANKS))
+                .criterion(hasItem(ModBlocks.PRIMA_PLANKS), conditionsFromItem(ModBlocks.PRIMA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_STAIRS)));
+        createTrapdoorRecipe(ModBlocks.PRIMA_TRAPDOOR, Ingredient.ofItems(ModBlocks.PRIMA_PLANKS))
+                .criterion(hasItem(ModBlocks.PRIMA_PLANKS), conditionsFromItem(ModBlocks.PRIMA_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_TRAPDOOR)));
 
         //shapeless
         //clumb foods

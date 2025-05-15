@@ -68,6 +68,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PRIMA_WOOD);
                         entries.add(ModBlocks.STRIPPED_PRIMA_WOOD);
                         entries.add(ModBlocks.PRIMA_PLANKS);
+                        entries.add(ModBlocks.PRIMA_STAIRS);
+                        entries.add(ModBlocks.PRIMA_SLAB);
+                        entries.add(ModBlocks.PRIMA_FENCE);
+                        entries.add(ModBlocks.PRIMA_FENCE_GATE);
+                        entries.add(ModBlocks.PRIMA_DOOR);
+                        entries.add(ModBlocks.PRIMA_TRAPDOOR);
+                        entries.add(ModBlocks.PRIMA_BUTTON);
+                        entries.add(ModBlocks.PRIMA_PRESSURE_PLATE);
                         entries.add(ModBlocks.PRIMA_LEAVES);
                         entries.add(ModItems.PRIMA_SIGN);
                         entries.add(ModItems.PRIMA_HANGING_SIGN);
