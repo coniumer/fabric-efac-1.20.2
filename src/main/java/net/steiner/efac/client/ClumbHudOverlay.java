@@ -39,7 +39,7 @@ public class ClumbHudOverlay implements HudRenderCallback {
         for(int i = 0; i < 10; i++) {
             if(((EntityDataSaver)MinecraftClient.getInstance().player).getPersistentData().getInt("clumbCharges") > i) {
                 drawContext.drawTexture(FULL_CLUMB, x - 94 + (i * 9), y - 54, 0, 0,
-                        12, 12, 12, 12);
+                        10, 10, 12, 12);
             } else {
                 break;
             }

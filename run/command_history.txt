@@ -1,8 +1,3 @@
-/give @a minecraft:debug_stick
-/time set night
-/kill
-/execute in efac:scarydim run tp Player684 ~ ~ ~
-/locate biome minecraft:plains
 /tp @s 57 48 5
 /kill
 /locate biome minecraft:dripstone_caves
@@ -48,3 +43,8 @@
 /gamemode creative
 /gamemode survival
 /gamemode creative
+/gamemode spectator
+/give @a efac:rub_clumb_wand
+/give @a efac:clumbkie 128
+/kill
+/execute in efac:tunneldim run tp @a ~ ~ ~
