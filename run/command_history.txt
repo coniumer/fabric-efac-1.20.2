@@ -1,17 +1,3 @@
-/time set night
-/time set day
-/time set night
-/playsound clear
-/stopsound @a
-/time set night
-/stopsound @a
-/time set night
-/stopsound @a
-/time set night
-/kill
-/gamemode survival
-/gamemode creative
-/time set night
 /give @a minecraft:debug_stick
 /time set night
 /kill
@@ -45,6 +31,20 @@
 /gamemode creative
 /effect clear
 /gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/clear
+/give @a efac:prima_fence 2
+/gamemode creative
+/gamemode survival
+/give @a minecraft:diamond_ore
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/give @a efac:clumbkie 64
 /gamemode creative
 /gamemode survival
 /gamemode creative

@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.item.ModItemGroups;
 import net.steiner.efac.item.ModItems;
+import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -41,6 +42,8 @@ public class EFAC implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_PRIMA_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.PRIMA_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_PRIMA_LOG, 30, 60);
+
+		ModMessages.regsiterC2SPackets();
 
 		CustomPortalBuilder.beginPortal() // scary portal
 				.destDimID(new Identifier(EFAC.MOD_ID, "scarydim"))
