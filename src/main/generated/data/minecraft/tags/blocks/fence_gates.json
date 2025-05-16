@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "efac:gelwood_fence_gate"
+    "efac:gelwood_fence_gate",
+    "efac:prima_fence_gate"
   ]
 }

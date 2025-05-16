@@ -7,10 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.EFAC;
 import net.steiner.efac.block.ModBlocks;
-import net.steiner.efac.item.custom.ClumbWandItem;
-import net.steiner.efac.item.custom.ClumbvestigatorItem;
-import net.steiner.efac.item.custom.ModToolMaterial;
-import net.steiner.efac.item.custom.WandItem;
+import net.steiner.efac.item.custom.*;
 
 public class ModItems {
 
@@ -20,12 +17,12 @@ public class ModItems {
     public static final Item ALB_GEM = registerItem("alb_gem", new Item(new FabricItemSettings()));
     public static final Item CIT_GEM = registerItem("cit_gem", new Item(new FabricItemSettings()));
     public static final Item RUB_GEM = registerItem("rub_gem", new Item(new FabricItemSettings()));
-    public static final Item ALB_CLUMB_MATERIA = registerItem("alb_clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
-    public static final Item CIT_CLUMB_MATERIA = registerItem("cit_clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
-    public static final Item RUB_CLUMB_MATERIA = registerItem("rub_clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
     public static final Item GELWOOD_ORB = registerItem("gelwood_orb", new Item(new FabricItemSettings()));
     //foods + crops
     public static final Item CLUMB_MATERIA = registerItem("clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
+    public static final Item ALB_CLUMB_MATERIA = registerItem("alb_clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
+    public static final Item CIT_CLUMB_MATERIA = registerItem("cit_clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
+    public static final Item RUB_CLUMB_MATERIA = registerItem("rub_clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));
     public static final Item BUTTER_STICK = registerItem("butter_stick", new Item(new FabricItemSettings().food(ModFoodComponents.BUTTER_STICK)));
     public static final Item CLUMBELON = registerItem("clumbelon", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMBELON)));
     public static final Item CLUMBKIE = registerItem("clumbkie", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMBKIE)));
@@ -53,7 +50,7 @@ public class ModItems {
     public static final Item PRIMA_HANGING_SIGN = registerItem("prima_hanging_sign",
             new HangingSignItem(ModBlocks.PRIMA_HANGING_SIGN, ModBlocks.PRIMA_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
 
-    private static Item registerItem(String name ,Item item) {
+    private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(EFAC.MOD_ID, name), item);
     }
 

@@ -12,6 +12,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.steiner.efac.entity.custom.ClumbProjectileEntity;
+import net.steiner.efac.util.ClumbCharge;
 
 public class WandItem extends Item {
     private final ToolMaterial material;
@@ -27,8 +28,21 @@ public class WandItem extends Item {
     // idk what i'm doing
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        // you have the wand in your hand and now my code knows it
+        ClumbCharge cPlayer = (ClumbCharge)user;
+        int clumbCharges = cPlayer.getClumbCharges();
         ItemStack itemStack = user.getStackInHand(hand);
+
+        if (cPlayer.canClumb() || user.getAbilities().creativeMode) {
+            clumbCast(world, user, itemStack);
+            if (!user.getAbilities().creativeMode) {
+                clumbCharges--;
+                cPlayer.setClumbCharges(clumbCharges);
+            }
+        }
+        return TypedActionResult.success(itemStack, world.isClient());
+    }
+
+    public void clumbCast(World world, PlayerEntity user, ItemStack itemStack) {
         // TODO original sound for clumbing
         world.playSound(
                 null,
@@ -40,25 +54,18 @@ public class WandItem extends Item {
                 0.7F,
                 1.25F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
-
         if (!world.isClient) {
-            // spawns clumb projectile???
             ClumbProjectileEntity clumbProjectileEntity = new ClumbProjectileEntity(user, world, modMaterial);
             clumbProjectileEntity.setItem(itemStack);
             clumbProjectileEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.2F, 0.5F);
             world.spawnEntity(clumbProjectileEntity);
         }
 
-        // cooldown so it's not OP
         user.getItemCooldownManager().set(this, modMaterial.getCooldown());
-        // Usage stats
         user.incrementStat(Stats.USED.getOrCreateStat(this));
-        // Damage item
         if (!user.getAbilities().creativeMode) {
             itemStack.damage(1, user, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         }
-        // play use animation
-        return TypedActionResult.success(itemStack, world.isClient());
     }
 
 }

@@ -1,12 +1,4 @@
 /time set night
-/gamemode survival
-/gamemode creative
-/gamerule doDaylightCycle true
-/time set night
-/gamemode survival
-/time set night
-/gamemode creative
-/time set night
 /time set day
 /time set night
 /playsound clear
@@ -48,3 +40,11 @@
 /give @a efac:prima_slab
 /give @a efac:prima_stairs
 /give @a efac:prima_trapdoor
+/kill
+/gamemode survival
+/gamemode creative
+/effect clear
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative

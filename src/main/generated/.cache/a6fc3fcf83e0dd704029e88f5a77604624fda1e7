@@ -1,11 +1,11 @@
-// 1.20.2	2025-05-15T13:33:11.627403	EFAC/Block Loot Tables
+// 1.20.2	2025-05-15T19:30:36.039531	EFAC/Block Loot Tables
 a425bcdcafeb5755dcc3b102ce841a1b199e97a1 data/efac/loot_tables/blocks/gelwood_button.json
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 95bbe02265bf5bcfa49dae964d14d4a09653c459 data/efac/loot_tables/blocks/slipulon_ore.json
 e5d19df4193c14bad32395d837916efc660bde04 data/efac/loot_tables/blocks/gelwood_stairs.json
 e9bd9b8c0ec8a9e65c8e6581e36143906621ce0e data/efac/loot_tables/blocks/gelwood_planks.json
-29d82232fff1b22c013e1bc33da91e64f596b259 data/efac/loot_tables/blocks/alb_gem_ore.json
 cb713af65c044b861a08523a615acda9aa80034f data/efac/loot_tables/blocks/prima_log.json
+29d82232fff1b22c013e1bc33da91e64f596b259 data/efac/loot_tables/blocks/alb_gem_ore.json
 17b419249b8804c4f949de4f20c5773100151b54 data/efac/loot_tables/blocks/gelwood_slab.json
 d9436414681b0950719671fe7b34cfeba580c409 data/efac/loot_tables/blocks/stripped_prima_log.json
 41fc56a3e04e1ec22285ff503a173a481b86da2e data/efac/loot_tables/blocks/prima_door.json
@@ -14,8 +14,8 @@ a5bfe2ce91e4ae06d39673c9ce7caf8367352fb9 data/efac/loot_tables/blocks/cit_gem_or
 e6f2b4044a656a6659270ab9a2757aa535c64a21 data/efac/loot_tables/blocks/stripped_prima_wood.json
 0f969e081a0c0d1285e69f17ece98385601281b3 data/efac/loot_tables/blocks/prima_leaves.json
 3a4f682ad83052c12ece2f8ed18770b721cf20b1 data/efac/loot_tables/blocks/prima_pressure_plate.json
-f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 79ee5e2fc1b3f745b349bb91bdfba4382ab1e4ba data/efac/loot_tables/blocks/gelwood_fence.json
+f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 97ae791eb1b5a9a9db35ada359d2dd72f952d2a5 data/efac/loot_tables/blocks/prima_wood.json
 eac27d731e4f7595ec0f5529f830b648d76f1816 data/efac/loot_tables/blocks/prima_slab.json
 25802ea42e10ed82c93a52ea8d884c513a69cb29 data/efac/loot_tables/blocks/prima_fence.json

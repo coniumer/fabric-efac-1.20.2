@@ -6,7 +6,9 @@
 
 	],
 	"client": [
-		"ReadyForBedMixin"
+		"ReadyForBedMixin",
+		"PlayerClumbMixin",
+		"EntityDataSaverMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -18,6 +18,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+
+        // tool stuff
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.SLIPULON_BLOCK)
                 .add(ModBlocks.SLIPULON_ORE)
@@ -58,8 +60,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.DIAMOND_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(ModBlocks.GELWOOD_FENCE);
+                .add(ModBlocks.GELWOOD_FENCE)
+                .add(ModBlocks.PRIMA_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(ModBlocks.GELWOOD_FENCE_GATE);
+                .add(ModBlocks.GELWOOD_FENCE_GATE)
+                .add(ModBlocks.PRIMA_FENCE_GATE);
     }
 }

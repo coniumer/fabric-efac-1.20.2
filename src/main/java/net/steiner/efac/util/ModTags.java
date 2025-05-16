@@ -18,7 +18,8 @@ public class ModTags {
     }
 
     public static class Items {
-
+        public static final TagKey<Item> IS_CLUMB_FOOD =
+                createTag("is_clumb_food");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(EFAC.MOD_ID, name));
