@@ -38,6 +38,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SLIPULON_ORE)
                 .add(ModBlocks.ALB_GEM_ORE)
                 .add(ModBlocks.GELWOOD_ORE)
+                .add(ModBlocks.GEUMB_BLOCK)
+                .add(ModBlocks.GEUMB_CLUSTER)
+                .add(ModBlocks.LARGE_GEUMB_BUD)
+                .add(ModBlocks.MEDIUM_GEUMB_BUD)
+                .add(ModBlocks.SMALL_GEUMB_BUD)
+                .add(ModBlocks.BUDDING_GEUMB)
                 .add(ModBlocks.YES);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)

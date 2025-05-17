@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "efac:block/prima_planks",
+    "side": "efac:block/prima_planks",
+    "top": "efac:block/prima_planks"
+  }
+}

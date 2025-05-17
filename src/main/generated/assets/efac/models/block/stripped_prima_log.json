@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "efac:block/stripped_prima_log_top",
+    "side": "efac:block/stripped_prima_log"
+  }
+}

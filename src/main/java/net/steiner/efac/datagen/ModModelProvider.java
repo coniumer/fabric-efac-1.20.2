@@ -26,6 +26,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUTTER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YES);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GEUMB_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUDDING_GEUMB);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.GEUMB_CLUSTER);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.LARGE_GEUMB_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.MEDIUM_GEUMB_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.SMALL_GEUMB_BUD);
+
         blockStateModelGenerator.registerLog(ModBlocks.PRIMA_LOG).log(ModBlocks.PRIMA_LOG).wood(ModBlocks.PRIMA_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PRIMA_LOG).log(ModBlocks.STRIPPED_PRIMA_LOG).wood(ModBlocks.STRIPPED_PRIMA_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRIMA_LEAVES);
@@ -62,6 +69,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ALB_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIT_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUB_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GEUMB_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ALB_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIT_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUB_CLUMB_MATERIA, Models.GENERATED);

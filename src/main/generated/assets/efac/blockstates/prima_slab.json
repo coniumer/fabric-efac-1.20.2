@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "efac:block/prima_slab"
+    },
+    "type=double": {
+      "model": "efac:block/prima_planks"
+    },
+    "type=top": {
+      "model": "efac:block/prima_slab_top"
+    }
+  }
+}

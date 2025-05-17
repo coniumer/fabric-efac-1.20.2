@@ -5,6 +5,12 @@
     "efac:slipulon_ore",
     "efac:alb_gem_ore",
     "efac:gelwood_ore",
+    "efac:geumb_block",
+    "efac:geumb_cluster",
+    "efac:large_geumb_bud",
+    "efac:medium_geumb_bud",
+    "efac:small_geumb_bud",
+    "efac:budding_geumb",
     "efac:yes"
   ]
 }

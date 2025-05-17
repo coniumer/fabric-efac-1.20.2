@@ -1,9 +1,9 @@
-// 1.20.2	2025-05-15T19:30:36.034399	EFAC/Tags for minecraft:block
-dc0f9e18b2ff88992bb8d1ea2914e006523f0efb data/minecraft/tags/blocks/fence_gates.json
-1b2ffe54b7232b9aabacb16cf388c5abba946cad data/minecraft/tags/blocks/mineable/shovel.json
-761cadedd6fb975336aeedbc9f20cb8273cee496 data/minecraft/tags/blocks/mineable/pickaxe.json
-28fe2081dc5ebfe7e8cea93a535ddd1e54bed8d0 data/efac/tags/blocks/clumbvestigatable.json
-5b22170d3eef0b5a1582805812691afdc340b764 data/minecraft/tags/blocks/needs_iron_tool.json
-d8e15d17df289fdec38a2414399e3e1b0d5f5e8f data/minecraft/tags/blocks/needs_stone_tool.json
+// 1.20.2	2025-05-17T12:44:17.984394	EFAC/Tags for minecraft:block
 cf5d8f856baa8674f958af2fd6e8411a10784bfd data/minecraft/tags/blocks/needs_diamond_tool.json
 067125cfd22fb0290cc1b73b747fde76623c9de2 data/minecraft/tags/blocks/fences.json
+28fe2081dc5ebfe7e8cea93a535ddd1e54bed8d0 data/efac/tags/blocks/clumbvestigatable.json
+dc0f9e18b2ff88992bb8d1ea2914e006523f0efb data/minecraft/tags/blocks/fence_gates.json
+5b22170d3eef0b5a1582805812691afdc340b764 data/minecraft/tags/blocks/needs_iron_tool.json
+a1fd19b07ce3b6b1605d4f994143fdfe0fef2796 data/minecraft/tags/blocks/needs_stone_tool.json
+1b2ffe54b7232b9aabacb16cf388c5abba946cad data/minecraft/tags/blocks/mineable/shovel.json
+761cadedd6fb975336aeedbc9f20cb8273cee496 data/minecraft/tags/blocks/mineable/pickaxe.json

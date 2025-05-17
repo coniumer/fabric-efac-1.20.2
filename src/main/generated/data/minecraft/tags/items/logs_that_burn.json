@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "efac:prima_log",
+    "efac:prima_wood",
+    "efac:stripped_prima_log",
+    "efac:stripped_prima_wood"
+  ]
+}

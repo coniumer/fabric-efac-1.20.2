@@ -5,14 +5,19 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.registry.tag.ItemTags;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.block.custom.ClumbrotCropBlock;
 import net.steiner.efac.item.ModItems;
@@ -62,6 +67,27 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RUB_GEM_ORE, multiOreDrops(ModBlocks.RUB_GEM_ORE, ModItems.RUB_GEM, 1.0f, 4.0f));
         addDrop(ModBlocks.BUTTER, multiOreDrops(ModBlocks.BUTTER, ModItems.BUTTER_STICK, 3.0f, 7.0f));
         addDrop(ModBlocks.GELWOOD_ORE, multiOreDrops(ModBlocks.GELWOOD_ORE, ModItems.GELWOOD_ORB, 3.0f, 5.0f));
+
+        //geumbs
+        addDrop(ModBlocks.GEUMB_BLOCK);
+        dropsWithSilkTouch(ModBlocks.LARGE_GEUMB_BUD);
+        dropsWithSilkTouch(ModBlocks.MEDIUM_GEUMB_BUD);
+        dropsWithSilkTouch(ModBlocks.SMALL_GEUMB_BUD);
+        addDrop(
+                ModBlocks.GEUMB_CLUSTER,
+                block -> dropsWithSilkTouch(
+                        block,
+                        ItemEntry.builder(ModItems.GEUMB_SHARD)
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(4.0F)))
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                                .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().tag(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .alternatively(
+                                        this.applyExplosionDecay(
+                                                block, ItemEntry.builder(Items.AMETHYST_SHARD).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2.0F)))
+                                        )
+                                )
+                )
+        );
 
         //crop
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.CLUMBROT_CROP)

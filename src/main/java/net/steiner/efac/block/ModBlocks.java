@@ -15,7 +15,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.EFAC;
+import net.steiner.efac.block.custom.BuddingGeumbBlock;
 import net.steiner.efac.block.custom.ClumbrotCropBlock;
+import net.steiner.efac.block.custom.GeumbBlock;
+import net.steiner.efac.block.custom.GeumbClusterBlock;
 import net.steiner.efac.sound.ModSounds;
 
 public class ModBlocks {
@@ -33,6 +36,19 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
     public static final Block RUB_GEM_ORE = registerBlock("rub_gem_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    //geumbs
+    public static final Block GEUMB_BLOCK = registerBlock("geumb_block",
+            new GeumbBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
+    public static final Block BUDDING_GEUMB = registerBlock("budding_geumb",
+            new BuddingGeumbBlock(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST)));
+    public static final Block GEUMB_CLUSTER = registerBlock("geumb_cluster",
+            new GeumbClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)));
+    public static final Block LARGE_GEUMB_BUD = registerBlock("large_geumb_bud",
+            new GeumbClusterBlock(5, 3, FabricBlockSettings.copyOf(Blocks.LARGE_AMETHYST_BUD)));
+    public static final Block MEDIUM_GEUMB_BUD = registerBlock("medium_geumb_bud",
+            new GeumbClusterBlock(4, 3, FabricBlockSettings.copyOf(Blocks.MEDIUM_AMETHYST_BUD)));
+    public static final Block SMALL_GEUMB_BUD = registerBlock("small_geumb_bud",
+            new GeumbClusterBlock(3, 4, FabricBlockSettings.copyOf(Blocks.SMALL_AMETHYST_BUD)));
 
     //gelwood
     public static final Block GELWOOD_ORE = registerBlock("gelwood_ore",

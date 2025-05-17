@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "efac:block/stripped_prima_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "efac:block/stripped_prima_wood"
+    },
+    "axis=z": {
+      "model": "efac:block/stripped_prima_wood",
+      "x": 90
+    }
+  }
+}

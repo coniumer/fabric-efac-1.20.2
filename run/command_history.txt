@@ -1,14 +1,3 @@
-/kill
-/gamemode creative
-/kill
-/gamemode survival
-/gamemode creative
-/kill
-/clear
-/kill
-/give @a efac:prima_button
-/give @a efac:prima_door
-/give @a efac:prima_fence
 /give @a efac:prima_fence_gate
 /give @a efac:prima_hanging_sign
 /give @a efac:prima_leaves
@@ -48,3 +37,14 @@
 /time set day
 /gamemode creative
 /gamemode survival
+/effect give @a minecraft:hunger
+/effect give @a minecraft:hunger 9 9
+/time set day
+/give @a efac:geumb_block
+/give @a efac:budding_geumb
+/give @a efac:geumb_cluster
+/gamerule randomTickSpeed 100
+/gamerule randomTickSpeed 1000
+/gamerule randomTickSpeed
+/gamerule randomTickSpeed3
+/gamerule randomTickSpeed 3
