@@ -99,5 +99,19 @@
     "sounds": [
       "efac:block/bed/ready_for_bed"
     ]
+  },
+  "wand_use": {
+    "subtitle": "efac.wand_use",
+    "sounds": [
+      "efac:item/wand/clumb1",
+      "efac:item/wand/clumb2",
+      "efac:item/wand/clumb3"
+    ]
+  },
+  "wand_fail": {
+    "subtitle": "efac.wand_fail",
+    "sounds": [
+      "efac:item/wand/fail"
+    ]
   }
 }

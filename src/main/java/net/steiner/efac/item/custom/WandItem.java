@@ -8,13 +8,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.steiner.efac.entity.custom.ClumbProjectileEntity;
 import net.steiner.efac.networking.ModMessages;
+import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.util.EntityDataSaver;
 
 public class WandItem extends Item {
@@ -37,25 +37,35 @@ public class WandItem extends Item {
         if (sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) ||
                 user.getAbilities().creativeMode) {
             clumbCast(world, user, itemStack);
-            if (!user.getAbilities().creativeMode) {
+            if (!user.getAbilities().creativeMode && !world.isClient) {
                 ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
             }
+        } else {
+            world.playSound(
+                    null,
+                    user.getX(),
+                    user.getY(),
+                    user.getZ(),
+                    ModSounds.WAND_FAIL,
+                    SoundCategory.PLAYERS,
+                    0.7F,
+                    0.85F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
+            );
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
     public void clumbCast(World world, PlayerEntity user, ItemStack itemStack) {
-        // TODO original sound for clumbing
         world.playSound(
                 null,
                 user.getX(),
                 user.getY(),
                 user.getZ(),
-                SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE,
-                SoundCategory.NEUTRAL,
+                ModSounds.WAND_USE,
+                SoundCategory.PLAYERS,
                 0.7F,
-                1.25F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
+                0.95F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
         if (!world.isClient) {
             ClumbProjectileEntity clumbProjectileEntity = new ClumbProjectileEntity(user, world, modMaterial);
@@ -69,6 +79,7 @@ public class WandItem extends Item {
         if (!user.getAbilities().creativeMode) {
             itemStack.damage(1, user, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         }
+
     }
 
 }

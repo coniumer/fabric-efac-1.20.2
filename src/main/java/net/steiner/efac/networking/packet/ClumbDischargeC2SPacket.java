@@ -5,7 +5,6 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
 import net.steiner.efac.util.ClumbData;
 import net.steiner.efac.util.EntityDataSaver;
 

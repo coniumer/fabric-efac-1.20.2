@@ -10,12 +10,13 @@ import net.steiner.efac.EFAC;
 import net.steiner.efac.util.EntityDataSaver;
 
 public class ClumbHudOverlay implements HudRenderCallback {
-    // TODO: better textures
     public static final Identifier EMPTY_CLUMB = new Identifier(EFAC.MOD_ID,
             "textures/gui/clumb/clumb_empty.png");
     public static final Identifier FULL_CLUMB = new Identifier(EFAC.MOD_ID,
             "textures/gui/clumb/clumb_full.png");
 
+
+    // TODO: Make it look better
     @Override
     public void onHudRender(DrawContext drawContext, float tickDelta) {
         int x = 0;
@@ -32,14 +33,14 @@ public class ClumbHudOverlay implements HudRenderCallback {
         RenderSystem.setShader(GameRenderer::getPositionTexProgram);
         drawContext.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
         for(int i = 0; i < 10; i++) {
-            drawContext.drawTexture(EMPTY_CLUMB, x - 94 + (i * 9), y - 54, 0, 0,
-                    12, 12, 12, 12);
+            drawContext.drawTexture(EMPTY_CLUMB, x - 94 + (i * 9), y - 48, 0, 0,
+                    8, 8, 8, 8);
         }
 
         for(int i = 0; i < 10; i++) {
             if(((EntityDataSaver)MinecraftClient.getInstance().player).getPersistentData().getInt("clumbCharges") > i) {
-                drawContext.drawTexture(FULL_CLUMB, x - 94 + (i * 9), y - 54, 0, 0,
-                        10, 10, 12, 12);
+                drawContext.drawTexture(FULL_CLUMB, x - 94 + (i * 9), y - 48, 0, 0,
+                        8, 8, 8, 8);
             } else {
                 break;
             }

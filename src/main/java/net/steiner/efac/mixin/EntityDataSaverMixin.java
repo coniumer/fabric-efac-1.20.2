@@ -25,7 +25,7 @@ public abstract class EntityDataSaverMixin implements EntityDataSaver {
         return persistentData;
     }
 
-    @Inject(method = "writeNbt", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;writeCustomDataToNbt(Lnet/minecraft/nbt/NbtCompound;)V"))
+    @Inject(method = "writeNbt", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;getVelocity()Lnet/minecraft/util/math/Vec3d;"))
     protected void injectWriteNbt(NbtCompound nbt, CallbackInfoReturnable<NbtCompound> info) {
         if (persistentData != null) {
             nbt.put("SteinerData", persistentData);
@@ -33,7 +33,7 @@ public abstract class EntityDataSaverMixin implements EntityDataSaver {
         }
     }
 
-    @Inject(method = "readNbt", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;readCustomDataFromNbt(Lnet/minecraft/nbt/NbtCompound;)V"))
+    @Inject(method = "readNbt", at = @At(value = "INVOKE", target = "Lnet/minecraft/nbt/NbtCompound;getList(Ljava/lang/String;I)Lnet/minecraft/nbt/NbtList;", ordinal = 0))
     protected void injectReadNbt(NbtCompound nbt, CallbackInfo info) {
         if (nbt.contains("SteinerData", 10)) {
             persistentData = nbt.getCompound("SteinerData");
