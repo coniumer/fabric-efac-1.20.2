@@ -10,7 +10,6 @@ import net.steiner.efac.util.EntityDataSaver;
 
 public class SetMaxClumbC2SPacket {
 
-    // TODO: use this somewhere and test it
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
         ClumbData.setMaxClumbCharges(((EntityDataSaver)player), buf.readInt());

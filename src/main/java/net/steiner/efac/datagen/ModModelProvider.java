@@ -69,7 +69,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ALB_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIT_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUB_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RANDOM_SAUCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.YUMMY_SAUCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AWESOME_SAUCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EPIC_SAUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GEUMB_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CLUMBY_GEUMB_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ALBY_GEUMB_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CITRY_GEUMB_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBIED_GEUMB_SHARD, Models.GENERATED);
+
+        itemModelGenerator.register(ModBlocks.GEUMB_CLUSTER.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.LARGE_GEUMB_BUD.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.MEDIUM_GEUMB_BUD.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.SMALL_GEUMB_BUD.asItem(), Models.GENERATED);
+
         itemModelGenerator.register(ModItems.ALB_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIT_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUB_CLUMB_MATERIA, Models.GENERATED);

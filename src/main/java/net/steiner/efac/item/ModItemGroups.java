@@ -23,7 +23,15 @@ public class ModItemGroups {
                         entries.add(ModItems.ALB_GEM);
                         entries.add(ModItems.CIT_GEM);
                         entries.add(ModItems.RUB_GEM);
+                        entries.add(ModItems.RANDOM_SAUCE);
+                        entries.add(ModItems.YUMMY_SAUCE);
+                        entries.add(ModItems.AWESOME_SAUCE);
+                        entries.add(ModItems.EPIC_SAUCE);
                         entries.add(ModItems.GEUMB_SHARD);
+                        entries.add(ModItems.CLUMBY_GEUMB_SHARD);
+                        entries.add(ModItems.ALBY_GEUMB_SHARD);
+                        entries.add(ModItems.CITRY_GEUMB_SHARD);
+                        entries.add(ModItems.RUBIED_GEUMB_SHARD);
                         entries.add(ModItems.GELWOOD_ORB);
                             //foods
                         entries.add(ModItems.CLUMB_MATERIA);

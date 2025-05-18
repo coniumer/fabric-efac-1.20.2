@@ -13,11 +13,11 @@ public class ClumbData {
     public static void addClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
         int clumbCharges = nbt.getInt("clumbCharges");
-        // TODO: variable max amount
         clumbCharges = MathHelper.clamp(clumbCharges + amount, 0, max);
         nbt.putInt("clumbCharges", clumbCharges);
 
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
+        syncMaxClumbCharges(max, (ServerPlayerEntity)player);
 
         System.out.println("Clumb charges equals: " +
                 player.getPersistentData().getInt("clumbCharges"));
@@ -26,20 +26,31 @@ public class ClumbData {
     public static void removeClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
         int clumbCharges = nbt.getInt("clumbCharges");
-        // TODO: variable max amount
         clumbCharges = MathHelper.clamp(clumbCharges - amount, 0, max);
         nbt.putInt("clumbCharges", clumbCharges);
 
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
+        syncMaxClumbCharges(max, (ServerPlayerEntity)player);
 
         System.out.println("Clumb charges equals: " +
                 player.getPersistentData().getInt("clumbCharges"));
+    }
+
+    public static void setClumbCharges(EntityDataSaver player, int amount, int max) {
+        NbtCompound nbt = player.getPersistentData();
+        int newClumbCharges = MathHelper.clamp(amount, 0, max);
+        nbt.putInt("clumbCharges", newClumbCharges);
+
+        syncClumbCharges(newClumbCharges, (ServerPlayerEntity)player);
+        syncMaxClumbCharges(max, (ServerPlayerEntity)player);
     }
 
     public static void setMaxClumbCharges(EntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int newMaxClumbCharges = MathHelper.clamp(amount, 5, 40);
         nbt.putInt("maxClumbCharges", newMaxClumbCharges);
+
+        syncMaxClumbCharges(newMaxClumbCharges, (ServerPlayerEntity)player);
     }
 
     public static void syncClumbCharges(int clumbCharges, ServerPlayerEntity player) {

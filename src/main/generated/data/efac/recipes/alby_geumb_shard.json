@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "efac:geumb_shard"
+    },
+    "M": {
+      "item": "efac:alb_clumb_materia"
+    },
+    "S": {
+      "item": "efac:yummy_sauce"
+    }
+  },
+  "pattern": [
+    "SMS",
+    "MGM",
+    "SMS"
+  ],
+  "result": {
+    "item": "efac:alby_geumb_shard"
+  },
+  "show_notification": true
+}

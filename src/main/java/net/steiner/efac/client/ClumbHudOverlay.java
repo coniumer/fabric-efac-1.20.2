@@ -29,7 +29,6 @@ public class ClumbHudOverlay implements HudRenderCallback {
     Random random = new Random(seed);
     int[] mults = setMults(random, 20);
 
-    // TODO: Make it look better
     @Override
     public void onHudRender(DrawContext drawContext, float tickDelta) {
         int x = 0;
@@ -46,6 +45,14 @@ public class ClumbHudOverlay implements HudRenderCallback {
 
         RenderSystem.setShader(GameRenderer::getPositionTexProgram);
         drawContext.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
+
+        if (!MinecraftClient.getInstance().player.getAbilities().creativeMode && !MinecraftClient.getInstance().player.isSpectator()) {
+            drawSurvivalHud(drawContext, x, y);
+        }
+
+    }
+
+    private void drawSurvivalHud(DrawContext drawContext, int x, int y) {
         for(int i = 0; i < 10; i++) {
             int j = i + 10;
             drawContext.drawTexture(EMPTY_CLUMB, x + 192 - (i * mults[i]), y - 16 - (i * mults[j]), 0, 0,

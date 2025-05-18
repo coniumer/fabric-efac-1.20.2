@@ -1,4 +1,6 @@
-// 1.20.2	2025-05-17T13:51:18.241357	EFAC/Recipes
+// 1.20.2	2025-05-18T16:14:54.18336	EFAC/Recipes
+5456a895970388d1b5aaa59bab06e721c1a464ad data/efac/recipes/alby_geumb_shard.json
+b1198e4f438c86760b4d714abbb4a604439b0920 data/efac/advancements/recipes/misc/rubied_geumb_shard.json
 b077a22a31e32d769b7adb42ea084b3f76fffa16 data/efac/advancements/recipes/misc/compact_dom.json
 d44da9152973eb824f963d9ad17b472662d73967 data/efac/recipes/clumbelon.json
 57181c4f9cea9a0baa0ee3748f98530abf8f2686 data/efac/recipes/prima_pressure_plate.json
@@ -9,6 +11,7 @@ c0638f1b343ba1b5ac2e64b252506837e14bed60 data/efac/advancements/recipes/misc/sli
 5c8ff80bade6e023876b3c6c3cd4c61b52fa5067 data/efac/advancements/recipes/decorations/gelwood_fence.json
 679b6a38d3f8dfd9a844850f7dbdb36077f87252 data/efac/recipes/prima_fence.json
 2fccb5d3cb25f38d96deb8b5077491df992d1262 data/efac/recipes/prima_stairs.json
+99d54b268997408ecd397068eafbeebd4c699b54 data/efac/recipes/rubied_geumb_shard.json
 c84615d6f58315338368bb57199e6ca60ef2fa8d data/efac/advancements/recipes/food/gold_clumble.json
 4ce987f557980c204f6893b0a7549de7cdc89fcc data/efac/advancements/recipes/food/clumbelon.json
 67051f67d879280d26304582308bf43d6ad98802 data/efac/recipes/gold_clumble.json
@@ -43,7 +46,10 @@ c9eabf206b820810c3c77feef303dc359917d06f data/efac/recipes/cit_clumb_materia.jso
 9ea6031eaf36a9d404aecfff43ac821b20c255d7 data/efac/recipes/gelwood_door.json
 4e86a1e4231fbd30fc178768b632745d49da4bcf data/efac/advancements/recipes/misc/clumb_materia_from_blasting_compact_dom.json
 afcbb57d919a433f34614774a7b9be8b3aef4b3b data/efac/advancements/recipes/decorations/slipulon_block.json
+21e97b0d4a6cb65a4c56096163498a748fd9606e data/efac/advancements/recipes/misc/alby_geumb_shard.json
 afb2602ba55eab9707fcbb42143608c1351f71d0 data/efac/recipes/slipulon_ingot_from_smelting_slipulon_ore.json
+09e692963c535c3c35cbf990fa3c8cf5deb8eaa1 data/efac/recipes/citry_geumb_shard.json
+7b74bf0222520474dfb665006d0be4b3b76d08b8 data/efac/advancements/recipes/misc/clumby_geumb_shard.json
 1f5c163f5ce74ed9a3d10b6435f9fc6e0e7e976f data/efac/recipes/gelwood_slab.json
 56ef9f888c517eb8b3a2ce9fe96bd319976a5beb data/efac/advancements/recipes/food/clumbkie.json
 e1ea6ab09b256de642f614b0fb37801a20e9a6a0 data/efac/recipes/gelwood_fence_gate.json
@@ -56,6 +62,7 @@ f8e59aebe2217a09b7b084593043467fd2a6a5a0 data/efac/advancements/recipes/building
 7dae53c96b439ce54d81c7a3f13c837ca47d48c9 data/efac/recipes/clumbkie.json
 5be4cd46a17bb905946c9b96b27f1cbe369f229d data/efac/advancements/recipes/misc/rub_clumb_wand.json
 307ae1ece45b2a763218ef3f8f75c4b7f64b09b4 data/efac/recipes/prima_slab.json
+98e6814496ed579a090b5f1ea2a7c70dacaff39c data/efac/recipes/clumby_geumb_shard.json
 956dd557c4a7beab0d29265db645087b98793a83 data/efac/advancements/recipes/redstone/gelwood_trapdoor.json
 33cc023003192aba679675dcc941d3fbd3affecf data/efac/advancements/recipes/food/rub_clumb_materia.json
 992975d731d13a713dcbf827a7f84fe8f590ad08 data/efac/recipes/clumb_materia_from_blasting_compact_dom.json
@@ -71,6 +78,7 @@ b9deb0308b00176698d4cfa00415c1feddc1100c data/efac/advancements/recipes/food/blu
 ee284ef581d3db3e9adc51a6057bb94fc21b6521 data/efac/recipes/gelwood_orb.json
 b49596ac920af8e1366dee490d0c3b82be5f3bbb data/efac/advancements/recipes/building_blocks/prima_slab.json
 7fa877f0456f9c778a7970cfa52d289013dd4d08 data/efac/advancements/recipes/misc/alb_clumb_wand.json
+dfca6f34d9fe9deb0db5237bd57802c44c9c96c9 data/efac/advancements/recipes/misc/citry_geumb_shard.json
 46de08c95f28034cbe0f81f50c307f5fa8f31673 data/efac/advancements/recipes/building_blocks/gelwood_stairs.json
 0315a7a93a939f9121a4d1bfc12a7ceee8dba53d data/efac/recipes/dirt.json
 3f848cbb7c5f95d82b9715b60a06b5624aca41f3 data/efac/advancements/recipes/misc/wood_clumb_wand.json

@@ -9,6 +9,8 @@ import net.steiner.efac.util.EntityDataSaver;
 public class ClumbSyncS2CPacket {
     public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
-        ((EntityDataSaver)client.player).getPersistentData().putInt("clumbCharges", buf.readInt());
+        client.execute(() -> {
+            ((EntityDataSaver)client.player).getPersistentData().putInt("clumbCharges", buf.readInt());
+        });
     }
 }

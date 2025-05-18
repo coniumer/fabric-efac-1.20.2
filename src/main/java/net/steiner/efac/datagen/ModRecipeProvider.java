@@ -195,8 +195,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
                 .criterion(hasItem(ModItems.RUB_CLUMB_MATERIA), conditionsFromItem(ModItems.RUB_CLUMB_MATERIA))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUB_CLUMB_WAND)));
-        //gem clumbs
 
+        //gem clumbs
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ALB_CLUMB_MATERIA, 2)
                 .pattern(" G ")
                 .pattern("GCG")
@@ -224,6 +224,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
                 .criterion(hasItem(ModItems.RUB_GEM), conditionsFromItem(ModItems.RUB_GEM))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUB_CLUMB_MATERIA)));
+
+        //geumb variants
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CLUMBY_GEUMB_SHARD, 1)
+                .pattern("SMS")
+                .pattern("MGM")
+                .pattern("SMS")
+                .input('S', ModItems.RANDOM_SAUCE)
+                .input('M', ModItems.CLUMB_MATERIA)
+                .input('G', ModItems.GEUMB_SHARD)
+                .criterion(hasItem(ModItems.GEUMB_SHARD), conditionsFromItem(ModItems.GEUMB_SHARD))
+                .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.RANDOM_SAUCE), conditionsFromItem(ModItems.RANDOM_SAUCE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CLUMBY_GEUMB_SHARD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ALBY_GEUMB_SHARD, 1)
+                .pattern("SMS")
+                .pattern("MGM")
+                .pattern("SMS")
+                .input('S', ModItems.YUMMY_SAUCE)
+                .input('M', ModItems.ALB_CLUMB_MATERIA)
+                .input('G', ModItems.GEUMB_SHARD)
+                .criterion(hasItem(ModItems.GEUMB_SHARD), conditionsFromItem(ModItems.GEUMB_SHARD))
+                .criterion(hasItem(ModItems.ALB_CLUMB_MATERIA), conditionsFromItem(ModItems.ALB_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.YUMMY_SAUCE), conditionsFromItem(ModItems.YUMMY_SAUCE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ALBY_GEUMB_SHARD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CITRY_GEUMB_SHARD, 1)
+                .pattern("SMS")
+                .pattern("MGM")
+                .pattern("SMS")
+                .input('S', ModItems.AWESOME_SAUCE)
+                .input('M', ModItems.CIT_CLUMB_MATERIA)
+                .input('G', ModItems.GEUMB_SHARD)
+                .criterion(hasItem(ModItems.GEUMB_SHARD), conditionsFromItem(ModItems.GEUMB_SHARD))
+                .criterion(hasItem(ModItems.CIT_CLUMB_MATERIA), conditionsFromItem(ModItems.CIT_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.AWESOME_SAUCE), conditionsFromItem(ModItems.AWESOME_SAUCE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CITRY_GEUMB_SHARD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBIED_GEUMB_SHARD, 1)
+                .pattern("SMS")
+                .pattern("MGM")
+                .pattern("SMS")
+                .input('S', ModItems.EPIC_SAUCE)
+                .input('M', ModItems.RUB_CLUMB_MATERIA)
+                .input('G', ModItems.GEUMB_SHARD)
+                .criterion(hasItem(ModItems.GEUMB_SHARD), conditionsFromItem(ModItems.GEUMB_SHARD))
+                .criterion(hasItem(ModItems.RUB_CLUMB_MATERIA), conditionsFromItem(ModItems.RUB_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.EPIC_SAUCE), conditionsFromItem(ModItems.EPIC_SAUCE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUBIED_GEUMB_SHARD)));
 
         //misc
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CLUMBVESTIGATOR, 1)
