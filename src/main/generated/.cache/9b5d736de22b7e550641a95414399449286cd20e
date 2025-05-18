@@ -1,9 +1,9 @@
-// 1.20.2	2025-05-17T12:44:17.985442	EFAC/Recipes
+// 1.20.2	2025-05-17T13:51:18.241357	EFAC/Recipes
 b077a22a31e32d769b7adb42ea084b3f76fffa16 data/efac/advancements/recipes/misc/compact_dom.json
 d44da9152973eb824f963d9ad17b472662d73967 data/efac/recipes/clumbelon.json
 57181c4f9cea9a0baa0ee3748f98530abf8f2686 data/efac/recipes/prima_pressure_plate.json
-f59a5debba989b0839dcb4bef3c0d9ec9ccca01a data/efac/advancements/recipes/redstone/prima_trapdoor.json
 f475bc5a42c2c61610f76b96e5619ac8fcb82932 data/efac/advancements/recipes/building_blocks/gelwood_slab.json
+f59a5debba989b0839dcb4bef3c0d9ec9ccca01a data/efac/advancements/recipes/redstone/prima_trapdoor.json
 e56cdb79ce48bb81da1b9f7d959cf7fcabe12c42 data/efac/advancements/recipes/misc/cit_clumb_wand.json
 c0638f1b343ba1b5ac2e64b252506837e14bed60 data/efac/advancements/recipes/misc/slipulon_ingot_from_blasting_raw_slipulon.json
 5c8ff80bade6e023876b3c6c3cd4c61b52fa5067 data/efac/advancements/recipes/decorations/gelwood_fence.json

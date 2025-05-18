@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ALB_GEM);
                         entries.add(ModItems.CIT_GEM);
                         entries.add(ModItems.RUB_GEM);
+                        entries.add(ModItems.GEUMB_SHARD);
                         entries.add(ModItems.GELWOOD_ORB);
                             //foods
                         entries.add(ModItems.CLUMB_MATERIA);
@@ -53,6 +54,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ALB_GEM_ORE);
                         entries.add(ModBlocks.CIT_GEM_ORE);
                         entries.add(ModBlocks.RUB_GEM_ORE);
+                        entries.add(ModBlocks.GEUMB_BLOCK);
+                        entries.add(ModBlocks.BUDDING_GEUMB);
+                        entries.add(ModBlocks.GEUMB_CLUSTER);
                         entries.add(ModBlocks.GELWOOD_ORE);
                         entries.add(ModBlocks.GELWOOD_PLANKS);
                         entries.add(ModBlocks.GELWOOD_STAIRS);

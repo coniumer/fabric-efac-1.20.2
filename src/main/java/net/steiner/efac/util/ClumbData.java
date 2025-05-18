@@ -10,30 +10,48 @@ import net.steiner.efac.networking.ModMessages;
 
 public class ClumbData {
 
-    public static void addClumbCharges(EntityDataSaver player, int amount) {
+    public static void addClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
         int clumbCharges = nbt.getInt("clumbCharges");
         // TODO: variable max amount
-        clumbCharges = MathHelper.clamp(clumbCharges + amount, 0, 10);
+        clumbCharges = MathHelper.clamp(clumbCharges + amount, 0, max);
         nbt.putInt("clumbCharges", clumbCharges);
 
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
+
+        System.out.println("Clumb charges equals: " +
+                player.getPersistentData().getInt("clumbCharges"));
     }
 
-    public static void removeClumbCharges(EntityDataSaver player, int amount) {
+    public static void removeClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
         int clumbCharges = nbt.getInt("clumbCharges");
         // TODO: variable max amount
-        clumbCharges = MathHelper.clamp(clumbCharges - amount, 0, 10);
+        clumbCharges = MathHelper.clamp(clumbCharges - amount, 0, max);
         nbt.putInt("clumbCharges", clumbCharges);
 
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
+
+        System.out.println("Clumb charges equals: " +
+                player.getPersistentData().getInt("clumbCharges"));
+    }
+
+    public static void setMaxClumbCharges(EntityDataSaver player, int amount) {
+        NbtCompound nbt = player.getPersistentData();
+        int newMaxClumbCharges = MathHelper.clamp(amount, 5, 40);
+        nbt.putInt("maxClumbCharges", newMaxClumbCharges);
     }
 
     public static void syncClumbCharges(int clumbCharges, ServerPlayerEntity player) {
         PacketByteBuf buffer = PacketByteBufs.create();
         buffer.writeInt(clumbCharges);
         ServerPlayNetworking.send(player, ModMessages.CLUMB_SYNC_ID, buffer);
+    }
+
+    public static void syncMaxClumbCharges(int maxClumbCharges, ServerPlayerEntity player) {
+        PacketByteBuf buffer = PacketByteBufs.create();
+        buffer.writeInt(maxClumbCharges);
+        ServerPlayNetworking.send(player, ModMessages.MAX_CLUMB_SYNC_ID, buffer);
     }
 
 }

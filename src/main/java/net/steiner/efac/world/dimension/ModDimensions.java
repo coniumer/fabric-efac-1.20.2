@@ -38,7 +38,7 @@ public class ModDimensions {
                 false, // hasSkyLight
                 true, // hasCeiling
                 false, // ultraWarm
-                true, // natural
+                false, // natural
                 1.0, // coordinateScale
                 false, // bedWorks
                 false, // respawnAnchorWorks

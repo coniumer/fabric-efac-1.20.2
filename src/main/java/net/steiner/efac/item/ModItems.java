@@ -17,7 +17,7 @@ public class ModItems {
     public static final Item ALB_GEM = registerItem("alb_gem", new Item(new FabricItemSettings()));
     public static final Item CIT_GEM = registerItem("cit_gem", new Item(new FabricItemSettings()));
     public static final Item RUB_GEM = registerItem("rub_gem", new Item(new FabricItemSettings()));
-    public static final Item GEUMB_SHARD = registerItem("geumb_shard", new Item(new FabricItemSettings()));
+    public static final Item GEUMB_SHARD = registerItem("geumb_shard", new GeumbItem(new FabricItemSettings()));
     public static final Item GELWOOD_ORB = registerItem("gelwood_orb", new Item(new FabricItemSettings()));
     //foods + crops
     public static final Item CLUMB_MATERIA = registerItem("clumb_materia", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMB_MATERIA)));

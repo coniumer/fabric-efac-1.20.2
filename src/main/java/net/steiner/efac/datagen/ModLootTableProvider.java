@@ -70,9 +70,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         //geumbs
         addDrop(ModBlocks.GEUMB_BLOCK);
-        dropsWithSilkTouch(ModBlocks.LARGE_GEUMB_BUD);
-        dropsWithSilkTouch(ModBlocks.MEDIUM_GEUMB_BUD);
-        dropsWithSilkTouch(ModBlocks.SMALL_GEUMB_BUD);
+        addDropWithSilkTouch(ModBlocks.LARGE_GEUMB_BUD);
+        addDropWithSilkTouch(ModBlocks.MEDIUM_GEUMB_BUD);
+        addDropWithSilkTouch(ModBlocks.SMALL_GEUMB_BUD);
+        addDropWithSilkTouch(ModBlocks.BUDDING_GEUMB);
         addDrop(
                 ModBlocks.GEUMB_CLUSTER,
                 block -> dropsWithSilkTouch(

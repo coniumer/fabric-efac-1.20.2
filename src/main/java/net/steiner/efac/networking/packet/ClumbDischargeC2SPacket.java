@@ -12,7 +12,7 @@ public class ClumbDischargeC2SPacket {
 
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
-        ClumbData.removeClumbCharges((EntityDataSaver)player, 1);
+        ClumbData.removeClumbCharges((EntityDataSaver)player, 1, ((EntityDataSaver)player).getPersistentData().getInt("maxClumbCharges"));
         ClumbData.syncClumbCharges(((EntityDataSaver)player).getPersistentData().getInt("clumbCharges"), player);
     }
 }
