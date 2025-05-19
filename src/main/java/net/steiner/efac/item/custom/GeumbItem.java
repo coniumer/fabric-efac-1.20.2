@@ -44,8 +44,10 @@ public class GeumbItem extends Item {
 
         if (!world.isClient) {
             ClientPlayNetworking.send(ModMessages.SET_MAX_CLUMB_ID, buffer);
+            /*
             System.out.println("Max clumb charges equals: " +
                     sPlayer.getPersistentData().getInt("maxClumbCharges"));
+             */
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
