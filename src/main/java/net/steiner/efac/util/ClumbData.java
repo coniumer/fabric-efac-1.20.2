@@ -58,15 +58,21 @@ public class ClumbData {
     }
 
     public static void syncClumbCharges(int clumbCharges, ServerPlayerEntity player) {
-        PacketByteBuf buffer = PacketByteBufs.create();
-        buffer.writeInt(clumbCharges);
-        ServerPlayNetworking.send(player, ModMessages.CLUMB_SYNC_ID, buffer);
+        EntityDataSaver sPlayer = (EntityDataSaver)player;
+        //if (!(sPlayer.getPersistentData().getInt("clumbCharges") == 0)) {
+            PacketByteBuf buffer = PacketByteBufs.create();
+            buffer.writeInt(clumbCharges);
+            ServerPlayNetworking.send(player, ModMessages.CLUMB_SYNC_ID, buffer);
+        //}
     }
 
     public static void syncMaxClumbCharges(int maxClumbCharges, ServerPlayerEntity player) {
-        PacketByteBuf buffer = PacketByteBufs.create();
-        buffer.writeInt(maxClumbCharges);
-        ServerPlayNetworking.send(player, ModMessages.MAX_CLUMB_SYNC_ID, buffer);
+        EntityDataSaver sPlayer = (EntityDataSaver)player;
+        //if (!(sPlayer.getPersistentData().getInt("clumbCharges") == 0)) {
+            PacketByteBuf buffer = PacketByteBufs.create();
+            buffer.writeInt(maxClumbCharges);
+            ServerPlayNetworking.send(player, ModMessages.MAX_CLUMB_SYNC_ID, buffer);
+        //}
     }
 
 }

@@ -10,7 +10,11 @@ public class MaxClumbSyncS2CPacket {
     public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
         client.execute(() -> {
-            ((EntityDataSaver)client.player).getPersistentData().putInt("maxClumbCharges", buf.readInt());
+            if (((EntityDataSaver)client.player).getPersistentData() != null) {
+                ((EntityDataSaver) client.player).getPersistentData().putInt("maxClumbCharges", buf.readInt());
+            } else {
+                ((EntityDataSaver) client.player).getPersistentData().putInt("maxClumbCharges", 5);
+            }
         });
     }
 }

@@ -1,11 +1,3 @@
-/gamemode survival
-/give @a efac:clumbkie 128
-/give Player350 efac:alb_clumb_materia
-/give Player350 efac:clumbkie
-/give Player350 efac:geumb_shard
-/give Player350 efac:geumb_shard 63
-/give Player350 efac:clumbkie
-/give Player350 efac:wood_clumb_wand
 /give Player350 efac:clumbkie 64
 /give @a efac:clumbkie 64
 /give @a efac:geumb_shard 64
@@ -48,3 +40,11 @@
 /give @a minecraft:lily_pad 64
 /give @a minecraft:torch
 /give @a minecraft:ender_pearl 64
+/gamemode survival
+/give @a efac:clumbkie
+/give @a efac:clumbkie 64
+/give @a efac:rub_clumb_wand
+/give @a efac:clumbkie 64
+/execute in efac:tunneldim run tp @a ~ ~ ~
+/kill
+/give @a efac:alby_geumb_shard

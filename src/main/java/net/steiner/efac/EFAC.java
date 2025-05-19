@@ -2,15 +2,11 @@ package net.steiner.efac;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.block.ModBlocks;
-import net.steiner.efac.util.ClumbData;
-import net.steiner.efac.util.EntityDataSaver;
 import net.steiner.efac.util.ModRegistries;
 import net.steiner.efac.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -42,13 +38,13 @@ public class EFAC implements ModInitializer {
 				.tintColor(0x9baaa2)
 				.registerPortal();
 
-		ServerPlayConnectionEvents.JOIN.register(((handler, sender, server) -> {
-			ServerPlayerEntity player = handler.player;
-			EntityDataSaver sPlayer = (EntityDataSaver)handler.player;
-			ClumbData.setMaxClumbCharges(sPlayer, sPlayer.getPersistentData().getInt("maxClumbCharges"));
-			ClumbData.syncMaxClumbCharges((sPlayer.getPersistentData().getInt("maxClumbCharges")), player);
-			ClumbData.syncClumbCharges((sPlayer.getPersistentData().getInt("clumbCharges")), player);
-		}));
+		//ServerPlayConnectionEvents.JOIN.register(((handler, sender, server) -> {
+		//	ServerPlayerEntity player = handler.player;
+		//	EntityDataSaver sPlayer = (EntityDataSaver)handler.player;
+		//	ClumbData.setMaxClumbCharges(sPlayer, sPlayer.getPersistentData().getInt("maxClumbCharges"));
+		//	ClumbData.syncMaxClumbCharges((sPlayer.getPersistentData().getInt("maxClumbCharges")), player);
+		//	ClumbData.syncClumbCharges((sPlayer.getPersistentData().getInt("clumbCharges")), player);
+		//}));
 
 	}
 }
