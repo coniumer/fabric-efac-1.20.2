@@ -15,7 +15,6 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
-import net.steiner.efac.entity.ModEntities;
 import net.steiner.efac.item.ModItems;
 import net.steiner.efac.item.custom.ModToolMaterial;
 
@@ -25,8 +24,8 @@ public class ClumbProjectileEntity extends ThrownItemEntity {
         super(entityType, world);
     }
 
-    public ClumbProjectileEntity(LivingEntity livingEntity, World world, ModToolMaterial modToolMaterial) {
-        super(ModEntities.CLUMB_PROJECTILE, livingEntity, world);
+    public ClumbProjectileEntity(EntityType<? extends ThrownItemEntity> entityType, LivingEntity livingEntity, World world, ModToolMaterial modToolMaterial) {
+        super(entityType, livingEntity, world);
         attackDamage = modToolMaterial.getAttackDamage();
     }
 

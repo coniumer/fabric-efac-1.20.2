@@ -10,9 +10,7 @@ public class ClumbSyncS2CPacket {
     public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
         client.execute(() -> {
-            if (((EntityDataSaver)client.player).getPersistentData() != null) {
-                ((EntityDataSaver) client.player).getPersistentData().putInt("clumbCharges", buf.readInt());
-            }
+            ((EntityDataSaver) client.player).getPersistentData().putInt("clumbCharges", buf.readInt());
         });
     }
 }

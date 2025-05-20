@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class PlayerEatMixin {
     @Inject(method = "eatFood", at = @At("TAIL"))
     protected void injectOnEat(World world, ItemStack stack, CallbackInfoReturnable<ItemStack> info) {
-        if (stack.isIn(ModTags.Items.IS_CLUMB_FOOD) && !world.isClient) {
+        if (stack.isIn(ModTags.Items.IS_CLUMB_FOOD) && world.isClient) {
             ClientPlayNetworking.send(ModMessages.CLUMB_RECHARGE_ID, PacketByteBufs.create());
         }
     }

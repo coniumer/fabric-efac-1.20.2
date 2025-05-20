@@ -12,6 +12,7 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.steiner.efac.entity.ModEntities;
 import net.steiner.efac.entity.custom.ClumbProjectileEntity;
 import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.sound.ModSounds;
@@ -36,8 +37,10 @@ public class WandItem extends Item {
 
         if (sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) ||
                 user.getAbilities().creativeMode) {
-            clumbCast(world, user, itemStack);
-            if (!user.getAbilities().creativeMode && !world.isClient) {
+            if (!world.isClient) {
+                clumbCast(world, user, itemStack);
+            }
+            if (!user.getAbilities().creativeMode && world.isClient) {
                 ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
             }
         } else {
@@ -67,12 +70,11 @@ public class WandItem extends Item {
                 0.7F,
                 0.95F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
-        if (!world.isClient) {
-            ClumbProjectileEntity clumbProjectileEntity = new ClumbProjectileEntity(user, world, modMaterial);
+
+            ClumbProjectileEntity clumbProjectileEntity = new ClumbProjectileEntity(ModEntities.CLUMB_PROJECTILE, user, world, modMaterial);
             clumbProjectileEntity.setItem(itemStack);
             clumbProjectileEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.2F, 0.5F);
             world.spawnEntity(clumbProjectileEntity);
-        }
 
         user.getItemCooldownManager().set(this, modMaterial.getCooldown());
         user.incrementStat(Stats.USED.getOrCreateStat(this));

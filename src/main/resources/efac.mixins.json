@@ -3,11 +3,10 @@
 	"package": "net.steiner.efac.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-
+		"EntityDataSaverMixin"
 	],
 	"client": [
 		"ReadyForBedMixin",
-		"EntityDataSaverMixin",
 		"PlayerEatMixin"
 	],
 	"injectors": {
