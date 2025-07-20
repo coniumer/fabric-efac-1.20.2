@@ -55,7 +55,6 @@ public class ModItemGroups {
                         entries.add(ModItems.RUB_CLUMB_WAND);
                                 //misc
                         entries.add(ModItems.CLUMBVESTIGATOR);
-
                         // Blocks
                         entries.add(ModBlocks.SLIPULON_ORE);
                         entries.add(ModBlocks.SLIPULON_BLOCK);

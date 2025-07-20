@@ -19,10 +19,6 @@ public class ClumbData {
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
         syncMaxClumbCharges(max, (ServerPlayerEntity)player);
 
-        /*
-        System.out.println("Clumb charges equals: " +
-                player.getPersistentData().getInt("clumbCharges"));
-         */
     }
 
     public static void removeClumbCharges(EntityDataSaver player, int amount, int max) {
@@ -34,10 +30,6 @@ public class ClumbData {
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
         syncMaxClumbCharges(max, (ServerPlayerEntity)player);
 
-        /*
-        System.out.println("Clumb charges equals: " +
-                player.getPersistentData().getInt("clumbCharges"));
-         */
     }
 
     public static void setClumbCharges(EntityDataSaver player, int amount, int max) {

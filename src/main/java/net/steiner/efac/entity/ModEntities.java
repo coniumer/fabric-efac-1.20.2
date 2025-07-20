@@ -14,6 +14,11 @@ public class ModEntities {
     public static final EntityType<ClumbProjectileEntity> CLUMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(EFAC.MOD_ID, "clumb_projectile"),
             FabricEntityTypeBuilder.<ClumbProjectileEntity>create(SpawnGroup.MISC, ClumbProjectileEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build()
+                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f))
+                    .trackRangeBlocks(4).trackedUpdateRate(10)
+                    .build()
     );
+    public static void registerModEntities() {
+        EFAC.LOGGER.info("Registering Mod Entities for " + EFAC.MOD_ID);
+    }
 }

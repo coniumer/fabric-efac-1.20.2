@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.MathHelper;
@@ -16,8 +17,14 @@ import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.util.EntityDataSaver;
 
 public class GeumbItem extends Item {
-    public GeumbItem(Settings settings) {
+    private final GeumbEnum geumbEnum;
+    public static boolean canUse(int maxCharges, int minToUse, int maxToUse) {
+        return maxCharges >= minToUse && maxCharges <= maxToUse;
+    }
+
+    public GeumbItem(GeumbEnum geumbEnum, Settings settings) {
         super(settings);
+        this.geumbEnum = geumbEnum;
     }
 
     @Override
@@ -26,6 +33,29 @@ public class GeumbItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         PacketByteBuf buffer = PacketByteBufs.create();
 
+        if (canUse(sPlayer.getPersistentData().getInt("maxClumbCharges"), geumbEnum.getMinToUse(), geumbEnum.getMaxToUse())) {
+            addMaxCharges(world, user, sPlayer, buffer);
+            user.incrementStat(Stats.USED.getOrCreateStat(this));
+            if (!user.getAbilities().creativeMode) {
+                itemStack.decrement(1);
+            }
+        } else {
+            world.playSound(
+                    null,
+                    user.getX(),
+                    user.getY(),
+                    user.getZ(),
+                    ModSounds.WAND_FAIL,
+                    SoundCategory.PLAYERS,
+                    0.7F,
+                    0.65F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
+            );
+        }
+
+        return TypedActionResult.success(itemStack, world.isClient());
+    }
+
+    public void addMaxCharges (World world, PlayerEntity user, EntityDataSaver sPlayer, PacketByteBuf buffer) {
         world.playSound(
                 null,
                 user.getX(),
@@ -37,18 +67,13 @@ public class GeumbItem extends Item {
                 0.65F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
 
-
         buffer.writeInt(
                 (MathHelper.clamp(sPlayer.getPersistentData().getInt("maxClumbCharges"), 5, 40) + 1)
         );
 
         if (world.isClient) {
             ClientPlayNetworking.send(ModMessages.SET_MAX_CLUMB_ID, buffer);
-            /*
-            System.out.println("Max clumb charges equals: " +
-                    sPlayer.getPersistentData().getInt("maxClumbCharges"));
-             */
         }
-        return TypedActionResult.success(itemStack, world.isClient());
     }
+
 }

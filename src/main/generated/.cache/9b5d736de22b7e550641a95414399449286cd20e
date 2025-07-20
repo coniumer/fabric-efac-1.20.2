@@ -1,4 +1,4 @@
-// 1.20.2	2025-05-18T16:14:54.18336	EFAC/Recipes
+// 1.20.2	2025-07-19T15:13:57.993084	EFAC/Recipes
 5456a895970388d1b5aaa59bab06e721c1a464ad data/efac/recipes/alby_geumb_shard.json
 b1198e4f438c86760b4d714abbb4a604439b0920 data/efac/advancements/recipes/misc/rubied_geumb_shard.json
 b077a22a31e32d769b7adb42ea084b3f76fffa16 data/efac/advancements/recipes/misc/compact_dom.json
@@ -79,8 +79,8 @@ ee284ef581d3db3e9adc51a6057bb94fc21b6521 data/efac/recipes/gelwood_orb.json
 b49596ac920af8e1366dee490d0c3b82be5f3bbb data/efac/advancements/recipes/building_blocks/prima_slab.json
 7fa877f0456f9c778a7970cfa52d289013dd4d08 data/efac/advancements/recipes/misc/alb_clumb_wand.json
 dfca6f34d9fe9deb0db5237bd57802c44c9c96c9 data/efac/advancements/recipes/misc/citry_geumb_shard.json
-46de08c95f28034cbe0f81f50c307f5fa8f31673 data/efac/advancements/recipes/building_blocks/gelwood_stairs.json
 0315a7a93a939f9121a4d1bfc12a7ceee8dba53d data/efac/recipes/dirt.json
+46de08c95f28034cbe0f81f50c307f5fa8f31673 data/efac/advancements/recipes/building_blocks/gelwood_stairs.json
 3f848cbb7c5f95d82b9715b60a06b5624aca41f3 data/efac/advancements/recipes/misc/wood_clumb_wand.json
 e25193a98b607cf85aa3cb8f9ebd8dd3e370ee48 data/efac/recipes/clumb_materia_from_smelting_compact_dom.json
 a436773ac632da08a985cb50b5b3a59ba252a7ba data/efac/recipes/slipulon_ingot_from_smelting_raw_slipulon.json

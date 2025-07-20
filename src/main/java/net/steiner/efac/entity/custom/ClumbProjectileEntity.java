@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
@@ -15,23 +16,25 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
+import net.steiner.efac.entity.ModEntities;
 import net.steiner.efac.item.ModItems;
 import net.steiner.efac.item.custom.ModToolMaterial;
 
 public class ClumbProjectileEntity extends ThrownItemEntity {
-    private float attackDamage;
+    private float attackDamage = 1f;
     public ClumbProjectileEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public ClumbProjectileEntity(EntityType<? extends ThrownItemEntity> entityType, LivingEntity livingEntity, World world, ModToolMaterial modToolMaterial) {
-        super(entityType, livingEntity, world);
+    public ClumbProjectileEntity(LivingEntity livingEntity, World world, ModToolMaterial modToolMaterial) {
+        super(ModEntities.CLUMB_PROJECTILE, livingEntity, world);
         attackDamage = modToolMaterial.getAttackDamage();
     }
 
+
     @Override
     protected Item getDefaultItem() {
-        return ModItems.WOOD_CLUMB_WAND;
+        return ModItems.CLUMB_MATERIA;
     }
 
     private ParticleEffect getParticleParameters() {

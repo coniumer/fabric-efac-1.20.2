@@ -1,39 +1,3 @@
-/gamemode creative
-/gamemode spectator
-/gamemode survival
-/gamemode creative
-/gamemode adventure
-/gamemode survival
-/give @a efac:clumbkie 64
-/give @a efac:geumb_shard
-/give @a efac:clumbkie 64
-/give @a efac:cit_clumb_wand
-/give @a efac:geumb_shard 64
-/gamemode creative
-/gamemode survival
-/clumb set 1
-/clumb set 5
-/clumb set seinsturg 5
-/gamemode creative
-/gamemode survival
-/kill
-/gamemode creative
-/kill
-/give @a efac:large_geumb_bud
-/give @a efac:medium_geumb_bud
-/give @a efac:small_geumb_bud
-/give @a efac:medium_geumb_bud
-/give @a efac:large_geumb_bud
-/gamemode survival
-/clear
-/kill
-/give @a efac:clumby_geumb_shard 64
-/kill
-/give @a efac:clumbkie 256
-/gamerule keepInventory true
-/kill
-/give @a minecraft:lily_pad 64
-/give @a minecraft:torch
 /give @a minecraft:ender_pearl 64
 /gamemode survival
 /give @a efac:clumbkie
@@ -48,3 +12,39 @@
 /give @a efac:clumbkie 256
 /give @a efac:alby_geumb_shard
 /give @a efac:rub_clumb_wand
+/kill
+/execute in minecraft:the_nether run tp ~ ~ ~
+/kill
+/time set day
+/gamerule doDaylightCycle false
+/time set night
+/time set day
+/weather clear
+/summon minecraft:cod
+/summon minecraft:cow
+/time set night
+/time set day
+/weather clear
+/summon minecraft:cod
+/locate biome minecraft:desert
+/tp @s -418 67 -1207
+/gamemode survival
+/gamemode creative
+/kill
+/fill ~ ~ ~ ~-16 ~ ~-16 air
+/fill ~ ~ ~ ~-16 ~5 ~-16 air
+/fill ~ ~ ~ ~-15 ~-20 ~-15 air
+/fill ~ ~ ~ ~-15 ~-1 ~-15 air
+/kill
+/gamemode survival
+/gamemode creative
+/summon minecraft:shulker
+/time set night
+/gamerule doDaylightCycle true
+/kill
+/summon minecraft:lightning_bolt
+/gamemode survival
+/give @a efac:clumbkie 256
+/gamemode creative
+/gamemode survival
+/gamemode creative
