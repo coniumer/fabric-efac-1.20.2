@@ -1,6 +1,3 @@
-/give @a minecraft:ender_pearl 64
-/gamemode survival
-/give @a efac:clumbkie
 /give @a efac:clumbkie 64
 /give @a efac:rub_clumb_wand
 /give @a efac:clumbkie 64
@@ -48,3 +45,6 @@
 /gamemode creative
 /gamemode survival
 /gamemode creative
+/kill
+/gamemode survival
+/give @a efac:clumbkie 64

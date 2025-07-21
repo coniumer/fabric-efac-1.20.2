@@ -11,6 +11,7 @@ public class ModMessages {
     public static final Identifier CLUMB_RECHARGE_ID = new Identifier(EFAC.MOD_ID, "clumb_recharge");
     public static final Identifier SET_CLUMB_ID = new Identifier(EFAC.MOD_ID, "set_clumb");
     public static final Identifier SET_MAX_CLUMB_ID = new Identifier(EFAC.MOD_ID, "set_max_clumb");
+
     public static final Identifier CLUMB_SYNC_ID = new Identifier(EFAC.MOD_ID, "clumb_sync");
     public static final Identifier MAX_CLUMB_SYNC_ID = new Identifier(EFAC.MOD_ID, "max_clumb_sync");
 

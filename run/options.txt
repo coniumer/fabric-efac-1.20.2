@@ -93,7 +93,7 @@ key_key.back:key.keyboard.s
 key_key.right:key.keyboard.d
 key_key.jump:key.keyboard.space
 key_key.sneak:key.keyboard.left.shift
-key_key.sprint:key.mouse.5
+key_key.sprint:key.keyboard.left.control
 key_key.drop:key.keyboard.q
 key_key.inventory:key.keyboard.e
 key_key.chat:key.keyboard.t
@@ -119,8 +119,9 @@ key_key.hotbar.6:key.keyboard.z
 key_key.hotbar.7:key.keyboard.x
 key_key.hotbar.8:key.keyboard.c
 key_key.hotbar.9:key.keyboard.v
+key_key.efac.clumb:key.mouse.5
 soundCategory_master:1.0
-soundCategory_music:1.0
+soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0

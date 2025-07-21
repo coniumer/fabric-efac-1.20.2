@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.entity.ModEntities;
+import net.steiner.efac.event.KeyInputHandler;
 import net.steiner.efac.event.ModEntityEventOnLoad;
 import net.steiner.efac.event.ModPlayerEventCopyFrom;
 import net.steiner.efac.item.ModItemGroups;

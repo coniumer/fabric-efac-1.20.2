@@ -72,5 +72,8 @@
   "block.efac.butter": "Butter",
   "block.efac.yes": "YES!",
 
-  "itemgroup.slipulon_ingot": "EFAC Group"
+  "itemgroup.slipulon_ingot": "EFAC Group",
+
+  "key.category.efac.evankeys": "Evan's Keys",
+  "key.efac.clumb": "Clumb"
 }

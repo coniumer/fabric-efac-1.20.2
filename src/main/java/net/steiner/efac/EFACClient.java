@@ -9,6 +9,7 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.client.ClumbHudOverlay;
 import net.steiner.efac.entity.ModEntities;
+import net.steiner.efac.event.KeyInputHandler;
 import net.steiner.efac.networking.ModMessages;
 
 public class EFACClient implements ClientModInitializer {
@@ -26,6 +27,8 @@ public class EFACClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMALL_GEUMB_BUD, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.CLUMB_PROJECTILE, FlyingItemEntityRenderer::new);
+
+        KeyInputHandler.registerKeys();
 
         ModMessages.regsiterS2CPackets();
         HudRenderCallback.EVENT.register(new ClumbHudOverlay());
