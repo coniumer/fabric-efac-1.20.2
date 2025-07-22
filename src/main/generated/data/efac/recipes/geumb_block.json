@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:dirt"
+      "item": "efac:geumb_shard"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "###",
+    "###",
+    "###"
   ],
   "result": {
-    "item": "efac:compact_dom"
+    "item": "efac:geumb_block"
   },
   "show_notification": true
 }

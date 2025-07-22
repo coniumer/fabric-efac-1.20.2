@@ -51,6 +51,15 @@ public class ModItems {
             new WandItem(ModToolMaterial.CITRINIZED, ModToolMaterial.CITRINIZED, new FabricItemSettings().maxCount(1)));
     public static final Item RUB_CLUMB_WAND = registerItem("rub_clumb_wand",
             new WandItem(ModToolMaterial.RUBEDIZED, ModToolMaterial.RUBEDIZED, new FabricItemSettings().maxCount(1)));
+    //clumb swords
+    public static final Item CLUMBY_SWORD = registerItem("clumby_sword",
+            new ClumbSwordItem(ModToolMaterial.CLUMB_MATERIA, ModToolMaterial.CLUMB_MATERIA, 3, -2.2f, new FabricItemSettings()));
+    public static final Item ALBY_SWORD = registerItem("alby_sword",
+            new ClumbSwordItem(ModToolMaterial.ALEBEDIZED, ModToolMaterial.ALEBEDIZED, 3, -2.2f, new FabricItemSettings()));
+    public static final Item CITRY_SWORD = registerItem("citry_sword",
+            new ClumbSwordItem(ModToolMaterial.CITRINIZED, ModToolMaterial.CITRINIZED, 3, -2.2f, new FabricItemSettings()));
+    public static final Item RUBIED_SWORD = registerItem("rubied_sword",
+            new ClumbSwordItem(ModToolMaterial.RUBEDIZED, ModToolMaterial.RUBEDIZED, 3, -2.2f, new FabricItemSettings()));
     //misc
     public static final Item CLUMBVESTIGATOR = registerItem("clumbvestigator",
             new ClumbvestigatorItem(new FabricItemSettings().maxCount(1)));

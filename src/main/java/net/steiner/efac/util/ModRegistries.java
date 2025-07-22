@@ -23,6 +23,8 @@ public class ModRegistries {
         ModSounds.registerSounds();
         ModMessages.regsiterC2SPackets();
 
+        ModLootTableModifiers.modifyLootTables();
+
         registerStrippables();
         registerFlammables();
         registerEvents();

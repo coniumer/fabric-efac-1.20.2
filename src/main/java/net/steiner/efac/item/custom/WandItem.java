@@ -15,15 +15,14 @@ import net.minecraft.world.World;
 import net.steiner.efac.entity.custom.ClumbProjectileEntity;
 import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.sound.ModSounds;
+import net.steiner.efac.util.ClumbData;
 import net.steiner.efac.util.EntityDataSaver;
 
 public class WandItem extends Item {
-    private final ToolMaterial material;
     private final ModToolMaterial modMaterial;
 
     public WandItem(ToolMaterial material, ModToolMaterial modMaterial, Item.Settings settings) {
         super(settings.maxDamageIfAbsent(material.getDurability()));
-        this.material = material;
         this.modMaterial = modMaterial;
     }
 
@@ -48,11 +47,12 @@ public class WandItem extends Item {
 
             if (!world.isClient) {
                 clumbCast(world, user, itemStack);
+                ClumbData.removeClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt("maxClumbCharges"));
             }
 
-            if (!user.getAbilities().creativeMode && world.isClient) {
-                ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
-            }
+            //if (!user.getAbilities().creativeMode && world.isClient) {
+            //    ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
+            //}
 
         } else {
 

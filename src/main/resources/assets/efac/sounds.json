@@ -113,5 +113,11 @@
     "sounds": [
       "efac:item/wand/fail"
     ]
+  },
+  "clumb_dash": {
+    "subtitle": "efac.clumb_dash",
+    "sounds": [
+      "efac:player/cdash"
+    ]
   }
 }

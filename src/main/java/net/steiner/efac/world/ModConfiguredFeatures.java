@@ -7,10 +7,7 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.steiner.efac.EFAC;
 import net.steiner.efac.block.ModBlocks;
 
@@ -24,6 +21,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ALB_GEM_ORE_KEY = registerKey("alb_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CIT_GEM_ORE_KEY = registerKey("cit_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUB_GEM_ORE_KEY = registerKey("rub_gem_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GEUMB_BLOCK_KEY = registerKey("geumb_block_key");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -53,12 +51,17 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.RUB_GEM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.RUB_GEM_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> overworldGeumbBlocks =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.GEUMB_BLOCK.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.BUDDING_GEUMB.getDefaultState()));
+
         register(context, SLIPULON_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSlipulonOres, 11));
         register(context, BUTTER_KEY, Feature.ORE, new OreFeatureConfig(overworldButterOres, 12));
         register(context, GELWOOD_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldGelwoodOres, 15));
         register(context, ALB_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAlbGemOres, 4));
         register(context, CIT_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCitGemOres, 4));
         register(context, RUB_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldRubGemOres, 4));
+        register(context, GEUMB_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(overworldGeumbBlocks, 8));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

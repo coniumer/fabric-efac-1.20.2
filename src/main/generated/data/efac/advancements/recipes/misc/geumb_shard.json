@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dirt": {
+    "has_geumb_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:dirt"
+              "efac:geumb_block"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "efac:compact_dom"
+        "recipe": "minecraft:geumb_shard"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_dirt"
+      "has_geumb_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "efac:compact_dom"
+      "minecraft:geumb_shard"
     ]
   },
   "sends_telemetry_event": false

@@ -69,7 +69,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GELWOOD_ORE, multiOreDrops(ModBlocks.GELWOOD_ORE, ModItems.GELWOOD_ORB, 3.0f, 5.0f));
 
         //geumbs
-        addDrop(ModBlocks.GEUMB_BLOCK);
+        addDrop(ModBlocks.GEUMB_BLOCK, multiOreDrops(ModBlocks.GEUMB_BLOCK, ModItems.GEUMB_SHARD, 1.0f, 6.0f));
         addDropWithSilkTouch(ModBlocks.LARGE_GEUMB_BUD);
         addDropWithSilkTouch(ModBlocks.MEDIUM_GEUMB_BUD);
         addDropWithSilkTouch(ModBlocks.SMALL_GEUMB_BUD);

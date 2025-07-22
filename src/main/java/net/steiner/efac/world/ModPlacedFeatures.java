@@ -22,6 +22,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ALB_GEM_ORE_PLACED_KEY = registerKey("alb_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> CIT_GEM_ORE_PLACED_KEY = registerKey("cit_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> RUB_GEM_ORE_PLACED_KEY = registerKey("rub_gem_ore_placed");
+    public static final RegistryKey<PlacedFeature> GEUMB_BLOCK_PLACED_KEY = registerKey("geumb_blocks_placed");
+
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(EFAC.MOD_ID, name));
     }
@@ -47,6 +49,9 @@ public class ModPlacedFeatures {
         register(context, RUB_GEM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUB_GEM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20))));
+        register(context, GEUMB_BLOCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GEUMB_BLOCK_KEY),
+                ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,

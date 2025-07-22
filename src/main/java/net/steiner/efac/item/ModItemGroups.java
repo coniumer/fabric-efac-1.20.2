@@ -53,6 +53,11 @@ public class ModItemGroups {
                         entries.add(ModItems.ALB_CLUMB_WAND);
                         entries.add(ModItems.CIT_CLUMB_WAND);
                         entries.add(ModItems.RUB_CLUMB_WAND);
+                                //swords
+                        entries.add(ModItems.CLUMBY_SWORD);
+                        entries.add(ModItems.ALBY_SWORD);
+                        entries.add(ModItems.CITRY_SWORD);
+                        entries.add(ModItems.RUBIED_SWORD);
                                 //misc
                         entries.add(ModItems.CLUMBVESTIGATOR);
                         // Blocks

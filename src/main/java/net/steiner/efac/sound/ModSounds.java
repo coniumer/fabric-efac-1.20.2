@@ -11,6 +11,8 @@ public class ModSounds {
 
     // readyforbed
     public static final SoundEvent READY_FOR_BED = registerSoundEvent("ready_for_bed");
+    // clumb button uses
+    public static final SoundEvent CLUMB_DASH = registerSoundEvent("clumb_dash");
     // clumb wands
     public static final SoundEvent WAND_USE = registerSoundEvent("wand_use");
     public static final SoundEvent WAND_FAIL = registerSoundEvent("wand_fail");

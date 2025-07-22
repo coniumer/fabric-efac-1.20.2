@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-19T15:13:57.995871	EFAC/Block Loot Tables
+// 1.20.2	2025-07-21T19:02:10.376794	EFAC/Block Loot Tables
 4ad6dbb4a3569eba9666aecbf9e86cee2b8b81c3 data/efac/loot_tables/blocks/prima_fence_gate.json
 eac27d731e4f7595ec0f5529f830b648d76f1816 data/efac/loot_tables/blocks/prima_slab.json
 1315f90c4e286b709222ecc44a16b9d47ab67067 data/efac/loot_tables/blocks/compact_dom.json
@@ -20,7 +20,7 @@ f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pr
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 349e9c77816e8d0d72e39e021224e8a47bf6b157 data/efac/loot_tables/blocks/gelwood_trapdoor.json
 64a72e8a1b0fb222df50bc4a4378c34971a1288b data/efac/loot_tables/blocks/prima_trapdoor.json
-a5881f7101e618d9ad111a8cbe501614563f746a data/efac/loot_tables/blocks/geumb_block.json
+a2ac50419f7e607542fcfef77aa45b0d149c370e data/efac/loot_tables/blocks/geumb_block.json
 9534675ffe18af924e7a250b524fe4a325ec227b data/efac/loot_tables/blocks/clumbrot_crop.json
 e6f2b4044a656a6659270ab9a2757aa535c64a21 data/efac/loot_tables/blocks/stripped_prima_wood.json
 2fe3141e108316e76b0dcac63e717f74ffaa9c6a data/efac/loot_tables/blocks/geumb_cluster.json

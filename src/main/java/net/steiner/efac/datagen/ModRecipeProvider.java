@@ -40,10 +40,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         //compacting
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GELWOOD_PLANKS,
                 ModItems.GELWOOD_ORB);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, ModBlocks.COMPACT_DOM, Blocks.DIRT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SLIPULON_INGOT,
                 RecipeCategory.DECORATIONS, ModBlocks.SLIPULON_BLOCK);
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Blocks.DIRT,
-                RecipeCategory.MISC, ModBlocks.COMPACT_DOM);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GEUMB_SHARD,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEUMB_BLOCK);
 
         //gelwood
         createDoorRecipe(ModBlocks.GELWOOD_DOOR, Ingredient.ofItems(ModBlocks.GELWOOD_PLANKS))
