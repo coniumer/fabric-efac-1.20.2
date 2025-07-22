@@ -3,18 +3,19 @@
   "category": "equipment",
   "key": {
     "C": {
-      "item": "efac:alb_clumb_materia"
+      "item": "efac:rubied_geumb_shard"
     },
     "S": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
     "C",
+    "C",
     "S"
   ],
   "result": {
-    "item": "efac:alb_clumb_wand"
+    "item": "efac:rubied_sword"
   },
   "show_notification": true
 }

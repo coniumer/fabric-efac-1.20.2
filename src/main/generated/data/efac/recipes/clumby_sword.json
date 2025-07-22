@@ -3,18 +3,19 @@
   "category": "equipment",
   "key": {
     "C": {
-      "item": "efac:alb_clumb_materia"
+      "item": "efac:clumby_geumb_shard"
     },
     "S": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
     "C",
+    "C",
     "S"
   ],
   "result": {
-    "item": "efac:alb_clumb_wand"
+    "item": "efac:clumby_sword"
   },
   "show_notification": true
 }

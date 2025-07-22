@@ -164,7 +164,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //shaped
         //wands
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WOOD_CLUMB_WAND, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.WOOD_CLUMB_WAND, 1)
                 .pattern("C")
                 .pattern("S")
                 .input('C', ModItems.CLUMB_MATERIA)
@@ -172,7 +172,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.WOOD_CLUMB_WAND)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ALB_CLUMB_WAND, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ALB_CLUMB_WAND, 1)
                 .pattern("C")
                 .pattern("S")
                 .input('C', ModItems.ALB_CLUMB_MATERIA)
@@ -180,7 +180,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .criterion(hasItem(ModItems.ALB_CLUMB_MATERIA), conditionsFromItem(ModItems.ALB_CLUMB_MATERIA))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.ALB_CLUMB_WAND)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CIT_CLUMB_WAND, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CIT_CLUMB_WAND, 1)
                 .pattern("C")
                 .pattern("S")
                 .input('C', ModItems.CIT_CLUMB_MATERIA)
@@ -188,7 +188,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
                 .criterion(hasItem(ModItems.CIT_CLUMB_MATERIA), conditionsFromItem(ModItems.CIT_CLUMB_MATERIA))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CIT_CLUMB_WAND)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUB_CLUMB_WAND, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.RUB_CLUMB_WAND, 1)
                 .pattern("C")
                 .pattern("S")
                 .input('C', ModItems.RUB_CLUMB_MATERIA)
@@ -196,6 +196,47 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
                 .criterion(hasItem(ModItems.RUB_CLUMB_MATERIA), conditionsFromItem(ModItems.RUB_CLUMB_MATERIA))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUB_CLUMB_WAND)));
+
+        //clumb swords
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CLUMBY_SWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', ModItems.CLUMBY_GEUMB_SHARD)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.CLUMBY_GEUMB_SHARD), conditionsFromItem(ModItems.CLUMBY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CLUMBY_SWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ALBY_SWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', ModItems.ALBY_GEUMB_SHARD)
+                .input('S', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(ModItems.ALBY_GEUMB_SHARD), conditionsFromItem(ModItems.ALBY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ALBY_SWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CITRY_SWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', ModItems.CITRY_GEUMB_SHARD)
+                .input('S', Items.GOLD_INGOT)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(ModItems.CITRY_GEUMB_SHARD), conditionsFromItem(ModItems.CITRY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CITRY_SWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.RUBIED_SWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', ModItems.RUBIED_GEUMB_SHARD)
+                .input('S', Items.DIAMOND)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(ModItems.RUBIED_GEUMB_SHARD), conditionsFromItem(ModItems.RUBIED_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUBIED_SWORD)));
 
         //gem clumbs
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ALB_CLUMB_MATERIA, 2)

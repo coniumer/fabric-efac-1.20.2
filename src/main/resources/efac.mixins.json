@@ -1,15 +1,16 @@
 {
-	"required": true,
-	"package": "net.steiner.efac.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"EntityDataSaverMixin"
-	],
-	"client": [
-		"ReadyForBedMixin",
-		"PlayerEatMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "net.steiner.efac.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EntityDataSaverMixin"
+  ],
+  "client": [
+    "PlayerEatMixin",
+    "PlayerOnGroundMixin",
+    "ReadyForBedMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

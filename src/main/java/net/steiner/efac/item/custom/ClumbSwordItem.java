@@ -4,9 +4,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.steiner.efac.sound.ModSounds;
 
 public class ClumbSwordItem extends SwordItem {
     private final ModToolMaterial modMaterial;
@@ -23,12 +25,20 @@ public class ClumbSwordItem extends SwordItem {
         if (!world.isClient) {
             chargeMode = !chargeMode;
         }
-        System.out.println("Mode = " + mode(chargeMode));
+
+        user.getItemCooldownManager().set(this, modMaterial.getCooldown());
+        world.playSound(
+                null,
+                user.getX(),
+                user.getY(),
+                user.getZ(),
+                ModSounds.SWORD_CHARGE,
+                SoundCategory.PLAYERS,
+                0.7F,
+                0.95F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
+        );
+
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
-    private String mode(boolean chargeMode) {
-        if (chargeMode) { return "Charge Mode"; }
-        else { return "Attack Mode"; }
-    }
 }

@@ -1,14 +1,3 @@
-/kill
-/summon minecraft:lightning_bolt
-/gamemode survival
-/give @a efac:clumbkie 256
-/gamemode creative
-/gamemode survival
-/gamemode creative
-/kill
-/gamemode survival
-/give @a efac:clumbkie 64
-/kill
 /give @a efac:clumbkie 256
 /gamemode creative
 /gamemode survival
@@ -48,3 +37,14 @@
 /gamemode survival
 /gamemode creative
 /gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/give @a efac:clumbkie 40
+/give @a minecraft:lightning_rod
+/give @a efac:clumbkie 40
+/kill
+/gamemode creative
+/gamemode survival
+/gamemode creative

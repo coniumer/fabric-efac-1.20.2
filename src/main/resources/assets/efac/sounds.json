@@ -114,6 +114,15 @@
       "efac:item/wand/fail"
     ]
   },
+  "sword_charge": {
+    "subtitle": "efac.sword_charge",
+    "sounds": [
+      "efac:item/clumb_sword/charge1",
+      "efac:item/clumb_sword/charge2",
+      "efac:item/clumb_sword/charge3",
+      "efac:item/clumb_sword/charge4"
+    ]
+  },
   "clumb_dash": {
     "subtitle": "efac.clumb_dash",
     "sounds": [

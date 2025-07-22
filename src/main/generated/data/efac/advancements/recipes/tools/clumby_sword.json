@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clumby_geumb_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumby_geumb_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:clumby_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stick",
+      "has_clumby_geumb_shard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:clumby_sword"
+    ]
+  },
+  "sends_telemetry_event": false
+}

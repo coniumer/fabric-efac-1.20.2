@@ -8,11 +8,12 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.sound.SoundCategory;
+import net.minecraft.item.Items;
+import net.minecraft.network.PacketByteBuf;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
 import net.steiner.efac.networking.ModMessages;
-import net.steiner.efac.sound.ModSounds;
+import net.steiner.efac.util.ClumbButtonFunctions;
 import net.steiner.efac.util.EntityDataSaver;
 import org.lwjgl.glfw.GLFW;
 
@@ -25,53 +26,60 @@ public class KeyInputHandler {
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(clumbKey.wasPressed()) {
-                System.out.println("Clumb key pressed");
-
                 MinecraftClient mc = MinecraftClient.getInstance();
-
                 if (mc.player == null)
                     return;
-
                 PlayerEntity player = mc.player;
                 EntityDataSaver sPlayer = (EntityDataSaver)player;
-                World world = player.getWorld();
 
                 if (sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) || player.getAbilities().creativeMode) {
-                    // build state machine that switches effects based on item equipped
-                    clumbDash(player, world);
-                    ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
+                    if (performClumbAction(player)) {
+                        ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
+                    }
                 } else {
-                    world.playSound(
-                            null,
-                            player.getX(),
-                            player.getY(),
-                            player.getZ(),
-                            ModSounds.WAND_FAIL,
-                            SoundCategory.PLAYERS,
-                            0.7F,
-                            0.85F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
-                    );
+                    sendPayload(ClumbButtonFunctions.FAIL);
                 }
 
             }
         });
     }
 
-    public static void clumbDash(PlayerEntity player, World world) {
+    public static boolean performClumbAction(PlayerEntity player) {
+        EntityDataSaver sPlayer = (EntityDataSaver) player;
+
+        if (player.getStackInHand(Hand.OFF_HAND).getItem() == Items.LIGHTNING_ROD) {
+            sendPayload(ClumbButtonFunctions.LIGHTNING);
+            return true;
+        } else if (sPlayer.getPersistentData().getInt("dashUses") < 2) {
+            clumbDash(player, ClumbButtonFunctions.DASH);
+            return true;
+        } else {
+            sendPayload(ClumbButtonFunctions.FAIL);
+        }
+        return false;
+    }
+
+    public static void sendPayload(ClumbButtonFunctions func) {
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeInt(func.getFunction());
+        ClientPlayNetworking.send(ModMessages.CLUMB_BUTTON_PAYLOAD_ID, buf);
+    }
+
+    public static void clumbDash(PlayerEntity player, ClumbButtonFunctions func) {
         Vec3d playerLook = player.getRotationVec(1.0f);
-        Vec3d dashVec = new Vec3d(playerLook.x, player.getVelocity().y + playerLook.y, playerLook.z);
+        Vec3d dashVec = new Vec3d(
+                playerLook.x * 0.7f,
+                (player.getVelocity().y * 0.3f) + playerLook.y * 0.7f,
+                playerLook.z * 0.7f);
         player.addVelocity(dashVec);
 
-        world.playSound(
-                null,
-                player.getX(),
-                player.getY(),
-                player.getZ(),
-                ModSounds.CLUMB_DASH,
-                SoundCategory.PLAYERS,
-                0.7F,
-                0.85F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
-        );
+        EntityDataSaver sPlayer = (EntityDataSaver)player;
+
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeInt(sPlayer.getPersistentData().getInt("dashUses") + 1);
+        ClientPlayNetworking.send(ModMessages.SET_DASH_USES_ID, buf);
+
+        sendPayload(func);
     }
 
     public static void registerKeys() {

@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-21T19:02:10.376794	EFAC/Block Loot Tables
+// 1.20.2	2025-07-22T12:33:33.552528	EFAC/Block Loot Tables
 4ad6dbb4a3569eba9666aecbf9e86cee2b8b81c3 data/efac/loot_tables/blocks/prima_fence_gate.json
 eac27d731e4f7595ec0f5529f830b648d76f1816 data/efac/loot_tables/blocks/prima_slab.json
 1315f90c4e286b709222ecc44a16b9d47ab67067 data/efac/loot_tables/blocks/compact_dom.json
@@ -15,8 +15,8 @@ a18beaaa9b23f38f03b8b24640990981d02a2a28 data/efac/loot_tables/blocks/budding_ge
 e5d19df4193c14bad32395d837916efc660bde04 data/efac/loot_tables/blocks/gelwood_stairs.json
 f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 42628c6879dc0e9f43b570a1c620d408b99db874 data/efac/loot_tables/blocks/butter.json
-22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
 0f969e081a0c0d1285e69f17ece98385601281b3 data/efac/loot_tables/blocks/prima_leaves.json
+22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 349e9c77816e8d0d72e39e021224e8a47bf6b157 data/efac/loot_tables/blocks/gelwood_trapdoor.json
 64a72e8a1b0fb222df50bc4a4378c34971a1288b data/efac/loot_tables/blocks/prima_trapdoor.json
