@@ -115,7 +115,6 @@ public class ClumbHudOverlay implements HudRenderCallback {
         for (int i = 0; i < length; i++) {
             int randomNumber = (Math.abs(random.nextInt() % 10) + 1);
             mult[i] = randomNumber;
-            System.out.println("Mult " + i + " = " + mult[i]);
         }
         return mult;
     }

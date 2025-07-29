@@ -18,6 +18,7 @@ public class ModSounds {
     public static final SoundEvent WAND_FAIL = registerSoundEvent("wand_fail");
     // clumb swords
     public static final SoundEvent SWORD_CHARGE = registerSoundEvent("sword_charge");
+    public static final SoundEvent SWORD_PULSE = registerSoundEvent("sword_pulse");
     // yes block
     public static final SoundEvent YES_BREAK = registerSoundEvent("yes_break");
     public static final SoundEvent YES_STEP = registerSoundEvent("yes_step");

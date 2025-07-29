@@ -20,6 +20,7 @@ public class ModRegistries {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModEntities.registerModEntities();
+        ModDamage.registerModDamage();
         ModSounds.registerSounds();
         ModMessages.regsiterC2SPackets();
 

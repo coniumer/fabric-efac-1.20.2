@@ -123,6 +123,15 @@
       "efac:item/clumb_sword/charge4"
     ]
   },
+  "sword_pulse": {
+    "subtitle": "efac.sword_pulse",
+    "sounds": [
+      "efac:item/clumb_sword/pulse1",
+      "efac:item/clumb_sword/pulse2",
+      "efac:item/clumb_sword/pulse3",
+      "efac:item/clumb_sword/pulse4"
+    ]
+  },
   "clumb_dash": {
     "subtitle": "efac.clumb_dash",
     "sounds": [

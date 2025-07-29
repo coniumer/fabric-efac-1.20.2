@@ -79,5 +79,7 @@
   "itemgroup.slipulon_ingot": "EFAC Group",
 
   "key.category.efac.evankeys": "Evan's Keys",
-  "key.efac.clumb": "Clumb"
+  "key.efac.clumb": "Clumb",
+
+  "death.attack.clumb_pulse": "%s was clumbed on by %s"
 }
