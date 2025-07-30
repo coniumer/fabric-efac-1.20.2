@@ -1,15 +1,3 @@
-/gamemode creative
-/gamemode survival
-/time set day
-/gamemode creative
-/summon minecraft:zombie 25
-/summon minecraft:zombie ~ ~ ~
-/summon minecraft:skeleton ~ ~ ~
-/summon minecraft:skeleton ~ ~ ~t
-/summon minecraft:skeleton ~ ~ ~
-/summon minecraft:spider ~ ~ ~
-/summon minecraft:creeper ~ ~ ~
-/gamemode survival
 /locate structure minecraft:pillager_outpost
 /tp @s -1792 ~ -1008
 /gamemode creative
@@ -47,4 +35,16 @@
 /gamemode creative
 /gamerule keepInventory true
 /kill
+/gamemode survival
+/give @a efac:clumby_sword
+/give @a efac:alby_sword
+/give @a efac:citry_sword
+/gamemode creative
+/gamemode spectator
+/gamemode survival
+/gamemode spectator
+/kill
+/gamemode survival
+/gamemode creative
+/give @a efac:alby_sword{CustomModelData:1}
 /gamemode survival

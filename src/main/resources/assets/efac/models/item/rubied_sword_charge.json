@@ -1,0 +1,6 @@
+{
+  "parent": "efac:item/rubied_sword",
+  "textures": {
+    "layer0": "efac:item/rubied_sword_charge"
+  }
+}

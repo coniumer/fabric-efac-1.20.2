@@ -1,0 +1,6 @@
+{
+  "parent": "efac:item/clumby_sword",
+  "textures": {
+    "layer0": "efac:item/clumby_sword_charge"
+  }
+}

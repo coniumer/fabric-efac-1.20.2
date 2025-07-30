@@ -1,0 +1,6 @@
+{
+  "parent": "efac:item/alby_sword",
+  "textures": {
+    "layer0": "efac:item/alby_sword_charge"
+  }
+}

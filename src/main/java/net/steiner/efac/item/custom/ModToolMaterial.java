@@ -11,11 +11,11 @@ public enum ModToolMaterial implements ToolMaterial {
     CLUMB_MATERIA(128, 2.0f, 0.0f, MiningLevels.WOOD, 0,
             () -> Ingredient.ofItems(ModItems.CLUMB_MATERIA), 35, 5),
     ALEBEDIZED(526, 6.5f, 2.5f, MiningLevels.IRON, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 25, 15),
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 25, 7),
     CITRINIZED(1302, 8.5f, 3.5f, MiningLevels.DIAMOND, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 15, 25),
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 15, 8),
     RUBEDIZED(2031, 9.5f, 4.5f, MiningLevels.NETHERITE, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 5, 35);
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 5, 9);
 
     private final int itemDurability;
     private final float miningSpeed;

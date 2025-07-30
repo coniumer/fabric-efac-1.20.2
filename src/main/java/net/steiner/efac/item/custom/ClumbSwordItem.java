@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
@@ -28,11 +29,14 @@ public class ClumbSwordItem extends SwordItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
+        NbtCompound nbtCompound = itemStack.getOrCreateNbt();
+
         user.getItemCooldownManager().set(this, modMaterial.getCooldown());
-        if (world.isClient) {
+        if (!world.isClient) {
             chargeMode ^= true;
         }
         if (chargeMode) {
+            nbtCompound.putFloat("CustomModelData", 1f);
             world.playSound(
                     null,
                     user.getX(),
@@ -44,6 +48,7 @@ public class ClumbSwordItem extends SwordItem {
                     0.95F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
             );
         } else {
+            nbtCompound.putFloat("CustomModelData", 0f);
             world.playSound(
                     null,
                     user.getX(),
@@ -63,6 +68,7 @@ public class ClumbSwordItem extends SwordItem {
         World world = attacker.getWorld();
         EntityDataSaver sPlayer = (EntityDataSaver)attacker;
         PlayerEntity player = (PlayerEntity)attacker;
+
 
         DamageSource source = new DamageSource(
                 world.getRegistryManager()
@@ -102,6 +108,6 @@ public class ClumbSwordItem extends SwordItem {
     }
 
     public boolean tryCharge(World world) {
-        return (Math.abs(world.getRandom().nextInt()) % 10) > 7;
+        return (Math.abs(world.getRandom().nextInt()) % 10) < modMaterial.getRechargeChance();
     }
 }
