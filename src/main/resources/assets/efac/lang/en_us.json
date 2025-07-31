@@ -36,6 +36,8 @@
   "item.efac.citry_sword": "Citry Sword",
   "item.efac.rubied_sword": "Rubied Sword",
   "item.efac.clumbvestigator": "Clumbvestigator",
+  "item.efac.prima_boat": "Prima Boat",
+  "item.efac.prima_chest_boat": "Prima Chest Boats",
 
   "block.efac.slipulon_ore": "Slipulon Ore",
   "block.efac.alb_gem_ore": "Albedized Ore",
@@ -73,6 +75,9 @@
   "block.efac.prima_door": "Prima Door",
   "block.efac.prima_trapdoor": "Prima Trapdoor",
   "block.efac.prima_leaves": "Prima Leaves",
+  "block.efac.prima_sapling": "Prima Sapling",
+  "block.efac.prima_sign": "Prima Sign",
+  "block.efac.prima_hanging_sign": "Prima Hanging Sign",
   "block.efac.butter": "Butter",
   "block.efac.yes": "YES!",
 

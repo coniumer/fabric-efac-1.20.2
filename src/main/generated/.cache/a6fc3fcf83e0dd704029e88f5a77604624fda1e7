@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-22T12:33:33.552528	EFAC/Block Loot Tables
+// 1.20.2	2025-07-30T11:16:51.804251	EFAC/Block Loot Tables
 4ad6dbb4a3569eba9666aecbf9e86cee2b8b81c3 data/efac/loot_tables/blocks/prima_fence_gate.json
 eac27d731e4f7595ec0f5529f830b648d76f1816 data/efac/loot_tables/blocks/prima_slab.json
 1315f90c4e286b709222ecc44a16b9d47ab67067 data/efac/loot_tables/blocks/compact_dom.json
@@ -15,8 +15,8 @@ a18beaaa9b23f38f03b8b24640990981d02a2a28 data/efac/loot_tables/blocks/budding_ge
 e5d19df4193c14bad32395d837916efc660bde04 data/efac/loot_tables/blocks/gelwood_stairs.json
 f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 42628c6879dc0e9f43b570a1c620d408b99db874 data/efac/loot_tables/blocks/butter.json
-0f969e081a0c0d1285e69f17ece98385601281b3 data/efac/loot_tables/blocks/prima_leaves.json
 22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
+22819cf817b3320f854d1624d65b8a686cdca1b5 data/efac/loot_tables/blocks/prima_leaves.json
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 349e9c77816e8d0d72e39e021224e8a47bf6b157 data/efac/loot_tables/blocks/gelwood_trapdoor.json
 64a72e8a1b0fb222df50bc4a4378c34971a1288b data/efac/loot_tables/blocks/prima_trapdoor.json
@@ -25,6 +25,7 @@ a2ac50419f7e607542fcfef77aa45b0d149c370e data/efac/loot_tables/blocks/geumb_bloc
 e6f2b4044a656a6659270ab9a2757aa535c64a21 data/efac/loot_tables/blocks/stripped_prima_wood.json
 2fe3141e108316e76b0dcac63e717f74ffaa9c6a data/efac/loot_tables/blocks/geumb_cluster.json
 a5bfe2ce91e4ae06d39673c9ce7caf8367352fb9 data/efac/loot_tables/blocks/cit_gem_ore.json
+71e25b01144a62230199b955d5630e6b93f47ee9 data/efac/loot_tables/blocks/prima_sapling.json
 de6e83b26ee0749fa5a6a49dc53b908412f8bf71 data/efac/loot_tables/blocks/large_geumb_bud.json
 79ee5e2fc1b3f745b349bb91bdfba4382ab1e4ba data/efac/loot_tables/blocks/gelwood_fence.json
 17b419249b8804c4f949de4f20c5773100151b54 data/efac/loot_tables/blocks/gelwood_slab.json

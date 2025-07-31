@@ -7,7 +7,12 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.steiner.efac.EFAC;
 import net.steiner.efac.block.ModBlocks;
 
@@ -22,6 +27,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CIT_GEM_ORE_KEY = registerKey("cit_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUB_GEM_ORE_KEY = registerKey("rub_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEUMB_BLOCK_KEY = registerKey("geumb_block_key");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PRIMA_KEY = registerKey("prima");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -62,6 +69,14 @@ public class ModConfiguredFeatures {
         register(context, CIT_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCitGemOres, 4));
         register(context, RUB_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldRubGemOres, 4));
         register(context, GEUMB_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(overworldGeumbBlocks, 8));
+
+        register(context, PRIMA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.PRIMA_LOG),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.of(ModBlocks.PRIMA_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build()
+        );
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

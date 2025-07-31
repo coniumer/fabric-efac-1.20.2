@@ -93,8 +93,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PRIMA_BUTTON);
                         entries.add(ModBlocks.PRIMA_PRESSURE_PLATE);
                         entries.add(ModBlocks.PRIMA_LEAVES);
+                        entries.add(ModBlocks.PRIMA_SAPLING);
                         entries.add(ModItems.PRIMA_SIGN);
                         entries.add(ModItems.PRIMA_HANGING_SIGN);
+                        entries.add(ModItems.PRIMA_BOAT);
+                        entries.add(ModItems.PRIMA_CHEST_BOAT);
                         entries.add(ModBlocks.COMPACT_DOM);
                         entries.add(ModBlocks.BUTTER);
                         entries.add(ModBlocks.YES);

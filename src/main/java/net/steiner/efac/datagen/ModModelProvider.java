@@ -36,6 +36,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.PRIMA_LOG).log(ModBlocks.PRIMA_LOG).wood(ModBlocks.PRIMA_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PRIMA_LOG).log(ModBlocks.STRIPPED_PRIMA_LOG).wood(ModBlocks.STRIPPED_PRIMA_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRIMA_LEAVES);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.PRIMA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         BlockStateModelGenerator.BlockTexturePool prima_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PRIMA_PLANKS);
         prima_pool.stairs(ModBlocks.PRIMA_STAIRS);
@@ -108,5 +109,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CLUMBVESTIGATOR, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.PRIMA_HANGING_SIGN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PRIMA_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PRIMA_CHEST_BOAT, Models.GENERATED);
     }
 }

@@ -55,7 +55,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PRIMA_PRESSURE_PLATE);
         addDrop(ModBlocks.PRIMA_FENCE);
         addDrop(ModBlocks.PRIMA_FENCE_GATE);
-        addDrop(ModBlocks.PRIMA_LEAVES, leavesDrops(ModBlocks.PRIMA_LEAVES, ModBlocks.BUTTER, 0.005f)); // TODO sapling
+        addDrop(ModBlocks.PRIMA_SAPLING);
+        addDrop(ModBlocks.PRIMA_LEAVES, leavesDrops(ModBlocks.PRIMA_LEAVES, ModBlocks.PRIMA_SAPLING, 0.005f));
 
         addDrop(ModBlocks.PRIMA_DOOR, doorDrops(ModBlocks.PRIMA_DOOR));
         addDrop(ModBlocks.PRIMA_SLAB, slabDrops(ModBlocks.PRIMA_SLAB));

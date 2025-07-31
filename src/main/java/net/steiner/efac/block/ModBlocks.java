@@ -20,6 +20,7 @@ import net.steiner.efac.block.custom.ClumbrotCropBlock;
 import net.steiner.efac.block.custom.GeumbBlock;
 import net.steiner.efac.block.custom.GeumbClusterBlock;
 import net.steiner.efac.sound.ModSounds;
+import net.steiner.efac.world.tree.PrimaSaplingGenerator;
 
 public class ModBlocks {
 
@@ -91,6 +92,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)));
     public static final Block PRIMA_LEAVES = registerBlock("prima_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+    public static final Block PRIMA_SAPLING = registerBlock("prima_sapling",
+            new SaplingBlock(new PrimaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
     public static final Block PRIMA_STAIRS = registerBlock("prima_stairs",
             new StairsBlock(ModBlocks.PRIMA_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
@@ -114,7 +117,7 @@ public class ModBlocks {
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.OAK));
 
     public static final Identifier PRIMA_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/prima");
-    public static final Identifier PRIMA_HANGING_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/prima/hanging");
+    public static final Identifier PRIMA_HANGING_SIGN_TEXTURE = new Identifier(EFAC.MOD_ID, "entity/signs/hanging/prima");
     public static final Identifier PRIMA_HANGING_SIGN_GUI_TEXTURE = new Identifier(EFAC.MOD_ID, "textures/gui/hanging_signs/prima");
 
     public static final Block PRIMA_SIGN = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "prima_sign"),

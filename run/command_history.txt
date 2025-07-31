@@ -1,5 +1,3 @@
-/locate structure minecraft:pillager_outpost
-/tp @s -1792 ~ -1008
 /gamemode creative
 /locate structure minecraft:mansion
 /tp @s -3120 ~ 432
@@ -48,3 +46,5 @@
 /gamemode creative
 /give @a efac:alby_sword{CustomModelData:1}
 /gamemode survival
+/gamemode creative
+/kill

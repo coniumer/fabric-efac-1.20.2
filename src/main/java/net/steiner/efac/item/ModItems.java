@@ -1,5 +1,6 @@
 package net.steiner.efac.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -7,6 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.EFAC;
 import net.steiner.efac.block.ModBlocks;
+import net.steiner.efac.entity.ModBoats;
 import net.steiner.efac.item.custom.*;
 import net.steiner.efac.item.custom.GeumbEnum;
 
@@ -68,6 +70,9 @@ public class ModItems {
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.PRIMA_SIGN, ModBlocks.PRIMA_WALL_SIGN));
     public static final Item PRIMA_HANGING_SIGN = registerItem("prima_hanging_sign",
             new HangingSignItem(ModBlocks.PRIMA_HANGING_SIGN, ModBlocks.PRIMA_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+    //boats
+    public static final Item PRIMA_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.PRIMA_BOAT_ID, ModBoats.PRIMA_BOAT_KEY, false);
+    public static final Item PRIMA_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.PRIMA_CHEST_BOAT_ID, ModBoats.PRIMA_BOAT_KEY, true);
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(EFAC.MOD_ID, name), item);

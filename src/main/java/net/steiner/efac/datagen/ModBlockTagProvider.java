@@ -77,5 +77,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.GELWOOD_FENCE_GATE)
                 .add(ModBlocks.PRIMA_FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(ModBlocks.PRIMA_LOG);
     }
 }
