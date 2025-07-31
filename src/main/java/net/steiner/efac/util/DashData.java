@@ -9,10 +9,12 @@ import net.minecraft.util.math.MathHelper;
 import net.steiner.efac.networking.ModMessages;
 
 public class DashData {
+    public static final String DASH_USES_KEY = "dashUses";
+
     public static void addDashUses(EntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int dashUses = MathHelper.clamp(amount, 0, 2);
-        nbt.putInt("dashUses", dashUses);
+        nbt.putInt(DASH_USES_KEY, dashUses);
 
         syncDashUses(dashUses, (ServerPlayerEntity)player);
     }

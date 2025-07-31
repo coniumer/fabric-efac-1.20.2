@@ -12,7 +12,7 @@ public class ClumbRechargeC2SPacket {
 
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
-        ClumbData.addClumbCharges(((EntityDataSaver)player), 1, ((EntityDataSaver)player).getPersistentData().getInt("maxClumbCharges"));
-        ClumbData.syncClumbCharges(((EntityDataSaver)player).getPersistentData().getInt("clumbCharges"), player);
+        ClumbData.addClumbCharges(((EntityDataSaver)player), 1, ((EntityDataSaver)player).getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
+        ClumbData.syncClumbCharges(((EntityDataSaver)player).getPersistentData().getInt(ClumbData.CLUMB_CHARGE_KEY), player);
     }
 }

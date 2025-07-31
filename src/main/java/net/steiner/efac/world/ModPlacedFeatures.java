@@ -8,9 +8,12 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.steiner.efac.EFAC;
+import net.steiner.efac.block.ModBlocks;
 
 import java.util.List;
 
@@ -23,6 +26,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CIT_GEM_ORE_PLACED_KEY = registerKey("cit_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> RUB_GEM_ORE_PLACED_KEY = registerKey("rub_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> GEUMB_BLOCK_PLACED_KEY = registerKey("geumb_blocks_placed");
+
+    public static final RegistryKey<PlacedFeature> PRIMA_PLACED_KEY = registerKey("prima_placed");
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(EFAC.MOD_ID, name));
@@ -52,6 +57,10 @@ public class ModPlacedFeatures {
         register(context, GEUMB_BLOCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GEUMB_BLOCK_KEY),
                 ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, PRIMA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PRIMA_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(2, 0.1f, 2),
+                        ModBlocks.PRIMA_SAPLING));
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,

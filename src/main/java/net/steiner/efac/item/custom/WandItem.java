@@ -31,7 +31,7 @@ public class WandItem extends Item {
         EntityDataSaver sPlayer = (EntityDataSaver)user;
         ItemStack itemStack = user.getStackInHand(hand);
 
-        if (sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) ||
+        if (sPlayer.canClumb(sPlayer.getPersistentData().getInt(ClumbData.CLUMB_CHARGE_KEY), sPlayer) ||
                 user.getAbilities().creativeMode) {
 
             world.playSound(
@@ -47,12 +47,8 @@ public class WandItem extends Item {
 
             if (!world.isClient) {
                 clumbCast(world, user, itemStack);
-                ClumbData.removeClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt("maxClumbCharges"));
+                ClumbData.removeClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
             }
-
-            //if (!user.getAbilities().creativeMode && world.isClient) {
-            //    ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
-            //}
 
         } else {
 

@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.util.ModTags;
 
@@ -80,5 +81,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(ModBlocks.PRIMA_LOG);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PRIMA_LOG)
+                .add(ModBlocks.PRIMA_WOOD)
+                .add(ModBlocks.STRIPPED_PRIMA_LOG)
+                .add(ModBlocks.STRIPPED_PRIMA_WOOD);
     }
 }

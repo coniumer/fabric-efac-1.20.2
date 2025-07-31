@@ -91,7 +91,7 @@ public class ModBlocks {
     public static final Block PRIMA_PLANKS = registerBlock("prima_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)));
     public static final Block PRIMA_LEAVES = registerBlock("prima_leaves",
-            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4f).nonOpaque()));
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()));
     public static final Block PRIMA_SAPLING = registerBlock("prima_sapling",
             new SaplingBlock(new PrimaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 

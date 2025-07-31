@@ -83,6 +83,34 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createTrapdoorRecipe(ModBlocks.PRIMA_TRAPDOOR, Ingredient.ofItems(ModBlocks.PRIMA_PLANKS))
                 .criterion(hasItem(ModBlocks.PRIMA_PLANKS), conditionsFromItem(ModBlocks.PRIMA_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_TRAPDOOR)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRIMA_PLANKS, 4)
+                .input(ModBlocks.PRIMA_LOG)
+                .criterion(hasItem(ModBlocks.PRIMA_LOG.asItem()), conditionsFromItem(ModBlocks.PRIMA_LOG.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_PLANKS)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRIMA_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_PRIMA_LOG)
+                .criterion(hasItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()), conditionsFromItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()))
+                .offerTo(exporter, new Identifier("prima_planks_from_stripped"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRIMA_PLANKS, 4)
+                .input(ModBlocks.PRIMA_WOOD)
+                .criterion(hasItem(ModBlocks.PRIMA_WOOD.asItem()), conditionsFromItem(ModBlocks.PRIMA_WOOD.asItem()))
+                .offerTo(exporter, new Identifier("prima_planks_from_wood"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRIMA_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_PRIMA_WOOD)
+                .criterion(hasItem(ModBlocks.STRIPPED_PRIMA_WOOD.asItem()), conditionsFromItem(ModBlocks.STRIPPED_PRIMA_WOOD.asItem()))
+                .offerTo(exporter, new Identifier("prima_planks_from_stripped_wood"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRIMA_WOOD, 3)
+                .pattern("LL")
+                .pattern("LL")
+                .input('L', ModBlocks.PRIMA_LOG)
+                .criterion(hasItem(ModBlocks.PRIMA_LOG.asItem()), conditionsFromItem(ModBlocks.PRIMA_LOG.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PRIMA_WOOD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_PRIMA_WOOD, 3)
+                .pattern("LL")
+                .pattern("LL")
+                .input('L', ModBlocks.STRIPPED_PRIMA_LOG)
+                .criterion(hasItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()), conditionsFromItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STRIPPED_PRIMA_WOOD)));
 
         //shapeless
         //clumb foods

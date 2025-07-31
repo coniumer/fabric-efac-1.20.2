@@ -13,6 +13,6 @@ public class SetMaxClumbC2SPacket {
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
         ClumbData.setMaxClumbCharges(((EntityDataSaver)player), buf.readInt());
-        ClumbData.syncMaxClumbCharges(((EntityDataSaver)player).getPersistentData().getInt("maxClumbCharges"), player);
+        ClumbData.syncMaxClumbCharges(((EntityDataSaver)player).getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY), player);
     }
 }

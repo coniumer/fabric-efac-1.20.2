@@ -11,11 +11,11 @@ public class ModPlayerEventCopyFrom implements ServerPlayerEvents.CopyFrom {
         EntityDataSaver original = ((EntityDataSaver)oldPlayer);
         EntityDataSaver player = ((EntityDataSaver)newPlayer);
 
-        ClumbData.setMaxClumbCharges(player, original.getPersistentData().getInt("maxClumbCharges"));
+        ClumbData.setMaxClumbCharges(player, original.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
         if (alive) {
             ClumbData.setClumbCharges(player,
-                    original.getPersistentData().getInt("clumbCharges"),
-                    original.getPersistentData().getInt("maxClumbCharges"));
+                    original.getPersistentData().getInt(ClumbData.CLUMB_CHARGE_KEY),
+                    original.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
         }
     }
 }

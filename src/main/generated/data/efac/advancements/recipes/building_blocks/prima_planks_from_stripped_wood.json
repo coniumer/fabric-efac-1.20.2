@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_prima_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:stripped_prima_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:prima_planks_from_stripped_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_prima_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:prima_planks_from_stripped_wood"
+    ]
+  },
+  "sends_telemetry_event": false
+}

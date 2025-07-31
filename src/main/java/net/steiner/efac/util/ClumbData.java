@@ -9,12 +9,14 @@ import net.minecraft.util.math.MathHelper;
 import net.steiner.efac.networking.ModMessages;
 
 public class ClumbData {
+    public static final String CLUMB_CHARGE_KEY = "clumbCharges";
+    public static final String MAX_CLUMB_CHARGE_KEY = "maxClumbCharges";
 
     public static void addClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
-        int clumbCharges = nbt.getInt("clumbCharges");
+        int clumbCharges = nbt.getInt(CLUMB_CHARGE_KEY);
         clumbCharges = MathHelper.clamp(clumbCharges + amount, 0, max);
-        nbt.putInt("clumbCharges", clumbCharges);
+        nbt.putInt(CLUMB_CHARGE_KEY, clumbCharges);
 
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
         syncMaxClumbCharges(max, (ServerPlayerEntity)player);
@@ -23,9 +25,9 @@ public class ClumbData {
 
     public static void removeClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
-        int clumbCharges = nbt.getInt("clumbCharges");
+        int clumbCharges = nbt.getInt(CLUMB_CHARGE_KEY);
         clumbCharges = MathHelper.clamp(clumbCharges - amount, 0, max);
-        nbt.putInt("clumbCharges", clumbCharges);
+        nbt.putInt(CLUMB_CHARGE_KEY, clumbCharges);
 
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
         syncMaxClumbCharges(max, (ServerPlayerEntity)player);
@@ -35,7 +37,7 @@ public class ClumbData {
     public static void setClumbCharges(EntityDataSaver player, int amount, int max) {
         NbtCompound nbt = player.getPersistentData();
         int newClumbCharges = MathHelper.clamp(amount, 0, max);
-        nbt.putInt("clumbCharges", newClumbCharges);
+        nbt.putInt(CLUMB_CHARGE_KEY, newClumbCharges);
 
         syncClumbCharges(newClumbCharges, (ServerPlayerEntity)player);
         syncMaxClumbCharges(max, (ServerPlayerEntity)player);
@@ -44,7 +46,7 @@ public class ClumbData {
     public static void setMaxClumbCharges(EntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int newMaxClumbCharges = MathHelper.clamp(amount, 5, 40);
-        nbt.putInt("maxClumbCharges", newMaxClumbCharges);
+        nbt.putInt(MAX_CLUMB_CHARGE_KEY, newMaxClumbCharges);
 
         syncMaxClumbCharges(newMaxClumbCharges, (ServerPlayerEntity)player);
     }

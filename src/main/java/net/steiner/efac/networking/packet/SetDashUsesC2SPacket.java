@@ -12,6 +12,6 @@ public class SetDashUsesC2SPacket {
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
         DashData.addDashUses(((EntityDataSaver) player), buf.readInt());
-        DashData.syncDashUses(((EntityDataSaver) player).getPersistentData().getInt("dashUses"), player);
+        DashData.syncDashUses(((EntityDataSaver) player).getPersistentData().getInt(DashData.DASH_USES_KEY), player);
     }
 }

@@ -77,7 +77,7 @@ public class ClumbSwordItem extends SwordItem {
         );
 
         if (chargeMode && tryCharge(world)) {
-            ClumbData.addClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt("maxClumbCharges"));
+            ClumbData.addClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
             world.playSound(
                     null,
                     attacker.getX(),
@@ -88,10 +88,10 @@ public class ClumbSwordItem extends SwordItem {
                     1F,
                     2.5F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
             );
-        } else if ((sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) || player.getAbilities().creativeMode) && !chargeMode) {
+        } else if ((sPlayer.canClumb(sPlayer.getPersistentData().getInt(ClumbData.CLUMB_CHARGE_KEY), sPlayer) || player.getAbilities().creativeMode) && !chargeMode) {
             target.damage(source, modMaterial.getAttackDamage());
             if (!player.getAbilities().creativeMode) {
-                ClumbData.removeClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt("maxClumbCharges"));
+                ClumbData.removeClumbCharges(sPlayer, 1, sPlayer.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
             }
             world.playSound(
                     null,
