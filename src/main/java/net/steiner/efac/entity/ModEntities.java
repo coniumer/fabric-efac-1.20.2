@@ -18,6 +18,7 @@ public class ModEntities {
                     .trackRangeBlocks(4).trackedUpdateRate(10)
                     .build()
     );
+
     public static void registerModEntities() {
         EFAC.LOGGER.info("Registering Mod Entities for " + EFAC.MOD_ID);
     }

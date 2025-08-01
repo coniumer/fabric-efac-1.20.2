@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-31T12:13:59.554037	EFAC/Model Definitions
+// 1.20.2	2025-07-31T21:01:14.941111	EFAC/Model Definitions
 2425e2e5736a30e96b042b9e05700a20720c0f9e assets/efac/models/block/cit_gem_ore.json
 3be9f4312597e5fd5ee1b7fd996e49316ffc1a92 assets/efac/blockstates/slipulon_block.json
 e61e1b36a8cae5c8b51afa42ad9c9d7625a9a869 assets/efac/blockstates/clumbrot_crop.json
@@ -63,12 +63,14 @@ e344167257ef825e10e92c370860d99b7168e2d3 assets/efac/models/block/gelwood_door_b
 ca2cfc42de8b430171cb165642d030a1bc5b1904 assets/efac/models/item/rub_clumb_wand.json
 ddc97d052ac57175ef5280912ce774ce58b5e72d assets/efac/blockstates/gelwood_trapdoor.json
 f377ffbeef9dca6332d6adbb52614b7d4fb0d808 assets/efac/blockstates/slipulon_ore.json
+3396ad5a7fa338f997f7e4d7744dda9c834099ac assets/efac/models/block/ether.json
 46922d496c4d11441619f4729da4dff9863e23bd assets/efac/models/block/large_geumb_bud.json
 4d5aef37d98fdbadbc55e10f21d2e344e1202051 assets/efac/models/item/gold_clumbrot.json
 33a4f159cd929b35fa7ecf927b5b01fe85fc523c assets/efac/models/block/prima_wood.json
 3f776b4413fe6a684fec508f0d45b4026333fffd assets/efac/models/block/prima_log.json
 8492fbd39040decbd2d5491ab7acc20a7e380c61 assets/efac/models/item/prima_trapdoor.json
 0cf70434da0c5aff0db4c4a315cf8596773fb31b assets/efac/models/block/prima_door_top_right_open.json
+65260a6ee4c532ed212256a81d12d1df1f2c2697 assets/efac/blockstates/ether.json
 f0988f306a6a82ac5544e73839a7aceb946abd5c assets/efac/models/item/prima_leaves.json
 325dbc251a8352645d3f9116ebd90e659a881199 assets/efac/blockstates/geumb_block.json
 23f770d362df9c8c08b243957bfe0b61448276c9 assets/efac/models/block/prima_pressure_plate.json
@@ -105,9 +107,10 @@ bab2939b05feaab4b5a8588424a6227b41bbacbf assets/efac/models/block/gelwood_button
 39080fd39c4c6119cdc3c3f6a6c5d166b9b88c0d assets/efac/models/block/prima_fence_side.json
 2c5ac4b57f773e15be0e7cf5c0f5252d4b59bd72 assets/efac/models/block/small_geumb_bud.json
 b895ba7948034ba0a227a9f8b9804d83510c9331 assets/efac/models/item/cit_gem_ore.json
-518c6f646cd5df46e5740818f4d7b4c66c6a69e2 assets/efac/blockstates/cit_gem_ore.json
 ce01fa1e982cb80c80f5a7285e83c980f9b4f55e assets/efac/blockstates/prima_wall_sign.json
+518c6f646cd5df46e5740818f4d7b4c66c6a69e2 assets/efac/blockstates/cit_gem_ore.json
 8e8bc37e48d0f764e7ff6fd9208ee2b86a43f834 assets/efac/models/block/prima_slab_top.json
+b06c25b87644d4b4ef3ab781d386c67d8d711ea8 assets/efac/models/item/ether.json
 fc2c99096b37557715db2187a26f0875a6acc80c assets/efac/models/block/alb_gem_ore.json
 16cc9c8537323d81840541c422006ed0151a81be assets/efac/models/block/gelwood_door_top_right_open.json
 1f74dc094f4bf0b113bfcd2a27b731885a248bdd assets/efac/blockstates/prima_pressure_plate.json

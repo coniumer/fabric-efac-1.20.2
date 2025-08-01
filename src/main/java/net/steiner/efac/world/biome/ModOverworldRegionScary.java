@@ -13,8 +13,8 @@ import terrablender.api.VanillaParameterOverlayBuilder;
 
 import java.util.function.Consumer;
 
-public class ModOverworldRegion extends Region {
-    public ModOverworldRegion(Identifier name, int weight) {
+public class ModOverworldRegionScary extends Region {
+    public ModOverworldRegionScary(Identifier name, int weight) {
         super(name, RegionType.OVERWORLD, weight);
     }
 

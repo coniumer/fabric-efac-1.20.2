@@ -2,35 +2,35 @@
   "type": "efac:scarydim_type",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:nether",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:nether_wastes",
+          "biome": "efac:scary_biome",
           "parameters": {
             "temperature": 0.05,
-            "humidity": 0.1,
-            "continentalness": 0,
+            "humidity": 0.3,
+            "continentalness": 0.2,
             "erosion": 0.3,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
+            "weirdness": 0.4,
+            "depth": 0.1,
+            "offset": 0.2
           }
         },
         {
-          "biome": "minecraft:plains",
+          "biome": "efac:ether_fields",
           "parameters": {
-            "temperature": 0.1,
-            "humidity": 0.3,
-            "continentalness": 0.2,
-            "erosion": 0,
-            "weirdness": 0.01,
+            "temperature": 0.15,
+            "humidity": 0.5,
+            "continentalness": 0.1,
+            "erosion": 0.3,
+            "weirdness": 0.1,
             "depth": 0,
-            "offset": 0
+            "offset": 0.5
           }
         }
       ]
-    }
+    },
+    "settings": "minecraft:overworld"
   }
 }

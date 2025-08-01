@@ -34,11 +34,11 @@ public class ModDimensions {
     // scary settings
     public static void scaryBootstrapType(Registerable<DimensionType> context) {
         context.register(SCARY_DIM_TYPE, new DimensionType(
-                OptionalLong.of(12000), //fixedTime
+                OptionalLong.of(18000), //fixedTime
                 false, // hasSkyLight
-                true, // hasCeiling
+                false, // hasCeiling
                 false, // ultraWarm
-                false, // natural
+                true, // natural
                 1.0, // coordinateScale
                 false, // bedWorks
                 false, // respawnAnchorWorks
@@ -47,7 +47,7 @@ public class ModDimensions {
                 256, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
-                1.0f, // ambientLight
+                0.0f, // ambientLight
                 new DimensionType.MonsterSettings(false,false, UniformIntProvider.create(0, 0), 0)));
     }
 

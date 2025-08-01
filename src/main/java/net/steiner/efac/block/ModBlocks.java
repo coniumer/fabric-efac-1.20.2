@@ -143,6 +143,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SLIME)));
     public static final Block YES = registerBlock("yes",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(ModSounds.YES_SOUNDS)));
+    public static final Block ETHER = registerBlock("ether",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.SNOW)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

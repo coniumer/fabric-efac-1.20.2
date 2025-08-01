@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-31T12:13:59.552665	EFAC/Recipes
+// 1.20.2	2025-07-31T21:01:14.939987	EFAC/Recipes
 0e64cd0ad82cce04b5748381297558604b7e80d9 data/efac/recipes/clumby_sword.json
 5456a895970388d1b5aaa59bab06e721c1a464ad data/efac/recipes/alby_geumb_shard.json
 b1198e4f438c86760b4d714abbb4a604439b0920 data/efac/advancements/recipes/misc/rubied_geumb_shard.json
@@ -12,8 +12,8 @@ c0638f1b343ba1b5ac2e64b252506837e14bed60 data/efac/advancements/recipes/misc/sli
 db1e262969c3cfcbde0bc168a472b1cf55388dbf data/efac/recipes/clumburger.json
 3e095fcf12bdb3770f14a567d5455c2477e1d8ce data/efac/recipes/slipulon_block.json
 433daee84443995486f10dc6d42314b4e86da086 data/efac/recipes/gelwood_planks.json
-5ef65c838ef13a1ef29324123c814bc25ea5a6db data/efac/recipes/prima_wood.json
 79efd333402932cd53b9ace5100ab8b1a560be12 data/efac/advancements/recipes/building_blocks/prima_planks_from_wood.json
+5ef65c838ef13a1ef29324123c814bc25ea5a6db data/efac/recipes/prima_wood.json
 66e3c556a43977ab58b1f1bd27e57f981471e15b data/efac/advancements/recipes/tools/rubied_sword.json
 dfed4ee651171db525431461996efe0db240ebe3 data/efac/recipes/prima_trapdoor.json
 8aea5dc3822b7e83f56ba46a866a82d950a892a2 data/efac/advancements/recipes/food/clumburger.json
@@ -54,8 +54,8 @@ d9725a3a5a3a14cc2e4d4039a45e73c174405e56 data/efac/advancements/recipes/misc/com
 2fccb5d3cb25f38d96deb8b5077491df992d1262 data/efac/recipes/prima_stairs.json
 99d54b268997408ecd397068eafbeebd4c699b54 data/efac/recipes/rubied_geumb_shard.json
 c84615d6f58315338368bb57199e6ca60ef2fa8d data/efac/advancements/recipes/food/gold_clumble.json
-4ce987f557980c204f6893b0a7549de7cdc89fcc data/efac/advancements/recipes/food/clumbelon.json
 d35970225587fc1922e4d68a7edcec87ab73a331 data/efac/recipes/prima_planks_from_stripped_wood.json
+4ce987f557980c204f6893b0a7549de7cdc89fcc data/efac/advancements/recipes/food/clumbelon.json
 67051f67d879280d26304582308bf43d6ad98802 data/efac/recipes/gold_clumble.json
 43a4d30509b301569e192f4e8079ca2bb8b49f31 data/efac/advancements/recipes/tools/citry_sword.json
 d92d584a45316f121a0555202f61ed61f8613c4a data/efac/advancements/recipes/misc/slipulon_ingot_from_smelting_raw_slipulon.json

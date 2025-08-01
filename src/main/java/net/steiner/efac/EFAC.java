@@ -45,6 +45,10 @@ public class EFAC implements ModInitializer {
 		ServerPlayConnectionEvents.JOIN.register(((handler, sender, server) -> {
 			ServerPlayerEntity player = handler.player;
 			EntityDataSaver sPlayer = (EntityDataSaver)handler.player;
+			if(sPlayer.getPersistentData() == null) {
+				ClumbData.setMaxClumbCharges(sPlayer, 5);
+				ClumbData.setClumbCharges(sPlayer, 0, sPlayer.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
+			}
 			ClumbData.setMaxClumbCharges(sPlayer, sPlayer.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY));
 			ClumbData.syncMaxClumbCharges((sPlayer.getPersistentData().getInt(ClumbData.MAX_CLUMB_CHARGE_KEY)), player);
 			ClumbData.syncClumbCharges((sPlayer.getPersistentData().getInt(ClumbData.CLUMB_CHARGE_KEY)), player);

@@ -101,6 +101,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COMPACT_DOM);
                         entries.add(ModBlocks.BUTTER);
                         entries.add(ModBlocks.YES);
+                        entries.add(ModBlocks.ETHER);
                     }).build());
 
     public static void registerItemGroups() {

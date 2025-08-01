@@ -25,6 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COMPACT_DOM);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUTTER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ETHER);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GEUMB_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUDDING_GEUMB);

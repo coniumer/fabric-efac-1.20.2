@@ -19,9 +19,12 @@ import net.steiner.efac.world.ModPlacedFeatures;
 public class ModBiomes {
     public static final RegistryKey<Biome> SCARY_BIOME = RegistryKey.of(RegistryKeys.BIOME,
             new Identifier(EFAC.MOD_ID, "scary_biome"));
+    public static final RegistryKey<Biome> ETHER_FIELDS = RegistryKey.of(RegistryKeys.BIOME,
+            new Identifier(EFAC.MOD_ID, "ether_fields"));
 
     public static void bootstrap(Registerable<Biome> context) {
         context.register(SCARY_BIOME, scaryBiome(context));
+        context.register(ETHER_FIELDS, etherFields(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -37,8 +40,10 @@ public class ModBiomes {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
 
-        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SKELETON, 100, 1, 3));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.CREEPER, 50, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ENDERMAN, 70, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SPIDER, 150, 3, 6));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
@@ -60,11 +65,43 @@ public class ModBiomes {
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0xe82e3b)
-                        .waterFogColor(0xbf1b26)
-                        .skyColor(0x30c918)
+                        .waterFogColor(0xe82e3b)
+                        .skyColor(0xe82e3b)
                         .grassColor(0x555555)
                         .foliageColor(0x555555)
-                        .fogColor(0x22a1e6)
+                        .fogColor(0x555555)
+                        .moodSound(BiomeMoodSound.CAVE).build())
+                .build();
+    }
+
+    public static Biome etherFields(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SKELETON, 100, 1, 3));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.CREEPER, 50, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ENDERMAN, 70, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SPIDER, 150, 3, 6));
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xe82e3b)
+                        .skyColor(0xe82e3b)
+                        .grassColor(0x555555)
+                        .foliageColor(0x555555)
+                        .fogColor(0x555555)
                         .moodSound(BiomeMoodSound.CAVE).build())
                 .build();
     }
