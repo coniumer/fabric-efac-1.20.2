@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-31T21:01:14.939987	EFAC/Recipes
+// 1.20.2	2025-08-01T19:37:55.175108	EFAC/Recipes
 0e64cd0ad82cce04b5748381297558604b7e80d9 data/efac/recipes/clumby_sword.json
 5456a895970388d1b5aaa59bab06e721c1a464ad data/efac/recipes/alby_geumb_shard.json
 b1198e4f438c86760b4d714abbb4a604439b0920 data/efac/advancements/recipes/misc/rubied_geumb_shard.json
@@ -33,6 +33,7 @@ c9eabf206b820810c3c77feef303dc359917d06f data/efac/recipes/cit_clumb_materia.jso
 1f5c163f5ce74ed9a3d10b6435f9fc6e0e7e976f data/efac/recipes/gelwood_slab.json
 ab97d51463b9891a0e9a0d64b06a209a5e8fd4a6 data/efac/recipes/prima_planks.json
 e1ea6ab09b256de642f614b0fb37801a20e9a6a0 data/efac/recipes/gelwood_fence_gate.json
+4c5d0f09a347b88790718107a96f729f59fb0f7a data/efac/advancements/recipes/building_blocks/clumb_harvester.json
 d2dd10337305eb14c9d591a090c340f8e9636cfb data/efac/recipes/rub_clumb_wand.json
 f8e59aebe2217a09b7b084593043467fd2a6a5a0 data/efac/advancements/recipes/building_blocks/gelwood_orb.json
 307ae1ece45b2a763218ef3f8f75c4b7f64b09b4 data/efac/recipes/prima_slab.json
@@ -41,6 +42,7 @@ f8e59aebe2217a09b7b084593043467fd2a6a5a0 data/efac/advancements/recipes/building
 e4c391d4b8996eae764f8466972ec0483132a5a0 data/efac/recipes/gelwood_pressure_plate.json
 cd11daf8d2e99c45b3a483257bbbecd965db8199 data/efac/advancements/recipes/food/cit_clumb_materia.json
 b9deb0308b00176698d4cfa00415c1feddc1100c data/efac/advancements/recipes/food/blumb.json
+48240524e426a5b84704014d0fcf369e5aa4de39 data/efac/recipes/clumb_harvester.json
 cda38972a26d993b4af83ae60ee651eb9b9df3be data/efac/recipes/geumb_block.json
 21f6d6b83342f68a634420fae49ecd301d3552b1 data/efac/advancements/recipes/food/alb_clumb_materia.json
 b49596ac920af8e1366dee490d0c3b82be5f3bbb data/efac/advancements/recipes/building_blocks/prima_slab.json

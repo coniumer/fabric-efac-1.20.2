@@ -37,13 +37,13 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SLIPULON_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SLIPULON_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(9, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
         register(context, BUTTER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BUTTER_KEY),
-                ModOrePlacement.modifiersWithCount(18, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(10, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
         register(context, GELWOOD_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GELWOOD_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(19, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
         register(context, ALB_GEM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ALB_GEM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(16, // Veins per Chunk
@@ -55,7 +55,7 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20))));
         register(context, GEUMB_BLOCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GEUMB_BLOCK_KEY),
-                ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(7, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
         register(context, PRIMA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PRIMA_KEY),

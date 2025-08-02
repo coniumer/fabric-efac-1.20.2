@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.steiner.efac.block.ModBlocks;
+import net.steiner.efac.block.entity.ModBlockEntities;
 import net.steiner.efac.entity.ModBoats;
 import net.steiner.efac.entity.ModEntities;
 import net.steiner.efac.event.ModEntityEventOnLoad;
@@ -12,6 +13,8 @@ import net.steiner.efac.event.ModPlayerEventCopyFrom;
 import net.steiner.efac.item.ModItemGroups;
 import net.steiner.efac.item.ModItems;
 import net.steiner.efac.networking.ModMessages;
+import net.steiner.efac.recipe.ModRecipes;
+import net.steiner.efac.screen.ModScreenHandlers;
 import net.steiner.efac.sound.ModSounds;
 
 public class ModRegistries {
@@ -20,10 +23,13 @@ public class ModRegistries {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModEntities.registerModEntities();
+        ModBlockEntities.registerBlockEntities();
         ModBoats.registerBoats();
         ModDamage.registerModDamage();
         ModSounds.registerSounds();
+        ModRecipes.registerRecipes();
         ModMessages.regsiterC2SPackets();
+        ModScreenHandlers.registerScreenHandlers();
 
         ModLootTableModifiers.modifyLootTables();
 

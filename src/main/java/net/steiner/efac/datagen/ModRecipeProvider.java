@@ -354,5 +354,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
                 .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CLUMBVESTIGATOR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLUMB_HARVESTER, 1)
+                .pattern("MMM")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('M', ModItems.CLUMB_MATERIA)
+                .input('S', ModItems.SLIPULON_INGOT)
+                .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.SLIPULON_INGOT), conditionsFromItem(ModItems.SLIPULON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CLUMB_HARVESTER)));
     }
 }

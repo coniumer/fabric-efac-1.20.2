@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "M": {
+      "item": "efac:clumb_materia"
+    },
+    "S": {
+      "item": "efac:slipulon_ingot"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "item": "efac:clumb_harvester"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "efac:block/slipulon_block",
+    "east": "efac:block/clumb_harvester_side",
+    "north": "efac:block/clumb_harvester_side",
+    "particle": "efac:block/clumb_harvester_side",
+    "south": "efac:block/clumb_harvester_side",
+    "up": "efac:block/clumb_harvester_top",
+    "west": "efac:block/clumb_harvester_side"
+  }
+}

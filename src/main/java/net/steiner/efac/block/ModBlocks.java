@@ -15,14 +15,15 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.EFAC;
-import net.steiner.efac.block.custom.BuddingGeumbBlock;
-import net.steiner.efac.block.custom.ClumbrotCropBlock;
-import net.steiner.efac.block.custom.GeumbBlock;
-import net.steiner.efac.block.custom.GeumbClusterBlock;
+import net.steiner.efac.block.custom.*;
 import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.world.tree.PrimaSaplingGenerator;
 
 public class ModBlocks {
+
+    //functional
+    public static final Block CLUMB_HARVESTER = registerBlock("clumb_harvester",
+            new ClumbHarvesterBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
 
     //ore
     //slipulon

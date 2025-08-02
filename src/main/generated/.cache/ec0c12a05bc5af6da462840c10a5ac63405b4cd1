@@ -1,4 +1,4 @@
-// 1.20.2	2025-07-31T21:01:14.941111	EFAC/Model Definitions
+// 1.20.2	2025-08-01T19:37:55.176661	EFAC/Model Definitions
 2425e2e5736a30e96b042b9e05700a20720c0f9e assets/efac/models/block/cit_gem_ore.json
 3be9f4312597e5fd5ee1b7fd996e49316ffc1a92 assets/efac/blockstates/slipulon_block.json
 e61e1b36a8cae5c8b51afa42ad9c9d7625a9a869 assets/efac/blockstates/clumbrot_crop.json
@@ -107,8 +107,8 @@ bab2939b05feaab4b5a8588424a6227b41bbacbf assets/efac/models/block/gelwood_button
 39080fd39c4c6119cdc3c3f6a6c5d166b9b88c0d assets/efac/models/block/prima_fence_side.json
 2c5ac4b57f773e15be0e7cf5c0f5252d4b59bd72 assets/efac/models/block/small_geumb_bud.json
 b895ba7948034ba0a227a9f8b9804d83510c9331 assets/efac/models/item/cit_gem_ore.json
-ce01fa1e982cb80c80f5a7285e83c980f9b4f55e assets/efac/blockstates/prima_wall_sign.json
 518c6f646cd5df46e5740818f4d7b4c66c6a69e2 assets/efac/blockstates/cit_gem_ore.json
+ce01fa1e982cb80c80f5a7285e83c980f9b4f55e assets/efac/blockstates/prima_wall_sign.json
 8e8bc37e48d0f764e7ff6fd9208ee2b86a43f834 assets/efac/models/block/prima_slab_top.json
 b06c25b87644d4b4ef3ab781d386c67d8d711ea8 assets/efac/models/item/ether.json
 fc2c99096b37557715db2187a26f0875a6acc80c assets/efac/models/block/alb_gem_ore.json

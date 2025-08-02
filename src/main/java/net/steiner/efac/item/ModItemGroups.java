@@ -15,7 +15,8 @@ public class ModItemGroups {
     public static final ItemGroup SLIPULON_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(EFAC.MOD_ID, "slipulon_ingot"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.slipulon_ingot"))
-                    .icon(() -> new ItemStack(ModItems.SLIPULON_INGOT)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModBlocks.CLUMB_HARVESTER)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.CLUMB_HARVESTER);
                         // Items
                             //valuables
                         entries.add(ModItems.RAW_SLIPULON);
