@@ -59,6 +59,18 @@ public class HarvesterRecipe {
                 new float[] {1f, 0.5f, 0.3f});
         registerClumbHarvesterRecipe(Blocks.RED_SAND.asItem(), Items.FLINT, ModItems.TOOTH, ModItems.CLUMB_MATERIA,
                 new float[] {1f, 0.5f, 0.3f});
+        registerClumbHarvesterRecipe(Blocks.DIRT.asItem(), Items.BONE_MEAL, ModItems.CLUMB_MATERIA, ModItems.TOOTH,
+                new float[] {0.5f, 0.2f, 0.1f});
+        registerClumbHarvesterRecipe(Blocks.DIORITE.asItem(), Items.BONE_MEAL, Items.COAL, ModItems.RUB_GEM,
+                new float[] {0.5f, 0.2f, 0.1f});
+        registerClumbHarvesterRecipe(Blocks.GRANITE.asItem(), Items.BONE_MEAL, Items.RAW_GOLD, ModItems.CIT_GEM,
+                new float[] {0.5f, 0.2f, 0.1f});
+        registerClumbHarvesterRecipe(Blocks.ANDESITE.asItem(), Items.BONE_MEAL, Items.RAW_IRON, ModItems.ALB_GEM,
+                new float[] {0.5f, 0.2f, 0.1f});
+        registerClumbHarvesterRecipe(Blocks.TUFF.asItem(), ModItems.RANDOM_SAUCE, ModItems.RANDOM_SAUCE, ModItems.YUMMY_SAUCE,
+                new float[] {0.5f, 0.2f, 0.1f});
+        registerClumbHarvesterRecipe(Blocks.NETHERRACK.asItem(), Items.GOLD_NUGGET, Items.QUARTZ, ModItems.YUMMY_SAUCE,
+                new float[] {0.4f, 0.3f, 0.2f});
     }
 
     public static void registerClumbHarvesterRecipe(Item input, Item mainOutput,
