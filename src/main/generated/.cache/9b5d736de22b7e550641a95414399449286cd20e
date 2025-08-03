@@ -1,4 +1,4 @@
-// 1.20.2	2025-08-01T19:37:55.175108	EFAC/Recipes
+// 1.20.2	2025-08-02T21:48:34.229461	EFAC/Recipes
 0e64cd0ad82cce04b5748381297558604b7e80d9 data/efac/recipes/clumby_sword.json
 5456a895970388d1b5aaa59bab06e721c1a464ad data/efac/recipes/alby_geumb_shard.json
 b1198e4f438c86760b4d714abbb4a604439b0920 data/efac/advancements/recipes/misc/rubied_geumb_shard.json
@@ -65,6 +65,7 @@ d92d584a45316f121a0555202f61ed61f8613c4a data/efac/advancements/recipes/misc/sli
 7e2d90ebb813b4516eeba1e49172d29556a900a5 data/efac/advancements/recipes/building_blocks/slipulon_ingot.json
 9fae6055b97221d4613e73265ec15285fefd8381 data/efac/recipes/citry_sword.json
 2ce148aeb0cc539b5e852958cb35576246127bfd data/efac/recipes/clumbrot.json
+595b87e3f92b1808e1dda6f45a4ff4a36ff1cc4a data/efac/recipes/tooth.json
 c367e2ed8dd06b27a6751210b918a0851a2bd140 data/efac/recipes/stripped_prima_wood.json
 62a750d4a2648262933c24cc2ed5c1d3fcd31e69 data/efac/recipes/alby_sword.json
 4e834273229cf88eb226628baaac9195357c1be3 data/efac/advancements/recipes/decorations/prima_fence.json
@@ -92,7 +93,6 @@ afb2602ba55eab9707fcbb42143608c1351f71d0 data/efac/recipes/slipulon_ingot_from_s
 56ef9f888c517eb8b3a2ce9fe96bd319976a5beb data/efac/advancements/recipes/food/clumbkie.json
 43761d6858e6d9727222aebb5670a8e801e77de7 data/efac/advancements/recipes/redstone/prima_pressure_plate.json
 0d2a8fa730dbde23dfddb6a1821e00e24250ad59 data/efac/advancements/recipes/food/clumble.json
-3e5d82a7e95c85ee3a462ad912e2e4690d9417b2 data/efac/recipes/clumbvestigator.json
 9bdb3f2bdd29d67ff1cd65916cfff80998e1070f data/efac/recipes/prima_fence_gate.json
 7dae53c96b439ce54d81c7a3f13c837ca47d48c9 data/efac/recipes/clumbkie.json
 98e6814496ed579a090b5f1ea2a7c70dacaff39c data/efac/recipes/clumby_geumb_shard.json
@@ -101,11 +101,11 @@ afb2602ba55eab9707fcbb42143608c1351f71d0 data/efac/recipes/slipulon_ingot_from_s
 992975d731d13a713dcbf827a7f84fe8f590ad08 data/efac/recipes/clumb_materia_from_blasting_compact_dom.json
 10cecc031ee2880364f329dad51bc2d29b00dbb6 data/efac/recipes/blumb.json
 af6895b72554b43652eb794279d27505de67bde8 data/efac/recipes/gelwood_fence.json
-c216296be61665b8ff4c23ce29edbd2d3e339af7 data/efac/advancements/recipes/tools/clumbvestigator.json
 4577df8626b281ecb0fe10a2145f692c9894984b data/efac/recipes/clumble.json
 30968a1ec95fe02b6bf1b46505e5ec458c9522c4 data/efac/advancements/recipes/building_blocks/prima_planks_from_stripped_wood.json
 ee284ef581d3db3e9adc51a6057bb94fc21b6521 data/efac/recipes/gelwood_orb.json
 446d062e331962911b1de118b2f28cb2fd4e9ff6 data/efac/advancements/recipes/misc/geumb_shard.json
+8dff41ff04b9e8862863af37596028bc2ce44e41 data/efac/advancements/recipes/misc/tooth.json
 dfca6f34d9fe9deb0db5237bd57802c44c9c96c9 data/efac/advancements/recipes/misc/citry_geumb_shard.json
 46de08c95f28034cbe0f81f50c307f5fa8f31673 data/efac/advancements/recipes/building_blocks/gelwood_stairs.json
 e25193a98b607cf85aa3cb8f9ebd8dd3e370ee48 data/efac/recipes/clumb_materia_from_smelting_compact_dom.json

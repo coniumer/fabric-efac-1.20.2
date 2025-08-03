@@ -21,6 +21,7 @@ public class EFACClient implements ClientModInitializer {
         ModClientRendering.registerCutouts();
 
         EntityRendererRegistry.register(ModEntities.CLUMB_PROJECTILE, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.TOOTH_ITEM_ENTITY, FlyingItemEntityRenderer::new);
 
         TerraformBoatClientHelper.registerModelLayers(ModBoats.PRIMA_BOAT_ID, false);
 

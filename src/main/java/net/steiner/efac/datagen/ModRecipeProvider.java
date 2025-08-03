@@ -344,17 +344,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.EPIC_SAUCE), conditionsFromItem(ModItems.EPIC_SAUCE))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUBIED_GEUMB_SHARD)));
 
-        //misc
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CLUMBVESTIGATOR, 1)
-                .pattern(" C ")
-                .pattern("CGC")
-                .pattern(" C ")
-                .input('C', ModItems.CLUMB_MATERIA)
-                .input('G', Blocks.GLASS)
-                .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
-                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CLUMBVESTIGATOR)));
+        //teeth
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOOTH, 1)
+                .pattern("B")
+                .pattern("B")
+                .input('B', Items.BONE_MEAL)
+                .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.BONE_MEAL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TOOTH)));
 
+        //misc
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLUMB_HARVESTER, 1)
                 .pattern("MMM")
                 .pattern("SSS")

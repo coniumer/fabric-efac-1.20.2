@@ -34,6 +34,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEDIUM_GEUMB_BUD)
                 .add(ModBlocks.SMALL_GEUMB_BUD)
                 .add(ModBlocks.BUDDING_GEUMB)
+                .add(ModBlocks.CLUMB_HARVESTER)
                 .add(ModBlocks.YES);
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
@@ -52,26 +53,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MEDIUM_GEUMB_BUD)
                 .add(ModBlocks.SMALL_GEUMB_BUD)
                 .add(ModBlocks.BUDDING_GEUMB)
-                .add(ModBlocks.YES);
+                .add(ModBlocks.YES)
+                .add(ModBlocks.CLUMB_HARVESTER);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CIT_GEM_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RUB_GEM_ORE);
-
-        getOrCreateTagBuilder(ModTags.Blocks.CLUMBVESTIGATABLE)
-                .add(ModBlocks.SLIPULON_ORE)
-                .add(ModBlocks.SLIPULON_BLOCK)
-                .add(ModBlocks.BUTTER)
-                .forceAddTag(BlockTags.GOLD_ORES)
-                .add(Blocks.GOLD_BLOCK)
-                .add(Blocks.RAW_GOLD_BLOCK)
-                .forceAddTag(BlockTags.COPPER_ORES)
-                .add(Blocks.COPPER_BLOCK)
-                .add(Blocks.RAW_COPPER_BLOCK)
-                .forceAddTag(BlockTags.DIAMOND_ORES)
-                .add(Blocks.DIAMOND_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.GELWOOD_FENCE)

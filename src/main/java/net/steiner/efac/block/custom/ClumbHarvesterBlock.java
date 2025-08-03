@@ -9,6 +9,7 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
@@ -17,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.steiner.efac.block.entity.ClumbHarvesterBlockEntity;
 import net.steiner.efac.block.entity.ModBlockEntities;
+import net.steiner.efac.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class ClumbHarvesterBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -46,10 +48,10 @@ public class ClumbHarvesterBlock extends BlockWithEntity implements BlockEntityP
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             NamedScreenHandlerFactory screenHandlerFactory = ((ClumbHarvesterBlockEntity) world.getBlockEntity(pos));
-
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);
             }
+            world.playSound(null, pos, ModSounds.HARVESTER_OPEN, SoundCategory.BLOCKS, 1f, 1f);
         }
         return ActionResult.SUCCESS;
     }

@@ -48,6 +48,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CLUMBLE);
                         entries.add(ModItems.GOLD_CLUMBLE);
                         entries.add(ModItems.CLUMBURGER);
+                            //teeth
+                        entries.add(ModItems.TOOTH);
                             //custom
                                 //wands
                         entries.add(ModItems.WOOD_CLUMB_WAND);
@@ -59,8 +61,6 @@ public class ModItemGroups {
                         entries.add(ModItems.ALBY_SWORD);
                         entries.add(ModItems.CITRY_SWORD);
                         entries.add(ModItems.RUBIED_SWORD);
-                                //misc
-                        entries.add(ModItems.CLUMBVESTIGATOR);
                         // Blocks
                         entries.add(ModBlocks.SLIPULON_ORE);
                         entries.add(ModBlocks.SLIPULON_BLOCK);

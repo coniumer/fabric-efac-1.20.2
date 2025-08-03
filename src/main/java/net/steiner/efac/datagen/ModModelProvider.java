@@ -100,14 +100,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CLUMBLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLD_CLUMBLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLUMBURGER, Models.GENERATED);
+        //teeth
+        itemModelGenerator.register(ModItems.TOOTH, Models.GENERATED);
         //custom
             //wands
         itemModelGenerator.register(ModItems.WOOD_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ALB_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CIT_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUB_CLUMB_WAND, Models.HANDHELD);
-            //ugh
-        itemModelGenerator.register(ModItems.CLUMBVESTIGATOR, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.PRIMA_HANGING_SIGN, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRIMA_BOAT, Models.GENERATED);

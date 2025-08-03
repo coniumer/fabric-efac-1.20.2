@@ -9,9 +9,6 @@ import net.steiner.efac.EFAC;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> CLUMBVESTIGATABLE =
-                createTag("clumbvestigatable");
-
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(EFAC.MOD_ID, name));
         }

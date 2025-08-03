@@ -24,6 +24,7 @@ public class ClumbHarvesterScreen extends HandledScreen<ClumbHarvesterScreenHand
         int y = (height - backgroundHeight) / 2;
 
         context.drawTexture(TEX, x, y, 0, 0, backgroundWidth, backgroundHeight);
+        renderProgress(context, x, y);
     }
 
     private void renderProgress(DrawContext context, int x, int y) {

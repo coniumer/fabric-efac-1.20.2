@@ -1,7 +1,5 @@
 package net.steiner.efac.item.custom;
 
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -13,7 +11,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.steiner.efac.entity.custom.ClumbProjectileEntity;
-import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.util.ClumbData;
 import net.steiner.efac.util.EntityDataSaver;

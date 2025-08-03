@@ -44,6 +44,9 @@ public class ModItems {
     public static final Item CLUMBLE = registerItem("clumble", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMBLE)));
     public static final Item GOLD_CLUMBLE = registerItem("gold_clumble", new Item(new FabricItemSettings().food(ModFoodComponents.GOLD_CLUMBLE)));
     public static final Item CLUMBURGER = registerItem("clumburger", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMBURGER)));
+    //teeth
+    public static final Item TOOTH = registerItem("tooth",
+            new ToothItem(new FabricItemSettings()));
     //wands
     public static final Item WOOD_CLUMB_WAND = registerItem("wood_clumb_wand",
             new WandItem(ModToolMaterial.CLUMB_MATERIA, ModToolMaterial.CLUMB_MATERIA, new FabricItemSettings().maxCount(1)));
@@ -62,9 +65,6 @@ public class ModItems {
             new ClumbSwordItem(ModToolMaterial.CITRINIZED, ModToolMaterial.CITRINIZED, 3, -2.2f, new FabricItemSettings()));
     public static final Item RUBIED_SWORD = registerItem("rubied_sword",
             new ClumbSwordItem(ModToolMaterial.RUBEDIZED, ModToolMaterial.RUBEDIZED, 3, -2.2f, new FabricItemSettings()));
-    //misc
-    public static final Item CLUMBVESTIGATOR = registerItem("clumbvestigator",
-            new ClumbvestigatorItem(new FabricItemSettings().maxCount(1)));
     //signs
     public static final Item PRIMA_SIGN = registerItem("prima_sign",
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.PRIMA_SIGN, ModBlocks.PRIMA_WALL_SIGN));

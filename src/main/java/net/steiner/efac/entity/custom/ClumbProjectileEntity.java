@@ -54,12 +54,6 @@ public class ClumbProjectileEntity extends ThrownItemEntity {
     }
 
     @Override
-    public void tick() {
-        super.tick();
-
-    }
-
-    @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         if (this.getOwner() instanceof LivingEntity livingEntity) {

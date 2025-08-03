@@ -137,5 +137,17 @@
     "sounds": [
       "efac:player/cdash"
     ]
+  },
+  "harvester_harvest": {
+    "subtitle": "efac.harvester_harvest",
+    "sounds": [
+      "efac:block/harvester/harvest"
+    ]
+  },
+  "harvester_open": {
+    "subtitle": "efac.harvester_open",
+    "sounds": [
+      "efac:block/harvester/open"
+    ]
   }
 }

@@ -1,29 +1,30 @@
 package net.steiner.efac.block.entity;
 
+import com.google.common.collect.Lists;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.steiner.efac.recipe.ClumbHarvestingRecipe;
+import net.steiner.efac.recipe.HarvesterRecipe;
 import net.steiner.efac.screen.ClumbHarvesterScreenHandler;
+import net.steiner.efac.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
+import java.util.List;
 
 public class ClumbHarvesterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
@@ -99,48 +100,47 @@ public class ClumbHarvesterBlockEntity extends BlockEntity implements ExtendedSc
 
     public void tick(World world, BlockPos pos, BlockState state) {
         if (world.isClient) { return; }
+        boolean crafted = false;
+        List<Item> outputs = Lists.newArrayList();
 
-        for (int i = 1; i <= 3; i++) {
-            if (outputIsEmptyOrReceivable(i)) {
-                if (this.hasRecipe(i)) {
-                    progress++;
-                    markDirty(world, pos, state);
-
-                    if (progress >= maxProgress) {
-                        this.craftItem(i);
-                        this.resetProgress();
-                    }
-                } else {
+        if (HarvesterRecipe.hasRecipe(this.getStack(INPUT_SLOT))) {
+            if (outputsAreAvailable()) {
+                progress++;
+                markDirty(world, pos, state);
+                if (progress >= maxProgress) {
+                    outputs.addAll(this.getOutputs(world, this.getStack(INPUT_SLOT)));
+                    putOutputsInSlots(outputs);
+                    world.playSound(null, pos, ModSounds.HARVESTER_HARVEST, SoundCategory.BLOCKS, 1f, 1f);
+                    crafted = true;
                     this.resetProgress();
                 }
-            } else {
+            }else {
                 this.resetProgress();
-                markDirty(world, pos, state);
+            }
+        } else {
+            this.resetProgress();
+            markDirty(world, pos, state);
+        }
+
+        if (crafted) {
+            this.removeStack(INPUT_SLOT, 1);
+        }
+    }
+
+    private void putOutputsInSlots(List<Item> outputs) {
+        for (int i = 0; i < outputs.size(); i++) {
+            if (canInsertAmountIntoOutputSlot(outputs.get(i).getDefaultStack(), OUTPUT[i]) && canInsertItemIntoOutputSlot(outputs.get(i), OUTPUT[i])) {
+                this.setStack(OUTPUT[i], new ItemStack(outputs.get(i), getStack(OUTPUT[i]).getCount() + 1));
             }
         }
     }
 
-    private void craftItem(int slot) {
-        Optional<RecipeEntry<ClumbHarvestingRecipe>> recipe = getCurrentRecipe();
-        this.removeStack(INPUT_SLOT, 1);
-
-        this.setStack(slot, new ItemStack(recipe.get().value().getResult(null).getItem(),
-                getStack(slot).getCount() + recipe.get().value().getResult(null).getCount()));
-    }
-
-    private boolean hasRecipe(int slot) {
-        Optional<RecipeEntry<ClumbHarvestingRecipe>> recipe = getCurrentRecipe();
-        return recipe.isPresent() && canInsertAmountIntoOutputSlot(recipe.get().value().getResult(null), slot)
-                && canInsertItemIntoOutputSlot(recipe.get().value().getResult(null).getItem(), slot);
-    }
-
-    private Optional<RecipeEntry<ClumbHarvestingRecipe>> getCurrentRecipe() {
-        SimpleInventory inv = new SimpleInventory(this.size());
-        for (int i = 0; i < this.size(); i++) {
-            inv.setStack(i, this.getStack(i));
+    private List<Item> getOutputs(World world, ItemStack input) {
+        float[] rolls = new float[OUTPUT.length];
+        for (int i = 0; i < OUTPUT.length; i++) {
+            rolls[i] = ((float) (Math.abs(world.getRandom().nextInt()) % 10) / 10f);
         }
-
-        return getWorld().getRecipeManager().getFirstMatch(ClumbHarvestingRecipe.Type.INSTANCE, inv, getWorld());
+        return HarvesterRecipe.craft(input, rolls);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item, int slot) {
@@ -151,8 +151,11 @@ public class ClumbHarvesterBlockEntity extends BlockEntity implements ExtendedSc
         return this.getStack(slot).getCount() + result.getCount() <= getStack(slot).getMaxCount();
     }
 
-    private boolean outputIsEmptyOrReceivable(int slot) {
-        return this.getStack(slot).isEmpty() || this.getStack(slot).getCount() < this.getStack(slot).getMaxCount();
+    private boolean outputsAreAvailable() {
+        for (int j : OUTPUT) {
+            return this.getStack(j).isEmpty() || this.getStack(j).getCount() < this.getStack(j).getMaxCount();
+        }
+        return false;
     }
 
     private void resetProgress() {

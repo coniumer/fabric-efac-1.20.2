@@ -19,12 +19,12 @@ public class ClumbHarvesterScreenHandler extends ScreenHandler {
 
     public ClumbHarvesterScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
-                new ArrayPropertyDelegate(4));
+                new ArrayPropertyDelegate(2));
     }
 
     public ClumbHarvesterScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandlers.CLUMB_HARVESTER_SCREEN_HANDLER, syncId);
-        checkSize(((Inventory) blockEntity), 4);
+        checkSize(((Inventory) blockEntity), 2);
         this.inventory = ((Inventory) blockEntity);
         playerInventory.onOpen(playerInventory.player);
         this.propertyDelegate = arrayPropertyDelegate;
