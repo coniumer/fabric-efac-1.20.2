@@ -1,9 +1,11 @@
 package net.steiner.efac.world;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
@@ -27,12 +29,16 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CIT_GEM_ORE_KEY = registerKey("cit_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUB_GEM_ORE_KEY = registerKey("rub_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEUMB_BLOCK_KEY = registerKey("geumb_block_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_YES_VEIN_KEY = registerKey("nether_yes_vein_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_ETHER_VEIN_KEY = registerKey("end_ether_vein_key");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PRIMA_KEY = registerKey("prima");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherReplacables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+        RuleTest endReplacables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> overworldSlipulonOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SLIPULON_ORE.getDefaultState()),
@@ -62,6 +68,12 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.GEUMB_BLOCK.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.BUDDING_GEUMB.getDefaultState()));
 
+        List<OreFeatureConfig.Target> netherYesVeins =
+                List.of(OreFeatureConfig.createTarget(netherReplacables, ModBlocks.YES.getDefaultState()));
+
+        List<OreFeatureConfig.Target> endEtherVeins =
+                List.of(OreFeatureConfig.createTarget(endReplacables, ModBlocks.ETHER.getDefaultState()));
+
         register(context, SLIPULON_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSlipulonOres, 11));
         register(context, BUTTER_KEY, Feature.ORE, new OreFeatureConfig(overworldButterOres, 12));
         register(context, GELWOOD_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldGelwoodOres, 15));
@@ -69,6 +81,8 @@ public class ModConfiguredFeatures {
         register(context, CIT_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCitGemOres, 4));
         register(context, RUB_GEM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldRubGemOres, 4));
         register(context, GEUMB_BLOCK_KEY, Feature.ORE, new OreFeatureConfig(overworldGeumbBlocks, 8));
+        register(context, NETHER_YES_VEIN_KEY, Feature.ORE, new OreFeatureConfig(netherYesVeins, 20));
+        register(context, END_ETHER_VEIN_KEY, Feature.ORE, new OreFeatureConfig(endEtherVeins, 20));
 
         register(context, PRIMA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.PRIMA_LOG),

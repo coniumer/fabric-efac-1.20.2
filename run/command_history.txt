@@ -1,18 +1,3 @@
-/tp @s -1555 127 -3951
-/locate biome efac:scary_biome
-/tp @s -2505 64 170
-/gamemode spectator
-/gamemode survival
-/give @a minecraft:spyglass
-/gamemode creative
-/kill
-/tp ~100 ~ ~100
-/gamemode spectator
-/kill
-/gamemode creative
-/execute in efac:scarydim run tp @a ~ ~ ~
-/gamemode creative
-/gamemode spectator
 /execute in efac:scarydim run tp ~ ~ ~
 /gamemode spectator
 /time set night
@@ -48,3 +33,18 @@
 /gamemode creative
 /gamemode survival
 /gamemode creative
+/execute in minecraft:the_nether run tp ~ ~ ~
+/fill ~10 ~10 ~10 ~-10 ~-10 ~-10 minecraft:air
+/execute in minecraft:the_end run tp ~ ~ ~
+/tp 0 100 0
+/execute in minecraft:the_end run tp 0 100 0
+/kill @e[type=minecraft:ender_dragon]
+/execute in minecraft:the_end run tp 0 100 0
+/execute in minecraft:the_nether run tp 0 100 0
+/fill ~10 ~10 ~10 ~-10 ~-10 ~-10 minecraft:air
+/execute in minecraft:the_end run tp 0 100 0
+/kill @e[type=minecraft:ender_dragon]
+/kill
+/gamemode survival
+/gamemode creative
+/gamemode survival

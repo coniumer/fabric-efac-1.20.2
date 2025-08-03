@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:alb_clumb_materia"
+    },
+    "title": {
+      "translate": "advancements.efac.clumb_enhancement.title"
+    },
+    "description": {
+      "translate": "advancements.efac.clumb_enhancement.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:clumb_materia",
+  "criteria": {
+    "clumb_enhancement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:alb_clumb_materia",
+              "efac:cit_clumb_materia",
+              "efac:rub_clumb_materia"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "clumb_enhancement"
+    ]
+  ]
+}

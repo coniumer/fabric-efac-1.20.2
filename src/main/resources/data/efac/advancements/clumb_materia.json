@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:clumb_materia"
+    },
+    "title": {
+      "translate": "advancements.efac.clumb_materia.title"
+    },
+    "description": {
+      "translate": "advancements.efac.clumb_materia.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "efac:textures/block/ether.png"
+  },
+  "criteria": {
+    "clumb_materia": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumb_materia"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "clumb_materia"
+    ]
+  ]
+}

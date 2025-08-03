@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:alby_geumb_shard"
+    },
+    "title": {
+      "translate": "advancements.efac.geumb_enhancement.title"
+    },
+    "description": {
+      "translate": "advancements.efac.geumb_enhancement.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:clumb_enhancement",
+  "criteria": {
+    "geumb_enhancement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumby_geumb_shard",
+              "efac:alby_geumb_shard",
+              "efac:citry_geumb_shard",
+              "efac:rubied_geumb_shard"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "geumb_enhancement"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bone_block"
+    },
+    "title": {
+      "translate": "advancements.efac.scarydim.title"
+    },
+    "description": {
+      "translate": "advancements.efac.scarydim.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:clumb_sword",
+  "criteria": {
+    "scarydim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "item": {},
+        "from": "minecraft:overworld",
+        "to": "efac:scarydim"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "scarydim"
+    ]
+  ]
+}

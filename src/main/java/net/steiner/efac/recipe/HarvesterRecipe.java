@@ -47,8 +47,8 @@ public class HarvesterRecipe {
     public static void registerClumbHarvesterRecipes() {
         registerClumbHarvesterRecipe(ModBlocks.COMPACT_DOM.asItem(), ModItems.CLUMB_MATERIA, Blocks.DIRT.asItem(), ModItems.TOOTH,
                 new float[] {1f, 0.4f, 0.1f});
-        registerClumbHarvesterRecipe(ModBlocks.ETHER.asItem(), ModItems.GEUMB_SHARD, ModItems.YUMMY_SAUCE, ModItems.AWESOME_SAUCE,
-                new float[] {1f, 0.9f, 0.5f});
+        registerClumbHarvesterRecipe(ModBlocks.ETHER.asItem(), ModItems.YUMMY_SAUCE, ModItems.AWESOME_SAUCE, ModItems.EPIC_SAUCE,
+                new float[] {0.8f, 0.6f, 0.4f});
         registerClumbHarvesterRecipe(ModBlocks.YES.asItem(), Items.IRON_INGOT, Items.DIAMOND, Items.NETHERITE_SCRAP,
                 new float[] {0.7f, 0.4f, 0.1f});
         registerClumbHarvesterRecipe(ModBlocks.PRIMA_LEAVES.asItem(), ModBlocks.PRIMA_SAPLING.asItem(), ModItems.CLUMB_MATERIA, ModItems.CLUMBLE,

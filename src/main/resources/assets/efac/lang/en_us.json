@@ -89,5 +89,26 @@
   "key.category.efac.evankeys": "Evan's Keys",
   "key.efac.clumb": "Clumb",
 
-  "death.attack.clumb_pulse": "%s was clumbed on by %s"
+  "death.attack.clumb_pulse": "%s was clumbed on by %s",
+
+  "advancements.efac.clumb_materia.title": "You Must Clumb!",
+  "advancements.efac.clumb_materia.description": "Obtain a Clumb Materia.",
+  "advancements.efac.clumb_enhancement.title": "Clumb Refinement!",
+  "advancements.efac.clumb_enhancement.description": "Create refined Clumb Materias with Gems.",
+  "advancements.efac.clumb_wand.title": "Spells and Shit...",
+  "advancements.efac.clumb_wand.description": "Cast a wicked clumb with your new Clumb Wand.",
+  "advancements.efac.geumb_enhancement.title": "Geumb Refinement!",
+  "advancements.efac.geumb_enhancement.description": "Create refined Geumb Shards with Clumbs and Sauces.",
+  "advancements.efac.clumb_sword.title": "Charge & Pulse, O Warrior!",
+  "advancements.efac.clumb_sword.description": "Use refined Geumb Shards to create a Clumb Sword.",
+  "advancements.efac.scarydim.title": "I'm Gonna Freak!",
+  "advancements.efac.scarydim.description": "Enter the Scary Realm.",
+  "advancements.efac.tunneldim.title": "The Clock is Ticking...",
+  "advancements.efac.tunneldim.description": "Enter the Tunnel of Time Realm.",
+  "advancements.efac.clumb_harvester.title": "Reap What Was Sowed!",
+  "advancements.efac.clumb_harvester.description": "Create a Clumb Harvester.",
+
+  "tooltip.efac.clumb_sword": "Right click to change modes.",
+  "tooltip.efac.clumb_harvester": "Harvests valuables from certain blocks.",
+  "tooltip.efac.geumb_item": "Use to increase your max clumb charges."
 }

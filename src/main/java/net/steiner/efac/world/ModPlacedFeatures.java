@@ -26,6 +26,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CIT_GEM_ORE_PLACED_KEY = registerKey("cit_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> RUB_GEM_ORE_PLACED_KEY = registerKey("rub_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> GEUMB_BLOCK_PLACED_KEY = registerKey("geumb_blocks_placed");
+    public static final RegistryKey<PlacedFeature> NETHER_YES_PLACED_KEY = registerKey("nether_yes_vein_placed");
+    public static final RegistryKey<PlacedFeature> END_ETHER_PLACED_KEY = registerKey("end_ether_vein_placed");
 
     public static final RegistryKey<PlacedFeature> PRIMA_PLACED_KEY = registerKey("prima_placed");
 
@@ -56,6 +58,12 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20))));
         register(context, GEUMB_BLOCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GEUMB_BLOCK_KEY),
                 ModOrePlacement.modifiersWithCount(7, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+        register(context, NETHER_YES_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_YES_VEIN_KEY),
+                ModOrePlacement.modifiersWithCount(8, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+        register(context, END_ETHER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_ETHER_VEIN_KEY),
+                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
         register(context, PRIMA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PRIMA_KEY),

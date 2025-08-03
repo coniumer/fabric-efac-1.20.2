@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:alb_clumb_wand"
+    },
+    "title": {
+      "translate": "advancements.efac.clumb_wand.title"
+    },
+    "description": {
+      "translate": "advancements.efac.clumb_wand.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:clumb_enhancement",
+  "criteria": {
+    "clumb_wand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:wood_clumb_wand",
+              "efac:alb_clumb_wand",
+              "efac:cit_clumb_wand",
+              "efac:rub_clumb_wand"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "clumb_wand"
+    ]
+  ]
+}

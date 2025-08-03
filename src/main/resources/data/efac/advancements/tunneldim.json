@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:slipulon_block"
+    },
+    "title": {
+      "translate": "advancements.efac.tunneldim.title"
+    },
+    "description": {
+      "translate": "advancements.efac.tunneldim.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:clumb_sword",
+  "criteria": {
+    "tunneldim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "item": {},
+        "from": "minecraft:overworld",
+        "to": "efac:tunneldim"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tunneldim"
+    ]
+  ]
+}

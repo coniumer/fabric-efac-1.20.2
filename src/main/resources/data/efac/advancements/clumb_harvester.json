@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:clumb_harvester"
+    },
+    "title": {
+      "translate": "advancements.efac.clumb_harvester.title"
+    },
+    "description": {
+      "translate": "advancements.efac.clumb_harvester.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:clumb_materia",
+  "criteria": {
+    "clumb_harvester": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumb_harvester"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "clumb_harvester"
+    ]
+  ]
+}

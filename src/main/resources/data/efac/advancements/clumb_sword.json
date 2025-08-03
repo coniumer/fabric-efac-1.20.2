@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:citry_sword"
+    },
+    "title": {
+      "translate": "advancements.efac.clumb_sword.title"
+    },
+    "description": {
+      "translate": "advancements.efac.clumb_sword.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:geumb_enhancement",
+  "criteria": {
+    "clumb_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:clumby_sword",
+              "efac:alby_sword",
+              "efac:citry_sword",
+              "efac:rubied_sword"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "clumb_sword"
+    ]
+  ]
+}

@@ -1,5 +1,6 @@
 package net.steiner.efac.item.custom;
 
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,6 +10,7 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -16,6 +18,9 @@ import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.util.ClumbData;
 import net.steiner.efac.util.EntityDataSaver;
 import net.steiner.efac.util.ModDamage;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ClumbSwordItem extends SwordItem {
     private final ModToolMaterial modMaterial;
@@ -109,5 +114,11 @@ public class ClumbSwordItem extends SwordItem {
 
     public boolean tryCharge(World world) {
         return (Math.abs(world.getRandom().nextInt()) % 10) < modMaterial.getRechargeChance();
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("tooltip.efac.clumb_sword"));
+        super.appendTooltip(stack, world, tooltip, context);
     }
 }
