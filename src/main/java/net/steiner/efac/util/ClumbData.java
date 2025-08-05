@@ -2,10 +2,13 @@ package net.steiner.efac.util;
 
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
+import net.steiner.efac.item.ModItems;
 import net.steiner.efac.networking.ModMessages;
 
 public class ClumbData {
@@ -24,11 +27,14 @@ public class ClumbData {
     }
 
     public static void removeClumbCharges(EntityDataSaver player, int amount, int max) {
+        ServerPlayerEntity rPlayer = (ServerPlayerEntity) player;
+        if (rPlayer.getStackInHand(Hand.MAIN_HAND).getItem() == ModItems.PHILOSOPHER_CHARM || rPlayer.getStackInHand(Hand.OFF_HAND).getItem() == ModItems.PHILOSOPHER_CHARM) {
+            return;
+        }
         NbtCompound nbt = player.getPersistentData();
         int clumbCharges = nbt.getInt(CLUMB_CHARGE_KEY);
         clumbCharges = MathHelper.clamp(clumbCharges - amount, 0, max);
         nbt.putInt(CLUMB_CHARGE_KEY, clumbCharges);
-
         syncClumbCharges(clumbCharges, (ServerPlayerEntity)player);
         syncMaxClumbCharges(max, (ServerPlayerEntity)player);
 

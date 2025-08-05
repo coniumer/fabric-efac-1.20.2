@@ -1,7 +1,11 @@
 package net.steiner.efac.mixin;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.Hand;
+import net.steiner.efac.item.ModItems;
 import net.steiner.efac.util.EntityDataSaver;
 import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
@@ -43,7 +47,8 @@ public abstract class EntityDataSaverMixin implements EntityDataSaver {
 
     @Override
     public boolean canClumb(int clumbCharges, EntityDataSaver player) {
-        return player.getPersistentData().getInt("clumbCharges") > 0;
+        PlayerEntity rPlayer = (PlayerEntity) player;
+        return (player.getPersistentData().getInt("clumbCharges") > 0 || rPlayer.getStackInHand(Hand.MAIN_HAND).getItem() == ModItems.PHILOSOPHER_CHARM || rPlayer.getStackInHand(Hand.OFF_HAND).getItem() == ModItems.PHILOSOPHER_CHARM);
     }
 
 }

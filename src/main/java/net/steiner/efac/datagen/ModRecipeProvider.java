@@ -352,6 +352,67 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.BONE_MEAL))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TOOTH)));
 
+        //charms
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLINK_CHARM, 1)
+                .pattern("EME")
+                .pattern("ESE")
+                .pattern("EEE")
+                .input('E', Items.ENDER_PEARL)
+                .input('M', ModItems.CLUMB_MATERIA)
+                .input('S', ModItems.CLUMBY_GEUMB_SHARD)
+                .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
+                .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.CLUMBY_GEUMB_SHARD), conditionsFromItem(ModItems.CLUMBY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BLINK_CHARM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LIGHTNING_CHARM, 1)
+                .pattern("CMC")
+                .pattern("CSC")
+                .pattern("CCC")
+                .input('C', Items.COPPER_INGOT)
+                .input('M', ModItems.CIT_CLUMB_MATERIA)
+                .input('S', ModItems.CITRY_GEUMB_SHARD)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(ModItems.CIT_CLUMB_MATERIA), conditionsFromItem(ModItems.CIT_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.CITRY_GEUMB_SHARD), conditionsFromItem(ModItems.CITRY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LIGHTNING_CHARM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FIREBALL_CHARM, 1)
+                .pattern("BMB")
+                .pattern("BSB")
+                .pattern("BBB")
+                .input('B', Items.BLAZE_POWDER)
+                .input('M', ModItems.ALB_CLUMB_MATERIA)
+                .input('S', ModItems.ALBY_GEUMB_SHARD)
+                .criterion(hasItem(Items.BLAZE_POWDER), conditionsFromItem(Items.BLAZE_POWDER))
+                .criterion(hasItem(ModItems.ALB_CLUMB_MATERIA), conditionsFromItem(ModItems.ALB_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.ALBY_GEUMB_SHARD), conditionsFromItem(ModItems.ALBY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FIREBALL_CHARM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BOMB_CHARM, 1)
+                .pattern("BMB")
+                .pattern("BSB")
+                .pattern("BBB")
+                .input('B', Blocks.TNT)
+                .input('M', ModItems.RUB_CLUMB_MATERIA)
+                .input('S', ModItems.RUBIED_GEUMB_SHARD)
+                .criterion(hasItem(Blocks.TNT), conditionsFromItem(Blocks.TNT))
+                .criterion(hasItem(ModItems.RUB_CLUMB_MATERIA), conditionsFromItem(ModItems.RUB_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.RUBIED_GEUMB_SHARD), conditionsFromItem(ModItems.RUBIED_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BOMB_CHARM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HEALTH_CHARM, 1)
+                .pattern("GMG")
+                .pattern("GSG")
+                .pattern("GGG")
+                .input('G', Items.GLISTERING_MELON_SLICE)
+                .input('M', ModItems.ALB_CLUMB_MATERIA)
+                .input('S', ModItems.ALBY_GEUMB_SHARD)
+                .criterion(hasItem(Items.GLISTERING_MELON_SLICE), conditionsFromItem(Items.GLISTERING_MELON_SLICE))
+                .criterion(hasItem(ModItems.ALB_CLUMB_MATERIA), conditionsFromItem(ModItems.ALB_CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.ALBY_GEUMB_SHARD), conditionsFromItem(ModItems.ALBY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.HEALTH_CHARM)));
+
         //misc
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLUMB_HARVESTER, 1)
                 .pattern("MMM")

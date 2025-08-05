@@ -1,11 +1,11 @@
-// 1.20.2	2025-08-03T14:32:31.335979	EFAC/World Gen
+// 1.20.2	2025-08-05T09:03:12.068466	EFAC/World Gen
 6a67d36c8c056312c64e9bd2a51f25046fa1b547 data/efac/worldgen/configured_feature/butter.json
 293a8400aa63d1ae9bf3d7cf1f941cec7c1ed28d data/efac/worldgen/configured_feature/slipulon_ore.json
 0be58143d0d5eff2284eb940dc92c297ff682ffe data/efac/worldgen/placed_feature/geumb_blocks_placed.json
 556e4952ef5c8d028304a22b6aa558007b420e12 data/efac/worldgen/configured_feature/geumb_block_key.json
 41caa2c891faa79a276233c78604f129a6bb1737 data/efac/dimension_type/scarydim_type.json
-8ce9c2df320795f520fa637f570b5a0c3b5bcd8f data/efac/worldgen/placed_feature/rub_gem_ore_placed.json
 96cbcb28079856d16d5c979132ac439fd9daccec data/efac/worldgen/placed_feature/slipulon_ore_placed.json
+8ce9c2df320795f520fa637f570b5a0c3b5bcd8f data/efac/worldgen/placed_feature/rub_gem_ore_placed.json
 cb80412c355f77906c1dd5a04eaf5aba5249bfa9 data/efac/worldgen/configured_feature/cit_gem_ore.json
 4ddf223791b3958205c6b60f6f2b6261cf80fdec data/efac/worldgen/configured_feature/end_ether_vein_key.json
 ac116fcabdcfeaad52c0f1499e0af6ab85779c56 data/efac/dimension_type/tunneldim_type.json
@@ -20,6 +20,6 @@ f8c0f20455a64d47bc93765f2d210e98d2c91ca4 data/efac/worldgen/configured_feature/p
 2722f94653b5fcf1637d1d0f8207b5ca866272f8 data/efac/worldgen/placed_feature/prima_placed.json
 70a8dae98f01b3f99c4155b157e561a7cba36803 data/efac/worldgen/configured_feature/nether_yes_vein_key.json
 43253d9533c70c9ea06c5d726e443e1bdea89f1c data/efac/worldgen/placed_feature/end_ether_vein_placed.json
-8632c781c52121183e194c57a4e2edbf39f9cd70 data/efac/worldgen/placed_feature/nether_yes_vein_placed.json
 fa5dc2d91d941fd13d62895a3302979ee4467874 data/efac/worldgen/placed_feature/cit_gem_ore_placed.json
+8632c781c52121183e194c57a4e2edbf39f9cd70 data/efac/worldgen/placed_feature/nether_yes_vein_placed.json
 29d097ad4942c7d5d35ce6f85e42f596b870aaba data/efac/worldgen/biome/ether_fields.json

@@ -3,6 +3,7 @@ package net.steiner.efac.mixin;
 
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -24,7 +25,7 @@ public abstract class PlayerOnGroundMixin extends LivingEntity {
 
     @Inject(method = "tick", at = @At("TAIL"))
     protected void injectTick(CallbackInfo info) {
-        if (isOnGround()) {
+        if (isOnGround() && MinecraftClient.getInstance().getNetworkHandler() != null) {
             PacketByteBuf buf = PacketByteBufs.create();
             buf.writeInt(0);
             ClientPlayNetworking.send(ModMessages.SET_DASH_USES_ID, buf);

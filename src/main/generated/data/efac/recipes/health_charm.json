@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "M": {
+      "item": "efac:alb_clumb_materia"
+    },
+    "S": {
+      "item": "efac:alby_geumb_shard"
+    }
+  },
+  "pattern": [
+    "GMG",
+    "GSG",
+    "GGG"
+  ],
+  "result": {
+    "item": "efac:health_charm"
+  },
+  "show_notification": true
+}

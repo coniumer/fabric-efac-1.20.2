@@ -61,6 +61,13 @@ public class ModItemGroups {
                         entries.add(ModItems.ALBY_SWORD);
                         entries.add(ModItems.CITRY_SWORD);
                         entries.add(ModItems.RUBIED_SWORD);
+                                //charms
+                        entries.add(ModItems.BLINK_CHARM);
+                        entries.add(ModItems.LIGHTNING_CHARM);
+                        entries.add(ModItems.FIREBALL_CHARM);
+                        entries.add(ModItems.BOMB_CHARM);
+                        entries.add(ModItems.HEALTH_CHARM);
+                        entries.add(ModItems.PHILOSOPHER_CHARM);
                         // Blocks
                         entries.add(ModBlocks.SLIPULON_ORE);
                         entries.add(ModBlocks.SLIPULON_BLOCK);

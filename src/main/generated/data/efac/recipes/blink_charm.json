@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "M": {
+      "item": "efac:clumb_materia"
+    },
+    "S": {
+      "item": "efac:clumby_geumb_shard"
+    }
+  },
+  "pattern": [
+    "EME",
+    "ESE",
+    "EEE"
+  ],
+  "result": {
+    "item": "efac:blink_charm"
+  },
+  "show_notification": true
+}

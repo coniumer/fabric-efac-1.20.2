@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:tnt"
+    },
+    "M": {
+      "item": "efac:rub_clumb_materia"
+    },
+    "S": {
+      "item": "efac:rubied_geumb_shard"
+    }
+  },
+  "pattern": [
+    "BMB",
+    "BSB",
+    "BBB"
+  ],
+  "result": {
+    "item": "efac:bomb_charm"
+  },
+  "show_notification": true
+}

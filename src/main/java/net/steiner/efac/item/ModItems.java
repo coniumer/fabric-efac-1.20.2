@@ -65,6 +65,19 @@ public class ModItems {
             new ClumbSwordItem(ModToolMaterial.CITRINIZED, ModToolMaterial.CITRINIZED, 3, -2.2f, new FabricItemSettings()));
     public static final Item RUBIED_SWORD = registerItem("rubied_sword",
             new ClumbSwordItem(ModToolMaterial.RUBEDIZED, ModToolMaterial.RUBEDIZED, 3, -2.2f, new FabricItemSettings()));
+    //charms
+    public static final Item BLINK_CHARM = registerItem("blink_charm",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item LIGHTNING_CHARM = registerItem("lightning_charm",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item FIREBALL_CHARM = registerItem("fireball_charm",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item BOMB_CHARM = registerItem("bomb_charm",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item HEALTH_CHARM = registerItem("health_charm",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item PHILOSOPHER_CHARM = registerItem("philosopher_charm",
+            new Item(new FabricItemSettings().maxCount(1)));
     //signs
     public static final Item PRIMA_SIGN = registerItem("prima_sign",
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.PRIMA_SIGN, ModBlocks.PRIMA_WALL_SIGN));

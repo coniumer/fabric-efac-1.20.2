@@ -102,6 +102,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CLUMBURGER, Models.GENERATED);
         //teeth
         itemModelGenerator.register(ModItems.TOOTH, Models.GENERATED);
+        //charms
+        itemModelGenerator.register(ModItems.BLINK_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LIGHTNING_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FIREBALL_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOMB_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HEALTH_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PHILOSOPHER_CHARM, Models.GENERATED);
         //custom
             //wands
         itemModelGenerator.register(ModItems.WOOD_CLUMB_WAND, Models.HANDHELD);

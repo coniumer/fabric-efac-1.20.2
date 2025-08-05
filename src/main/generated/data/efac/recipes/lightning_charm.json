@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "M": {
+      "item": "efac:cit_clumb_materia"
+    },
+    "S": {
+      "item": "efac:citry_geumb_shard"
+    }
+  },
+  "pattern": [
+    "CMC",
+    "CSC",
+    "CCC"
+  ],
+  "result": {
+    "item": "efac:lightning_charm"
+  },
+  "show_notification": true
+}
