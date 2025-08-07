@@ -4,12 +4,10 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Items;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Hand;
@@ -17,6 +15,7 @@ import net.minecraft.util.math.Vec3d;
 import net.steiner.efac.item.ModItems;
 import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.util.ClumbButtonFunctions;
+import net.steiner.efac.util.CooldownData;
 import net.steiner.efac.util.EntityDataSaver;
 import org.lwjgl.glfw.GLFW;
 
@@ -29,15 +28,21 @@ public class KeyInputHandler {
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(clumbKey.wasPressed()) {
+
                 MinecraftClient mc = MinecraftClient.getInstance();
                 if (mc.player == null)
                     return;
                 PlayerEntity player = mc.player;
                 EntityDataSaver sPlayer = (EntityDataSaver)player;
 
-                if (sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) || player.getAbilities().creativeMode) {
+                if ((sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) || player.getAbilities().creativeMode)
+                        && sPlayer.getPersistentData().getInt(CooldownData.COOLDOWN_PROGRESS_KEY) >= CooldownData.COOLDOWN_MAX) {
                     if (performClumbAction(player)) {
                         ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
+
+                        PacketByteBuf buf = PacketByteBufs.create();
+                        buf.writeInt(0);
+                        ClientPlayNetworking.send(ModMessages.SET_COOLDOWN_PROGRESS_ID, buf);
                     }
                 } else {
                     sendPayload(ClumbButtonFunctions.FAIL);

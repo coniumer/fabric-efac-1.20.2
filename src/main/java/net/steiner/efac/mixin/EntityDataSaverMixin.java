@@ -6,6 +6,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Hand;
 import net.steiner.efac.item.ModItems;
+import net.steiner.efac.util.CooldownData;
 import net.steiner.efac.util.EntityDataSaver;
 import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Debug(export = true)
 @Mixin(Entity.class)
 public abstract class EntityDataSaverMixin implements EntityDataSaver {
     @Unique
@@ -50,5 +50,4 @@ public abstract class EntityDataSaverMixin implements EntityDataSaver {
         PlayerEntity rPlayer = (PlayerEntity) player;
         return (player.getPersistentData().getInt("clumbCharges") > 0 || rPlayer.getStackInHand(Hand.MAIN_HAND).getItem() == ModItems.PHILOSOPHER_CHARM || rPlayer.getStackInHand(Hand.OFF_HAND).getItem() == ModItems.PHILOSOPHER_CHARM);
     }
-
 }

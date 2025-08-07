@@ -17,11 +17,15 @@ public class ModMessages {
 
     public static final Identifier SET_DASH_USES_ID = new Identifier(EFAC.MOD_ID, "set_dash_uses");
 
+    public static final Identifier SET_COOLDOWN_PROGRESS_ID = new Identifier(EFAC.MOD_ID, "set_cooldown_progress");
+
     //S2C
     public static final Identifier CLUMB_SYNC_ID = new Identifier(EFAC.MOD_ID, "clumb_sync");
     public static final Identifier MAX_CLUMB_SYNC_ID = new Identifier(EFAC.MOD_ID, "max_clumb_sync");
 
     public static final Identifier DASH_SYNC_ID = new Identifier(EFAC.MOD_ID, "dash_sync");
+
+    public static final Identifier COOLDOWN_PROGRESS_SYNC_ID = new Identifier(EFAC.MOD_ID, "cooldown_progress_sync");
 
     public static void regsiterC2SPackets() {
         ServerPlayNetworking.registerGlobalReceiver(CLUMB_DISCHARGE_ID, ClumbDischargeC2SPacket::receive);
@@ -32,6 +36,8 @@ public class ModMessages {
         ServerPlayNetworking.registerGlobalReceiver(CLUMB_BUTTON_PAYLOAD_ID, ClumbButtonPayloadC2SPacket::receive);
 
         ServerPlayNetworking.registerGlobalReceiver(SET_DASH_USES_ID, SetDashUsesC2SPacket::receive);
+
+        ServerPlayNetworking.registerGlobalReceiver(SET_COOLDOWN_PROGRESS_ID, SetCooldownProgressC2SPacket::receive);
     }
 
     public static void regsiterS2CPackets() {
@@ -39,6 +45,8 @@ public class ModMessages {
         ClientPlayNetworking.registerGlobalReceiver(MAX_CLUMB_SYNC_ID, MaxClumbSyncS2CPacket::receive);
 
         ClientPlayNetworking.registerGlobalReceiver(DASH_SYNC_ID, DashSyncS2CPacket::receive);
+
+        ClientPlayNetworking.registerGlobalReceiver(COOLDOWN_PROGRESS_SYNC_ID, CooldownProgressSyncS2CPacket::receive);
     }
 
 }
