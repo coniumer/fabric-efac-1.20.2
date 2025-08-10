@@ -27,7 +27,7 @@ public class KeyInputHandler {
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if(clumbKey.wasPressed()) {
+            if (clumbKey.wasPressed()) {
 
                 MinecraftClient mc = MinecraftClient.getInstance();
                 if (mc.player == null)
@@ -47,7 +47,6 @@ public class KeyInputHandler {
                 } else {
                     sendPayload(ClumbButtonFunctions.FAIL);
                 }
-
             }
         });
     }

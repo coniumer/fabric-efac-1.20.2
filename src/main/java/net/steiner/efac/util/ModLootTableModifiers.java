@@ -27,6 +27,22 @@ public class ModLootTableModifiers {
             "minecraft", "chests/pillager_outpost");
     private static final Identifier WOODLAND_MANSION_ID = new Identifier(
             "minecraft", "chests/woodland_mansion");
+    private static final Identifier SIMPLE_DUNGEON_ID = new Identifier(
+            "minecraft", "chests/simple_dungeon");
+    private static final Identifier VILLAGE_ARMORER_ID = new Identifier(
+            "minecraft", "chests/village/village_armorer");
+    private static final Identifier VILLAGE_MASON_ID = new Identifier(
+            "minecraft", "chests/village/village_mason");
+    private static final Identifier VILLAGE_PLAINS_HOUSE_ID = new Identifier(
+            "minecraft", "chests/village/village_plains_house");
+    private static final Identifier VILLAGE_SNOWY_HOUSE_ID = new Identifier(
+            "minecraft", "chests/village/village_snowy_house");
+    private static final Identifier VILLAGE_DESERT_HOUSE_ID = new Identifier(
+            "minecraft", "chests/village/village_desert_house");
+    private static final Identifier VILLAGE_SAVANNA_HOUSE_ID = new Identifier(
+            "minecraft", "chests/village/village_savanna_house");
+    private static final Identifier VILLAGE_TAIGA_HOUSE_ID = new Identifier(
+            "minecraft", "chests/village/village_taiga_house");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
@@ -89,6 +105,86 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.YUMMY_SAUCE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f))
                         .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (SIMPLE_DUNGEON_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 6.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_ARMORER_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(3))
+                        .conditionally(RandomChanceLootCondition.builder(0.4f))
+                        .with(ItemEntry.builder(ModItems.ALB_GEM))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 5.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_MASON_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(4))
+                        .conditionally(RandomChanceLootCondition.builder(0.2f))
+                        .with(ItemEntry.builder(ModItems.GELWOOD_ORB))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 8.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_PLAINS_HOUSE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 6.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_SAVANNA_HOUSE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 6.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_SNOWY_HOUSE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 6.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_TAIGA_HOUSE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 6.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (VILLAGE_DESERT_HOUSE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 6.0f))
+                                .build());
                 tableBuilder.pool(builder.build());
             }
         }));
