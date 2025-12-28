@@ -20,6 +20,7 @@ public class EFACDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModPoiTagProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
 	}
 
@@ -30,5 +31,8 @@ public class EFACDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::scaryBootstrapType);
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::tunnelBootstrapType);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::yesBootstrapType);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::evanBootstrapType);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::thinkEnvironmentBootstrapType);
 	}
 }

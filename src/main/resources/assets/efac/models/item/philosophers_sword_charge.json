@@ -1,0 +1,6 @@
+{
+  "parent": "efac:item/philosophers_sword",
+  "textures": {
+    "layer0": "efac:item/philosophers_sword_charge"
+  }
+}

@@ -20,6 +20,36 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
+        //mod stuff
+        getOrCreateTagBuilder(ModTags.Blocks.PROVIDES_CHARGE_ALWAYS)
+                .add(ModBlocks.CLUMB_BLOCK)
+                .add(ModBlocks.YES)
+                .add(ModBlocks.SMALL_GEUMB_BUD)
+                .add(ModBlocks.MEDIUM_GEUMB_BUD)
+                .add(ModBlocks.LARGE_GEUMB_BUD)
+                .add(ModBlocks.GEUMB_CLUSTER);
+
+        getOrCreateTagBuilder(ModTags.Blocks.PROVIDES_CHARGE_COMMON)
+                .add(ModBlocks.COMPACT_DOM)
+                .add(ModBlocks.BUTTER)
+                .add(ModBlocks.GEUMB_BLOCK)
+                .add(ModBlocks.BUDDING_GEUMB)
+                .add(ModBlocks.ETHER);
+
+        getOrCreateTagBuilder(ModTags.Blocks.PROVIDES_CHARGE_RARE)
+                .add(Blocks.DIRT)
+                .add(ModBlocks.PRIMA_LEAVES)
+                .add(Blocks.GRASS_BLOCK)
+                .add(Blocks.STONE)
+                .add(Blocks.DIORITE)
+                .add(Blocks.ANDESITE)
+                .add(Blocks.GRANITE)
+                .add(Blocks.TUFF)
+                .add(Blocks.NETHERRACK)
+                .add(Blocks.SAND)
+                .add(Blocks.RED_SAND)
+                .add(Blocks.GRAVEL);
+
         // tool stuff
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.SLIPULON_BLOCK)
@@ -40,6 +70,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.COMPACT_DOM)
                 .add(ModBlocks.ETHER)
+                .add(ModBlocks.CLUMB_BLOCK)
                 .add(ModBlocks.BUTTER);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
@@ -62,6 +93,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RUB_GEM_ORE);
 
+        //wood stuff
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.GELWOOD_FENCE)
                 .add(ModBlocks.PRIMA_FENCE);

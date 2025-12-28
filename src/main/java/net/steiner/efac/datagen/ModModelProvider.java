@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.steiner.efac.block.ModBlocks;
 import net.steiner.efac.block.custom.ClumbrotCropBlock;
 import net.steiner.efac.item.ModItems;
@@ -66,31 +67,34 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         //valuables
+            //ores
         itemModelGenerator.register(ModItems.RAW_SLIPULON, Models.GENERATED);
         itemModelGenerator.register(ModItems.SLIPULON_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ALB_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIT_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUB_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_STONE, Models.GENERATED);
+            //sauce
         itemModelGenerator.register(ModItems.RANDOM_SAUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.YUMMY_SAUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AWESOME_SAUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.EPIC_SAUCE, Models.GENERATED);
+            //geumb
         itemModelGenerator.register(ModItems.GEUMB_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLUMBY_GEUMB_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ALBY_GEUMB_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.CITRY_GEUMB_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUBIED_GEUMB_SHARD, Models.GENERATED);
-
         itemModelGenerator.register(ModBlocks.GEUMB_CLUSTER.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.LARGE_GEUMB_BUD.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.MEDIUM_GEUMB_BUD.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.SMALL_GEUMB_BUD.asItem(), Models.GENERATED);
-
+            //materia
         itemModelGenerator.register(ModItems.ALB_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIT_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUB_CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.GELWOOD_ORB, Models.GENERATED);
-        //foods
+            //foods
         itemModelGenerator.register(ModItems.CLUMB_MATERIA, Models.GENERATED);
         itemModelGenerator.register(ModItems.BUTTER_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLUMBELON, Models.GENERATED);
@@ -100,22 +104,55 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CLUMBLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLD_CLUMBLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLUMBURGER, Models.GENERATED);
-        //teeth
+            //teeth
         itemModelGenerator.register(ModItems.TOOTH, Models.GENERATED);
-        //charms
+        itemModelGenerator.register(ModItems.SNIPERS_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LUXURY_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HUNTERS_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLUE_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MUMMY_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ADVENTURERS_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARCHITECTS_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EXCAVATORS_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HEAVY_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FORCE_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RADIANT_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SPINE_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MIDAS_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SOUL_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OBSERVANT_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CARDBOARD_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GOLD_TOOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_TOOTH, Models.GENERATED);
+        //tools
+        itemModelGenerator.register(ModItems.DRAGON_BLOOD_BUCKET, Models.GENERATED);
+            //charms
         itemModelGenerator.register(ModItems.BLINK_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.LIGHTNING_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIREBALL_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.BOMB_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.HEALTH_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STORAGE_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.PHILOSOPHER_CHARM, Models.GENERATED);
-        //custom
             //wands
         itemModelGenerator.register(ModItems.WOOD_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ALB_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CIT_CLUMB_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUB_CLUMB_WAND, Models.HANDHELD);
-
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_WAND, Models.HANDHELD);
+            //philosophers gear
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_HOE, Models.HANDHELD);
+            //philosophers armor
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PHILOSOPHERS_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PHILOSOPHERS_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PHILOSOPHERS_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PHILOSOPHERS_BOOTS);
+        //smithing
+        itemModelGenerator.register(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        //wood items
         itemModelGenerator.register(ModItems.PRIMA_HANGING_SIGN, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRIMA_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRIMA_CHEST_BOAT, Models.GENERATED);

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "efac:philosophers_stone"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "item": "efac:philosophers_axe"
+  },
+  "template": {
+    "item": "efac:philosophers_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "efac:clumb_poi",
+      "required": false
+    }
+  ]
+}

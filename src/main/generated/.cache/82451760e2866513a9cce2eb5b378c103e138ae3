@@ -1,10 +1,13 @@
-// 1.20.2	2025-08-05T09:03:12.066001	EFAC/Tags for minecraft:block
+// 1.20.2	2025-12-27T20:07:31.793415	EFAC/Tags for minecraft:block
 cf5d8f856baa8674f958af2fd6e8411a10784bfd data/minecraft/tags/blocks/needs_diamond_tool.json
+a03b922a55a24e4c9703329897ee79051f03c836 data/efac/tags/blocks/provides_charge_always.json
+327fe38e20f4199e346ec7c7a4dc91ea4f0068ff data/minecraft/tags/blocks/logs.json
+a293336965b3420b78910a789a57f37407daa86c data/minecraft/tags/blocks/logs_that_burn.json
+2d73dea0a1bcbfdb72027631757f52799f0bfb7b data/minecraft/tags/blocks/mineable/shovel.json
+29d93e24de9a8f2f84042185def12efefabe4364 data/minecraft/tags/blocks/mineable/pickaxe.json
+ef5bf78f32a34c64258ebc4810ce25c35d2a5655 data/efac/tags/blocks/provides_charge_rare.json
 067125cfd22fb0290cc1b73b747fde76623c9de2 data/minecraft/tags/blocks/fences.json
 dc0f9e18b2ff88992bb8d1ea2914e006523f0efb data/minecraft/tags/blocks/fence_gates.json
-327fe38e20f4199e346ec7c7a4dc91ea4f0068ff data/minecraft/tags/blocks/logs.json
 5b22170d3eef0b5a1582805812691afdc340b764 data/minecraft/tags/blocks/needs_iron_tool.json
 10208d58ba8d0776df87fcdc9ff0a4bf68132bec data/minecraft/tags/blocks/needs_stone_tool.json
-a293336965b3420b78910a789a57f37407daa86c data/minecraft/tags/blocks/logs_that_burn.json
-21d841813a2e823c107851c6a7786e4120840108 data/minecraft/tags/blocks/mineable/shovel.json
-29d93e24de9a8f2f84042185def12efefabe4364 data/minecraft/tags/blocks/mineable/pickaxe.json
+ba868d0f01105a344fd1c12576ee9cf816ccd668 data/efac/tags/blocks/provides_charge_common.json

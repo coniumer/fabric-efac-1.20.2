@@ -13,9 +13,11 @@ public enum ModToolMaterial implements ToolMaterial {
     ALEBEDIZED(526, 6.5f, 2.5f, MiningLevels.IRON, 0,
             () -> Ingredient.ofItems(ModItems.ALB_GEM), 25, 7),
     CITRINIZED(1302, 8.5f, 3.5f, MiningLevels.DIAMOND, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 15, 8),
+            () -> Ingredient.ofItems(ModItems.CIT_GEM), 15, 8),
     RUBEDIZED(2031, 9.5f, 4.5f, MiningLevels.NETHERITE, 0,
-            () -> Ingredient.ofItems(ModItems.ALB_GEM), 5, 9);
+            () -> Ingredient.ofItems(ModItems.RUB_GEM), 5, 9),
+    PHILOSOPERS(4062, 12f, 5f, 5, 0,
+            () -> Ingredient.ofItems(ModItems.ALB_GEM), 0, 10);
 
     private final int itemDurability;
     private final float miningSpeed;

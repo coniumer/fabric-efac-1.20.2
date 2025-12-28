@@ -24,6 +24,9 @@
     },
     {
       "model": "minecraft:block/end_stone_7"
+    },
+    {
+      "model": "minecraft:block/end_stone_8"
     }]
   }
 }

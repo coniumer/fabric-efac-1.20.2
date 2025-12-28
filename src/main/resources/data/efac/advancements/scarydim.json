@@ -13,7 +13,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "efac:clumb_sword",
+  "parent": "efac:tunneldim",
   "criteria": {
     "scarydim": {
       "trigger": "minecraft:changed_dimension",

@@ -1,17 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "B": {
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
       "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "efac:random_sauce"
     }
-  },
-  "pattern": [
-    "B",
-    "B"
   ],
   "result": {
     "item": "efac:tooth"
-  },
-  "show_notification": true
+  }
 }

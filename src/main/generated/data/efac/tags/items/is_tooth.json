@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "efac:tooth",
+    "efac:snipers_tooth",
+    "efac:luxury_tooth",
+    "efac:hunters_tooth",
+    "efac:blue_tooth",
+    "efac:mummy_tooth",
+    "efac:adventurers_tooth",
+    "efac:architects_tooth",
+    "efac:excavators_tooth",
+    "efac:heavy_tooth",
+    "efac:force_tooth",
+    "efac:radiant_tooth",
+    "efac:spine_tooth",
+    "efac:midas_tooth",
+    "efac:soul_tooth",
+    "efac:observant_tooth",
+    "efac:cardboard_tooth",
+    "efac:gold_tooth",
+    "efac:philosophers_tooth"
+  ]
+}

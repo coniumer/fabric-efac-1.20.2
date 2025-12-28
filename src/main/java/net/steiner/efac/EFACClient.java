@@ -13,12 +13,13 @@ import net.steiner.efac.event.KeyInputHandler;
 import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.screen.ClumbHarvesterScreen;
 import net.steiner.efac.screen.ModScreenHandlers;
+import net.steiner.efac.screen.MouthScreen;
 import net.steiner.efac.util.ModClientRendering;
 
 public class EFACClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ModClientRendering.registerCutouts();
+        ModClientRendering.registerRenderLayers();
 
         EntityRendererRegistry.register(ModEntities.CLUMB_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.TOOTH_ITEM_ENTITY, FlyingItemEntityRenderer::new);
@@ -26,6 +27,7 @@ public class EFACClient implements ClientModInitializer {
         TerraformBoatClientHelper.registerModelLayers(ModBoats.PRIMA_BOAT_ID, false);
 
         HandledScreens.register(ModScreenHandlers.CLUMB_HARVESTER_SCREEN_HANDLER, ClumbHarvesterScreen::new);
+        HandledScreens.register(ModScreenHandlers.MOUTH_SCREEN_HANDLER, MouthScreen::new);
 
         KeyInputHandler.registerKeys();
 

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_prismarine_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:prismarine_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spine_tooth"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tide_armor_trim_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tide_armor_trim_smithing_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tooth": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:tooth"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tide_armor_trim_smithing_template",
+      "has_tooth",
+      "has_prismarine_shard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spine_tooth"
+    ]
+  },
+  "sends_telemetry_event": false
+}

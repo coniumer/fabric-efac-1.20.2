@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "efac:philosophers_helmet",
+    "efac:philosophers_chestplate",
+    "efac:philosophers_leggings",
+    "efac:philosophers_boots"
+  ]
+}

@@ -41,6 +41,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GELWOOD_FENCE_GATE);
         addDrop(ModBlocks.YES);
         addDrop(ModBlocks.ETHER);
+        addDrop(ModBlocks.CLUMB_BLOCK);
         addDrop(ModBlocks.CLUMB_HARVESTER);
 
         addDrop(ModBlocks.GELWOOD_DOOR, doorDrops(ModBlocks.GELWOOD_DOOR));

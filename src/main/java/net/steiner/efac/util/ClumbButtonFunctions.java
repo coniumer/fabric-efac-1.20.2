@@ -7,7 +7,8 @@ public enum ClumbButtonFunctions {
     BLINK(3),
     FIREBALL(4),
     BOMB(5),
-    HEALTH(6);
+    HEALTH(6),
+    STORAGE(7);
 
     private final int function;
 

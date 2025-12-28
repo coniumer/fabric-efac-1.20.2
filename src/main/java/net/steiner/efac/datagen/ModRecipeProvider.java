@@ -6,9 +6,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.SmithingRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
@@ -45,6 +47,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeCategory.DECORATIONS, ModBlocks.SLIPULON_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GEUMB_SHARD,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEUMB_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.CLUMB_MATERIA,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLUMB_BLOCK);
 
         //gelwood
         createDoorRecipe(ModBlocks.GELWOOD_DOOR, Ingredient.ofItems(ModBlocks.GELWOOD_PLANKS))
@@ -112,7 +116,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()), conditionsFromItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STRIPPED_PRIMA_WOOD)));
 
-        //shapeless
         //clumb foods
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CLUMBELON, 1)
                 .input(ModItems.CLUMB_MATERIA)
@@ -266,6 +269,79 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.RUBIED_GEUMB_SHARD), conditionsFromItem(ModItems.RUBIED_GEUMB_SHARD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUBIED_SWORD)));
 
+        //philosopher upgrades
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.RUB_CLUMB_WAND),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_WAND)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.RUB_CLUMB_WAND), conditionsFromItem(ModItems.RUB_CLUMB_WAND))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_WAND)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_SWORD),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_SWORD)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_SWORD), conditionsFromItem(Items.NETHERITE_SWORD))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_SWORD)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_PICKAXE),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_PICKAXE)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_PICKAXE), conditionsFromItem(Items.NETHERITE_PICKAXE))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_PICKAXE)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_AXE),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_AXE)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_AXE), conditionsFromItem(Items.NETHERITE_AXE))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_AXE)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_HOE),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_HOE)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_HOE), conditionsFromItem(Items.NETHERITE_HOE))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_HOE)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_SHOVEL),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_SHOVEL)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_SHOVEL), conditionsFromItem(Items.NETHERITE_SHOVEL))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_SHOVEL)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_HELMET),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_HELMET)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_HELMET), conditionsFromItem(Items.NETHERITE_HELMET))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_HELMET)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_CHESTPLATE),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_CHESTPLATE)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_CHESTPLATE), conditionsFromItem(Items.NETHERITE_CHESTPLATE))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_CHESTPLATE)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_LEGGINGS),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_LEGGINGS)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_LEGGINGS), conditionsFromItem(Items.NETHERITE_LEGGINGS))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_LEGGINGS)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(Items.NETHERITE_BOOTS),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_BOOTS)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(Items.NETHERITE_BOOTS), conditionsFromItem(Items.NETHERITE_BOOTS))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_BOOTS)));
+
+        //pickaxe, axe, shovel, hoe, helmet, chestplate, leggings, boots
+
         //gem clumbs
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ALB_CLUMB_MATERIA, 2)
                 .pattern(" G ")
@@ -345,12 +421,139 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RUBIED_GEUMB_SHARD)));
 
         //teeth
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOOTH, 1)
-                .pattern("B")
-                .pattern("B")
-                .input('B', Items.BONE_MEAL)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.TOOTH, 1)
+                .input(Items.BONE_MEAL)
+                .input(Items.BONE_MEAL)
+                .input(ModItems.RANDOM_SAUCE)
                 .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.BONE_MEAL))
+                .criterion(hasItem(ModItems.RANDOM_SAUCE), conditionsFromItem(ModItems.RANDOM_SAUCE))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.FLINT), RecipeCategory.TOOLS, ModItems.SNIPERS_TOOTH)
+                .criterion(hasItem(Items.SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.FLINT), conditionsFromItem(Items.FLINT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SNIPERS_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.VEX_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.EMERALD), RecipeCategory.TOOLS, ModItems.LUXURY_TOOTH)
+                .criterion(hasItem(Items.VEX_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.VEX_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.EMERALD), conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LUXURY_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.SPIDER_EYE), RecipeCategory.TOOLS, ModItems.HUNTERS_TOOTH)
+                .criterion(hasItem(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.SPIDER_EYE), conditionsFromItem(Items.SPIDER_EYE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.HUNTERS_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.LAPIS_LAZULI), RecipeCategory.TOOLS, ModItems.BLUE_TOOTH)
+                .criterion(hasItem(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.LAPIS_LAZULI), conditionsFromItem(Items.LAPIS_LAZULI))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BLUE_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.SAND), RecipeCategory.TOOLS, ModItems.MUMMY_TOOTH)
+                .criterion(hasItem(Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Blocks.SAND.asItem()), conditionsFromItem(Blocks.SAND.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MUMMY_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Blocks.MUD.asItem()), RecipeCategory.TOOLS, ModItems.ADVENTURERS_TOOTH)
+                .criterion(hasItem(Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Blocks.SAND.asItem()), conditionsFromItem(Blocks.SAND.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ADVENTURERS_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Blocks.BRICKS.asItem()), RecipeCategory.TOOLS, ModItems.ARCHITECTS_TOOTH)
+                .criterion(hasItem(Items.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Blocks.BRICKS.asItem()), conditionsFromItem(Blocks.BRICKS.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ARCHITECTS_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Blocks.COBBLESTONE.asItem()), RecipeCategory.TOOLS, ModItems.EXCAVATORS_TOOTH)
+                .criterion(hasItem(Items.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Blocks.COBBLESTONE.asItem()), conditionsFromItem(Blocks.COBBLESTONE.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.EXCAVATORS_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.HOST_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Blocks.IRON_BLOCK.asItem()), RecipeCategory.TOOLS, ModItems.HEAVY_TOOTH)
+                .criterion(hasItem(Items.HOST_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.HOST_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Blocks.IRON_BLOCK.asItem()), conditionsFromItem(Blocks.IRON_BLOCK.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.HEAVY_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.ECHO_SHARD), RecipeCategory.TOOLS, ModItems.FORCE_TOOTH)
+                .criterion(hasItem(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.ECHO_SHARD), conditionsFromItem(Items.ECHO_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FORCE_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.ECHO_SHARD), RecipeCategory.TOOLS, ModItems.RADIANT_TOOTH) //TODO: Warden drop for recipe
+                .criterion(hasItem(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.ECHO_SHARD), conditionsFromItem(Items.ECHO_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.RADIANT_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.TIDE_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.PRISMARINE_SHARD), RecipeCategory.TOOLS, ModItems.SPINE_TOOTH)
+                .criterion(hasItem(Items.TIDE_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.TIDE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.PRISMARINE_SHARD), conditionsFromItem(Items.PRISMARINE_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SPINE_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Blocks.GOLD_BLOCK.asItem()), RecipeCategory.TOOLS, ModItems.MIDAS_TOOTH)
+                .criterion(hasItem(Items.SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Blocks.GOLD_BLOCK.asItem()), conditionsFromItem(Blocks.GOLD_BLOCK.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MIDAS_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.NETHER_BRICK), RecipeCategory.TOOLS, ModItems.SOUL_TOOTH)
+                .criterion(hasItem(Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SOUL_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.ENDER_PEARL), RecipeCategory.TOOLS, ModItems.OBSERVANT_TOOTH)
+                .criterion(hasItem(Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.OBSERVANT_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.SHULKER_SHELL), RecipeCategory.TOOLS, ModItems.CARDBOARD_TOOTH)
+                .criterion(hasItem(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE), conditionsFromItem(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.CARDBOARD_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(Items.GOLD_INGOT), RecipeCategory.TOOLS, ModItems.GOLD_TOOTH)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GOLD_TOOTH)));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(ModItems.TOOTH),
+                        Ingredient.ofItems(ModItems.PHILOSOPHERS_STONE), RecipeCategory.TOOLS, ModItems.PHILOSOPHERS_TOOTH)
+                .criterion(hasItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ModItems.TOOTH), conditionsFromItem(ModItems.TOOTH))
+                .criterion(hasItem(ModItems.PHILOSOPHERS_STONE), conditionsFromItem(ModItems.PHILOSOPHERS_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.PHILOSOPHERS_TOOTH)));
 
         //charms
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLINK_CHARM, 1)
@@ -364,6 +567,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
                 .criterion(hasItem(ModItems.CLUMBY_GEUMB_SHARD), conditionsFromItem(ModItems.CLUMBY_GEUMB_SHARD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.BLINK_CHARM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STORAGE_CHARM, 1)
+                .pattern("EME")
+                .pattern("ESE")
+                .pattern("EEE")
+                .input('E', Blocks.OBSIDIAN)
+                .input('M', ModItems.CLUMB_MATERIA)
+                .input('S', ModItems.CLUMBY_GEUMB_SHARD)
+                .criterion(hasItem(Blocks.OBSIDIAN), conditionsFromItem(Blocks.OBSIDIAN))
+                .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
+                .criterion(hasItem(ModItems.CLUMBY_GEUMB_SHARD), conditionsFromItem(ModItems.CLUMBY_GEUMB_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.STORAGE_CHARM)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LIGHTNING_CHARM, 1)
                 .pattern("CMC")

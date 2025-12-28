@@ -3,7 +3,9 @@
   "package": "net.steiner.efac.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "EntityDataSaverMixin"
+    "EntityDataSaverMixin",
+    "PostMineMixin",
+    "PlayerMouthMixin"
   ],
   "client": [
     "PlayerEatMixin",

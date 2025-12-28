@@ -15,18 +15,22 @@ import net.minecraft.util.math.Vec3d;
 import net.steiner.efac.item.ModItems;
 import net.steiner.efac.networking.ModMessages;
 import net.steiner.efac.util.ClumbButtonFunctions;
-import net.steiner.efac.util.CooldownData;
 import net.steiner.efac.util.EntityDataSaver;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyInputHandler {
     public static final String KEY_CATEGORY_EFAC = "key.category.efac.evankeys";
     public static final String KEY_CLUMB = "key.efac.clumb";
+    public static final String KEY_MOUTH = "key.efac.mouth";
 
     public static KeyBinding clumbKey;
+    public static KeyBinding mouthKey;
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (mouthKey.wasPressed()) {
+                ClientPlayNetworking.send(ModMessages.OPEN_MOUTH_ID, PacketByteBufs.create());
+            }
             if (clumbKey.wasPressed()) {
 
                 MinecraftClient mc = MinecraftClient.getInstance();
@@ -35,8 +39,7 @@ public class KeyInputHandler {
                 PlayerEntity player = mc.player;
                 EntityDataSaver sPlayer = (EntityDataSaver)player;
 
-                if ((sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) || player.getAbilities().creativeMode)
-                        && sPlayer.getPersistentData().getInt(CooldownData.COOLDOWN_PROGRESS_KEY) >= CooldownData.COOLDOWN_MAX) {
+                if (sPlayer.canClumb(sPlayer.getPersistentData().getInt("clumbCharges"), sPlayer) || player.getAbilities().creativeMode) {
                     if (performClumbAction(player)) {
                         ClientPlayNetworking.send(ModMessages.CLUMB_DISCHARGE_ID, PacketByteBufs.create());
 
@@ -68,6 +71,9 @@ public class KeyInputHandler {
             return true;
         } else if (player.getStackInHand(Hand.OFF_HAND).getItem() == ModItems.HEALTH_CHARM) {
             sendPayload(ClumbButtonFunctions.HEALTH);
+            return true;
+        } else if (player.getStackInHand(Hand.OFF_HAND).getItem() == ModItems.STORAGE_CHARM) {
+            sendPayload(ClumbButtonFunctions.STORAGE);
             return true;
         } else if (sPlayer.getPersistentData().getInt("dashUses") < 2) {
             clumbDash(player, ClumbButtonFunctions.DASH);
@@ -119,7 +125,10 @@ public class KeyInputHandler {
 
     public static void registerKeys() {
         clumbKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                KEY_CLUMB, InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_C, KEY_CATEGORY_EFAC
+                KEY_CLUMB, InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT_CONTROL, KEY_CATEGORY_EFAC
+        ));
+        mouthKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KEY_MOUTH, InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_M, KEY_CATEGORY_EFAC
         ));
 
         registerKeyInputs();

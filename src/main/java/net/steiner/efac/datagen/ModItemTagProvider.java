@@ -20,13 +20,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.GELWOOD_PLANKS.asItem())
-                .add(ModBlocks.PRIMA_PLANKS.asItem());
+                .add(ModBlocks.PRIMA_PLANKS.asItem())
+        ;
 
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PRIMA_LOG.asItem())
                 .add(ModBlocks.PRIMA_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_PRIMA_LOG.asItem())
-                .add(ModBlocks.STRIPPED_PRIMA_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_PRIMA_WOOD.asItem())
+        ;
 
         getOrCreateTagBuilder(ModTags.Items.IS_CLUMB_FOOD)
                 .add(ModItems.CLUMB_MATERIA)
@@ -40,6 +42,33 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.GOLD_CLUMBROT)
                 .add(ModItems.CLUMBLE)
                 .add(ModItems.GOLD_CLUMBLE)
-                .add(ModItems.CLUMBURGER);
+                .add(ModItems.CLUMBURGER)
+        ;
+
+        getOrCreateTagBuilder(ModTags.Items.IS_TOOTH)
+                .add(ModItems.TOOTH)
+                .add(ModItems.SNIPERS_TOOTH)
+                .add(ModItems.LUXURY_TOOTH)
+                .add(ModItems.HUNTERS_TOOTH)
+                .add(ModItems.BLUE_TOOTH)
+                .add(ModItems.MUMMY_TOOTH)
+                .add(ModItems.ADVENTURERS_TOOTH)
+                .add(ModItems.ARCHITECTS_TOOTH)
+                .add(ModItems.EXCAVATORS_TOOTH)
+                .add(ModItems.HEAVY_TOOTH)
+                .add(ModItems.FORCE_TOOTH)
+                .add(ModItems.RADIANT_TOOTH)
+                .add(ModItems.SPINE_TOOTH)
+                .add(ModItems.MIDAS_TOOTH)
+                .add(ModItems.SOUL_TOOTH)
+                .add(ModItems.OBSERVANT_TOOTH)
+                .add(ModItems.CARDBOARD_TOOTH)
+                .add(ModItems.GOLD_TOOTH)
+                .add(ModItems.PHILOSOPHERS_TOOTH)
+        ;
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.PHILOSOPHERS_HELMET, ModItems.PHILOSOPHERS_CHESTPLATE, ModItems.PHILOSOPHERS_LEGGINGS, ModItems.PHILOSOPHERS_BOOTS)
+        ;
     }
 }

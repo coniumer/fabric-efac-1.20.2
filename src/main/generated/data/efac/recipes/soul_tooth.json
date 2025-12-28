@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:nether_brick"
+  },
+  "base": {
+    "item": "efac:tooth"
+  },
+  "result": {
+    "item": "efac:soul_tooth"
+  },
+  "template": {
+    "item": "minecraft:rib_armor_trim_smithing_template"
+  }
+}

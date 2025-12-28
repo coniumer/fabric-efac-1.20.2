@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:echo_shard"
+  },
+  "base": {
+    "item": "efac:tooth"
+  },
+  "result": {
+    "item": "efac:radiant_tooth"
+  },
+  "template": {
+    "item": "minecraft:silence_armor_trim_smithing_template"
+  }
+}

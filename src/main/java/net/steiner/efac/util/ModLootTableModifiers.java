@@ -1,6 +1,7 @@
 package net.steiner.efac.util;
 
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.condition.RandomChanceWithLootingLootCondition;
@@ -15,12 +16,30 @@ public class ModLootTableModifiers {
     // entities
     private static final Identifier ZOMBIE_ID = new Identifier(
             "minecraft", "entities/zombie");
+    private static final Identifier DROWNED_ID = new Identifier(
+            "minecraft", "entities/drowned");
+    private static final Identifier HUSK_ID = new Identifier(
+            "minecraft", "entities/husk");
     private static final Identifier SKELETON_ID = new Identifier(
             "minecraft", "entities/skeleton");
+    private static final Identifier STRAY_ID = new Identifier(
+            "minecraft", "entities/stray");
     private static final Identifier CREEPER_ID = new Identifier(
             "minecraft", "entities/creeper");
     private static final Identifier SPIDER_ID = new Identifier(
             "minecraft", "entities/spider");
+    private static final Identifier CAVE_SPIDER_ID = new Identifier(
+            "minecraft", "entities/cave_spider");
+
+    //blocks
+    private static final Identifier DIRT_ID = new Identifier(
+            "minecraft", "blocks/dirt");
+    private static final Identifier STONE_ID = new Identifier(
+            "minecraft", "blocks/stone");
+    private static final Identifier NETHERRACK_ID = new Identifier(
+            "minecraft", "blocks/netherrack");
+    private static final Identifier BLACKSTONE_ID = new Identifier(
+            "minecraft", "blocks/blackstone");
 
     // dungeon chests
     private static final Identifier PILLAGER_OUTPOST_ID = new Identifier(
@@ -52,9 +71,48 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceWithLootingLootCondition.builder(0.1f, 3f))
                         .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.2f, 3f))
+                        .with(ItemEntry.builder(Items.COAL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f))
                         .build());
                 tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
+            }
+            if (DROWNED_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.3f, 3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.2f, 3f))
+                        .with(ItemEntry.builder(Items.COAL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
+            }
+            if (HUSK_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.4f, 3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.2f, 3f))
+                        .with(ItemEntry.builder(Items.COAL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
             }
 
             if (SKELETON_ID.equals(id) && source.isBuiltin()) {
@@ -62,9 +120,32 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceWithLootingLootCondition.builder(0.3f, 3f))
                         .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 5.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.35f, 3f))
+                        .with(ItemEntry.builder(Items.IRON_NUGGET))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
                         .build());
                 tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
+            }
+            if (STRAY_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.35f, 3f))
+                        .with(ItemEntry.builder(ModItems.CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 5.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.35f, 3f))
+                        .with(ItemEntry.builder(Items.IRON_NUGGET))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
             }
 
             if (SPIDER_ID.equals(id) && source.isBuiltin()) {
@@ -74,7 +155,30 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.RANDOM_SAUCE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))
                         .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.25f, 3f))
+                        .with(ItemEntry.builder(Items.COAL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f))
+                        .build());
                 tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
+            }
+            if (CAVE_SPIDER_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.35f, 3f))
+                        .with(ItemEntry.builder(ModItems.RANDOM_SAUCE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.15f, 3f))
+                        .with(ItemEntry.builder(Items.COAL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
             }
 
             if (CREEPER_ID.equals(id) && source.isBuiltin()) {
@@ -84,6 +188,54 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.RANDOM_SAUCE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))
                         .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.25f, 3f))
+                        .with(ItemEntry.builder(Items.IRON_NUGGET))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 5.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
+            }
+
+            //blocks
+            if (DIRT_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.05f, 3f))
+                        .with(ItemEntry.builder(ModItems.TOOTH))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (STONE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.07f, 3f))
+                        .with(ItemEntry.builder(Items.IRON_NUGGET))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 5.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (NETHERRACK_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.08f, 3f))
+                        .with(ItemEntry.builder(Items.GOLD_NUGGET))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 5.0f))
+                                .build());
+                tableBuilder.pool(builder.build());
+            }
+
+            if (BLACKSTONE_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.02f, 3f))
+                        .with(ItemEntry.builder(Items.DIAMOND))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
+                                .build());
                 tableBuilder.pool(builder.build());
             }
 

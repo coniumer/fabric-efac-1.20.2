@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BedBlock.class)
 public abstract class ReadyForBedMixin {
 
-    @Inject(method = "onUse", at = @At("TAIL"))
+    @Inject(method = "onUse", at = @At(value = "TAIL"))
     protected void injectOnUse(BlockState state, @NotNull World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> info) {
         if (player.isSleeping()) {
             player.sendMessage(Text.literal("Ready for Bed!"));

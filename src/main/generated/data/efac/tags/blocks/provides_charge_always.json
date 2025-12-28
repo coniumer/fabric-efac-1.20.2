@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "efac:clumb_block",
+    "efac:yes",
+    "efac:small_geumb_bud",
+    "efac:medium_geumb_bud",
+    "efac:large_geumb_bud",
+    "efac:geumb_cluster"
+  ]
+}

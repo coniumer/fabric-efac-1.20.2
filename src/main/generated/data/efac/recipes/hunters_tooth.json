@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:spider_eye"
+  },
+  "base": {
+    "item": "efac:tooth"
+  },
+  "result": {
+    "item": "efac:hunters_tooth"
+  },
+  "template": {
+    "item": "minecraft:wild_armor_trim_smithing_template"
+  }
+}

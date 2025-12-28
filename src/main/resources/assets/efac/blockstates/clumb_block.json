@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clumb_phase=solid": {
+      "model": "efac:block/clumb_block"
+    },
+    "clumb_phase=passable": {
+      "model": "efac:block/clumb_block_passable"
+    }
+  }
+}

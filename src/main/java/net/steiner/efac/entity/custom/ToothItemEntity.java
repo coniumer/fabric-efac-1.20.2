@@ -3,6 +3,7 @@ package net.steiner.efac.entity.custom;
 import net.minecraft.entity.EntityStatuses;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,16 +18,20 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 import net.steiner.efac.entity.ModEntities;
 import net.steiner.efac.item.ModItems;
+import org.jetbrains.annotations.Nullable;
 
 public class ToothItemEntity extends ThrownItemEntity {
-    private float attackDamage = 1f;
+    private float attackDamage;
+    @Nullable
+    private StatusEffectInstance statusEffectInstance;
     public ToothItemEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public ToothItemEntity(LivingEntity livingEntity, World world, float attackDamage) {
+    public ToothItemEntity(LivingEntity livingEntity, World world, float attackDamage, @Nullable StatusEffectInstance statusEffectInstance) {
         super(ModEntities.TOOTH_ITEM_ENTITY, livingEntity, world);
         this.attackDamage = attackDamage;
+        this.statusEffectInstance = statusEffectInstance;
     }
 
     @Override
@@ -54,7 +59,10 @@ public class ToothItemEntity extends ThrownItemEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         if (this.getOwner() instanceof LivingEntity livingEntity) {
-            entityHitResult.getEntity().damage(this.getDamageSources().mobProjectile(this, livingEntity), 1.0F + attackDamage);
+            entityHitResult.getEntity().damage(this.getDamageSources().mobProjectile(this, livingEntity), attackDamage);
+        }
+        if (statusEffectInstance != null && entityHitResult.getEntity() instanceof LivingEntity livingEntity) {
+            livingEntity.addStatusEffect(statusEffectInstance);
         }
     }
 

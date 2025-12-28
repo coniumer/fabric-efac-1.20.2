@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:cobblestone"
+  },
+  "base": {
+    "item": "efac:tooth"
+  },
+  "result": {
+    "item": "efac:excavators_tooth"
+  },
+  "template": {
+    "item": "minecraft:shaper_armor_trim_smithing_template"
+  }
+}

@@ -16,6 +16,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.steiner.efac.EFAC;
 import net.steiner.efac.block.custom.*;
+import net.steiner.efac.fluid.ModFluids;
 import net.steiner.efac.sound.ModSounds;
 import net.steiner.efac.world.tree.PrimaSaplingGenerator;
 
@@ -146,6 +147,12 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(ModSounds.YES_SOUNDS)));
     public static final Block ETHER = registerBlock("ether",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.SNOW)));
+    public static final Block CLUMB_BLOCK = registerBlock("clumb_block",
+            new ClumbBlock(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SLIME)));
+
+    //liquid
+    public static Block DRAGON_BLOOD = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "dragon_blood"),
+            new FluidBlock(ModFluids.DRAGON_BLOOD_STILL, FabricBlockSettings.copyOf(Blocks.WATER)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

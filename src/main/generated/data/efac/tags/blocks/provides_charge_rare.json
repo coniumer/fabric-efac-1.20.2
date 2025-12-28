@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:dirt",
+    "efac:prima_leaves",
+    "minecraft:grass_block",
+    "minecraft:stone",
+    "minecraft:diorite",
+    "minecraft:andesite",
+    "minecraft:granite",
+    "minecraft:tuff",
+    "minecraft:netherrack",
+    "minecraft:sand",
+    "minecraft:red_sand",
+    "minecraft:gravel"
+  ]
+}

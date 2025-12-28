@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:ender_pearl"
+  },
+  "base": {
+    "item": "efac:tooth"
+  },
+  "result": {
+    "item": "efac:observant_tooth"
+  },
+  "template": {
+    "item": "minecraft:eye_armor_trim_smithing_template"
+  }
+}

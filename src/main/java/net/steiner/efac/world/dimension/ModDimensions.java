@@ -15,7 +15,7 @@ import net.steiner.efac.EFAC;
 import java.util.OptionalLong;
 
 public class ModDimensions {
-    // Scary Dimension Registries
+    // Scary Realm Registries
     public static final RegistryKey<DimensionOptions> SCARY_DIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
             new Identifier(EFAC.MOD_ID, "scarydim"));
     public static final RegistryKey<World> SCARY_DIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
@@ -23,13 +23,37 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> SCARY_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
             new Identifier(EFAC.MOD_ID, "scarydim_type"));
 
-    // Tunnel of Time Dimension Registries
+    // Tunnel of Time Realm Registries
     public static final RegistryKey<DimensionOptions> TUNNEL_DIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
             new Identifier(EFAC.MOD_ID, "tunneldim"));
     public static final RegistryKey<World> TUNNEL_DIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
             new Identifier(EFAC.MOD_ID, "tunneldim"));
     public static final RegistryKey<DimensionType> TUNNEL_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
             new Identifier(EFAC.MOD_ID, "tunneldim_type"));
+
+    // YES Realm Registries
+    public static final RegistryKey<DimensionOptions> YES_DIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(EFAC.MOD_ID, "yesdim"));
+    public static final RegistryKey<World> YES_DIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(EFAC.MOD_ID, "yesdim"));
+    public static final RegistryKey<DimensionType> YES_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            new Identifier(EFAC.MOD_ID, "yesdim_type"));
+
+    // Evan's Realm Registries
+    public static final RegistryKey<DimensionOptions> EVAN_DIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(EFAC.MOD_ID, "evandim"));
+    public static final RegistryKey<World> EVAN_DIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(EFAC.MOD_ID, "evandim"));
+    public static final RegistryKey<DimensionType> EVAN_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            new Identifier(EFAC.MOD_ID, "evandim_type"));
+
+    // Think Environment Realm Registries
+    public static final RegistryKey<DimensionOptions> THINK_ENVIRONMENT_DIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(EFAC.MOD_ID, "thinkdim"));
+    public static final RegistryKey<World> THINK_ENVIRONMENT_DIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(EFAC.MOD_ID, "thinkdim"));
+    public static final RegistryKey<DimensionType> THINK_ENVIRONMENT_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            new Identifier(EFAC.MOD_ID, "thinkdim_type"));
 
     // scary settings
     public static void scaryBootstrapType(Registerable<DimensionType> context) {
@@ -61,6 +85,66 @@ public class ModDimensions {
                 true, // natural
                 1.0, // coordinateScale
                 false, // bedWorks
+                true, // respawnAnchorWorks
+                -64, // minY
+                256, // height
+                256, // logicalHeight
+                BlockTags.INFINIBURN_OVERWORLD, // infiniburn
+                DimensionTypes.OVERWORLD_ID, // effectsLocation
+                1.0f, // ambientLight
+                new DimensionType.MonsterSettings(false,false, UniformIntProvider.create(0, 0), 0)));
+    }
+
+    // yes settings
+    public static void yesBootstrapType(Registerable<DimensionType> context) {
+        context.register(YES_DIM_TYPE, new DimensionType(
+                OptionalLong.of(12000), //fixedTime
+                false, // hasSkyLight
+                true, // hasCeiling
+                false, // ultraWarm
+                true, // natural
+                8.0, // coordinateScale
+                true, // bedWorks
+                false, // respawnAnchorWorks
+                -64, // minY
+                256, // height
+                256, // logicalHeight
+                BlockTags.INFINIBURN_OVERWORLD, // infiniburn
+                DimensionTypes.OVERWORLD_ID, // effectsLocation
+                1.0f, // ambientLight
+                new DimensionType.MonsterSettings(false,false, UniformIntProvider.create(0, 0), 0)));
+    }
+
+    // evan settings
+    public static void evanBootstrapType(Registerable<DimensionType> context) {
+        context.register(EVAN_DIM_TYPE, new DimensionType(
+                OptionalLong.of(12000), //fixedTime
+                false, // hasSkyLight
+                true, // hasCeiling
+                false, // ultraWarm
+                true, // natural
+                8.0, // coordinateScale
+                true, // bedWorks
+                false, // respawnAnchorWorks
+                -64, // minY
+                256, // height
+                256, // logicalHeight
+                BlockTags.INFINIBURN_OVERWORLD, // infiniburn
+                DimensionTypes.OVERWORLD_ID, // effectsLocation
+                1.0f, // ambientLight
+                new DimensionType.MonsterSettings(false,false, UniformIntProvider.create(0, 0), 0)));
+    }
+
+    // think environment settings
+    public static void thinkEnvironmentBootstrapType(Registerable<DimensionType> context) {
+        context.register(THINK_ENVIRONMENT_DIM_TYPE, new DimensionType(
+                OptionalLong.of(12000), //fixedTime
+                false, // hasSkyLight
+                true, // hasCeiling
+                false, // ultraWarm
+                true, // natural
+                8.0, // coordinateScale
+                true, // bedWorks
                 false, // respawnAnchorWorks
                 -64, // minY
                 256, // height

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coast_armor_trim_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:coast_armor_trim_smithing_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lapis_lazuli": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lapis_lazuli"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:blue_tooth"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tooth": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:tooth"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coast_armor_trim_smithing_template",
+      "has_tooth",
+      "has_lapis_lazuli"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:blue_tooth"
+    ]
+  },
+  "sends_telemetry_event": false
+}

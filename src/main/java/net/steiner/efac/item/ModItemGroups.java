@@ -12,9 +12,34 @@ import net.steiner.efac.block.ModBlocks;
 
 public class ModItemGroups {
 
+    public static final ItemGroup TOOTH_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(EFAC.MOD_ID, "tooth"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.efac.tooth"))
+                    .icon(() -> new ItemStack(ModItems.TOOTH)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.TOOTH);
+                        entries.add(ModItems.SNIPERS_TOOTH);
+                        entries.add(ModItems.LUXURY_TOOTH);
+                        entries.add(ModItems.HUNTERS_TOOTH);
+                        entries.add(ModItems.BLUE_TOOTH);
+                        entries.add(ModItems.MUMMY_TOOTH);
+                        entries.add(ModItems.ADVENTURERS_TOOTH);
+                        entries.add(ModItems.ARCHITECTS_TOOTH);
+                        entries.add(ModItems.EXCAVATORS_TOOTH);
+                        entries.add(ModItems.HEAVY_TOOTH);
+                        entries.add(ModItems.FORCE_TOOTH);
+                        entries.add(ModItems.RADIANT_TOOTH);
+                        entries.add(ModItems.SPINE_TOOTH);
+                        entries.add(ModItems.MIDAS_TOOTH);
+                        entries.add(ModItems.SOUL_TOOTH);
+                        entries.add(ModItems.OBSERVANT_TOOTH);
+                        entries.add(ModItems.CARDBOARD_TOOTH);
+                        entries.add(ModItems.GOLD_TOOTH);
+                        entries.add(ModItems.PHILOSOPHERS_TOOTH);
+                    }).build());
+
     public static final ItemGroup SLIPULON_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(EFAC.MOD_ID, "slipulon_ingot"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.slipulon_ingot"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.efac.slipulon_ingot"))
                     .icon(() -> new ItemStack(ModBlocks.CLUMB_HARVESTER)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CLUMB_HARVESTER);
                         // Items
@@ -24,6 +49,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ALB_GEM);
                         entries.add(ModItems.CIT_GEM);
                         entries.add(ModItems.RUB_GEM);
+                        entries.add(ModItems.PHILOSOPHERS_STONE);
                         entries.add(ModItems.RANDOM_SAUCE);
                         entries.add(ModItems.YUMMY_SAUCE);
                         entries.add(ModItems.AWESOME_SAUCE);
@@ -48,25 +74,40 @@ public class ModItemGroups {
                         entries.add(ModItems.CLUMBLE);
                         entries.add(ModItems.GOLD_CLUMBLE);
                         entries.add(ModItems.CLUMBURGER);
-                            //teeth
-                        entries.add(ModItems.TOOTH);
                             //custom
                                 //wands
                         entries.add(ModItems.WOOD_CLUMB_WAND);
                         entries.add(ModItems.ALB_CLUMB_WAND);
                         entries.add(ModItems.CIT_CLUMB_WAND);
                         entries.add(ModItems.RUB_CLUMB_WAND);
+                        entries.add(ModItems.PHILOSOPHERS_WAND);
                                 //swords
                         entries.add(ModItems.CLUMBY_SWORD);
                         entries.add(ModItems.ALBY_SWORD);
                         entries.add(ModItems.CITRY_SWORD);
                         entries.add(ModItems.RUBIED_SWORD);
+                        entries.add(ModItems.PHILOSOPHERS_SWORD);
+                                //philosophers tools
+                        entries.add(ModItems.PHILOSOPHERS_SHOVEL);
+                        entries.add(ModItems.PHILOSOPHERS_PICKAXE);
+                        entries.add(ModItems.PHILOSOPHERS_AXE);
+                        entries.add(ModItems.PHILOSOPHERS_HOE);
+                                //philosophers armor
+                        entries.add(ModItems.PHILOSOPHERS_HELMET);
+                        entries.add(ModItems.PHILOSOPHERS_CHESTPLATE);
+                        entries.add(ModItems.PHILOSOPHERS_LEGGINGS);
+                        entries.add(ModItems.PHILOSOPHERS_BOOTS);
+                                //smithing
+                        entries.add(ModItems.PHILOSOPHERS_UPGRADE_SMITHING_TEMPLATE);
+                                //bucket
+                        entries.add(ModItems.DRAGON_BLOOD_BUCKET);
                                 //charms
                         entries.add(ModItems.BLINK_CHARM);
                         entries.add(ModItems.LIGHTNING_CHARM);
                         entries.add(ModItems.FIREBALL_CHARM);
                         entries.add(ModItems.BOMB_CHARM);
                         entries.add(ModItems.HEALTH_CHARM);
+                        entries.add(ModItems.STORAGE_CHARM);
                         entries.add(ModItems.PHILOSOPHER_CHARM);
                         // Blocks
                         entries.add(ModBlocks.SLIPULON_ORE);
@@ -110,6 +151,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BUTTER);
                         entries.add(ModBlocks.YES);
                         entries.add(ModBlocks.ETHER);
+                        entries.add(ModBlocks.CLUMB_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {

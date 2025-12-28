@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "item": "efac:philosopher_charm"
+    },
+    "title": {
+      "translate": "advancements.efac.clumb_charm.title"
+    },
+    "description": {
+      "translate": "advancements.efac.clumb_charm.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "efac:geumb_enhancement",
+  "criteria": {
+    "clumb_charm": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:blink_charm",
+              "efac:lightning_charm",
+              "efac:fireball_charm",
+              "efac:bomb_charm",
+              "efac:health_charm",
+              "efac:philosopher_charm"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "clumb_charm"
+    ]
+  ]
+}
