@@ -140,6 +140,7 @@
   "effect.efac.tooth_slowness": "Slowness of Tooth",
   "effect.efac.tooth_fatigue": "Mining Fatigue of Tooth",
   "effect.efac.tooth_haste": "Haste of Tooth",
+  "effect.efac.beams": "Beams",
 
   "itemgroup.efac.slipulon_ingot": "EFAC Group",
   "itemgroup.efac.tooth": "Teeth",

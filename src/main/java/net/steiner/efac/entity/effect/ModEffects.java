@@ -22,6 +22,8 @@ public class ModEffects {
     public static StatusEffect FATIGUE;
     public static StatusEffect HASTE;
 
+    public static StatusEffect BEAMS;
+
     public static StatusEffect registerFreezeEffect(String name) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(EFAC.MOD_ID, name),
                 new FreezeEffect(StatusEffectCategory.HARMFUL, 3124687));
@@ -57,6 +59,11 @@ public class ModEffects {
                 new ToothEffect(StatusEffectCategory.BENEFICIAL, 3124687).addAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED, "b5fc7b2d-20dd-42e5-913a-e42f7a73f2f5", 0.1F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
     }
 
+    public static StatusEffect registerBeamsEffect(String name) {
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(EFAC.MOD_ID, name),
+                new ToothEffect(StatusEffectCategory.BENEFICIAL, 3124687));
+    }
+
     public static void registerModEffects() {
         FREEZE = registerFreezeEffect("freeze");
 
@@ -68,6 +75,8 @@ public class ModEffects {
 
         FATIGUE = registerToothFatigueEffect("tooth_fatigue");
         HASTE = registerToothHasteEffect("tooth_haste");
+
+        BEAMS = registerBeamsEffect("beams");
 
         EFAC.LOGGER.info("Registering Mod Effects for " + EFAC.MOD_ID);
     }

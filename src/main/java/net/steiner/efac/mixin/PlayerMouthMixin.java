@@ -69,6 +69,8 @@ public abstract class PlayerMouthMixin extends LivingEntity implements MouthData
                 if (tooth.getTooth() == ModItems.TOOTH) {
                     if (tooth.getType() == Tooth.Type.WISDOM) {
                         slowness++;
+                    } else if (tooth.getType() == Tooth.Type.INCISOR) {
+                        speed++;
                     } else if (tooth.getType() == Tooth.Type.CANINE) {
                         strength++;
                     } else if (tooth.getType() == Tooth.Type.PREMOLAR) {
