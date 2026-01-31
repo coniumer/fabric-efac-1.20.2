@@ -32,6 +32,66 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
     public static final Block SLIPULON_BLOCK = registerBlock("slipulon_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    //philosopher's
+    public static final Block PHILOSOPHERS_ORE = registerBlock("philosophers_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)));
+    public static final Block PHILOSOPHERS_BLOCK = registerBlock("philosophers_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+    //decor
+    public static final Block BLONE_BRICKS = registerBlock("blone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block BLONE_BRICK_STAIRS = registerBlock("blone_brick_stairs",
+            new StairsBlock(ModBlocks.BLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block BLONE_BRICK_SLAB = registerBlock("blone_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block BLONE_BRICK_WALL = registerBlock("blone_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block POLISHED_BLONE = registerBlock("polished_blone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_BLONE_STAIRS = registerBlock("polished_blone_stairs",
+            new StairsBlock(ModBlocks.POLISHED_BLONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_BLONE_SLAB = registerBlock("polished_blone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_BLONE_WALL = registerBlock("polished_blone_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block RONE_BRICKS = registerBlock("rone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block RONE_BRICK_STAIRS = registerBlock("rone_brick_stairs",
+            new StairsBlock(ModBlocks.RONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block RONE_BRICK_SLAB = registerBlock("rone_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block RONE_BRICK_WALL = registerBlock("rone_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block POLISHED_RONE = registerBlock("polished_rone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_RONE_STAIRS = registerBlock("polished_rone_stairs",
+            new StairsBlock(ModBlocks.POLISHED_RONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_RONE_SLAB = registerBlock("polished_rone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_RONE_WALL = registerBlock("polished_rone_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block PLONE_BRICKS = registerBlock("plone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block PLONE_BRICK_STAIRS = registerBlock("plone_brick_stairs",
+            new StairsBlock(ModBlocks.PLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block PLONE_BRICK_SLAB = registerBlock("plone_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block PLONE_BRICK_WALL = registerBlock("plone_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block POLISHED_PLONE = registerBlock("polished_plone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_PLONE_STAIRS = registerBlock("polished_plone_stairs",
+            new StairsBlock(ModBlocks.POLISHED_PLONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_PLONE_SLAB = registerBlock("polished_plone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block POLISHED_PLONE_WALL = registerBlock("polished_plone_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
     //gems
     public static final Block ALB_GEM_ORE = registerBlock("alb_gem_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
@@ -149,6 +209,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.SNOW)));
     public static final Block CLUMB_BLOCK = registerBlock("clumb_block",
             new ClumbBlock(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SLIME)));
+    public static final Block FISH_BLOCK = registerBlock("fish_block",
+            new FishBlock(FabricBlockSettings.copyOf(Blocks.SAND).sounds(BlockSoundGroup.SLIME)));
 
     //liquid
     public static Block DRAGON_BLOOD = Registry.register(Registries.BLOCK, new Identifier(EFAC.MOD_ID, "dragon_blood"),

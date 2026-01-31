@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "efac:block/polished_rone",
+    "side": "efac:block/polished_rone",
+    "top": "efac:block/polished_rone"
+  }
+}

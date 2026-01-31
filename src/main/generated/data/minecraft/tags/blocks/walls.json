@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "efac:blone_brick_wall",
+    "efac:polished_blone_wall",
+    "efac:plone_brick_wall",
+    "efac:polished_plone_wall",
+    "efac:rone_brick_wall",
+    "efac:polished_rone_wall"
+  ]
+}

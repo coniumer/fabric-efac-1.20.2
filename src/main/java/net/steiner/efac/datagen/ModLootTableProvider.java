@@ -64,6 +64,36 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PRIMA_DOOR, doorDrops(ModBlocks.PRIMA_DOOR));
         addDrop(ModBlocks.PRIMA_SLAB, slabDrops(ModBlocks.PRIMA_SLAB));
 
+        addDrop(ModBlocks.BLONE_BRICKS);
+        addDrop(ModBlocks.BLONE_BRICK_STAIRS);
+        addDrop(ModBlocks.BLONE_BRICK_SLAB, slabDrops(ModBlocks.BLONE_BRICK_SLAB));
+        addDrop(ModBlocks.BLONE_BRICK_WALL);
+        addDrop(ModBlocks.POLISHED_BLONE);
+        addDrop(ModBlocks.POLISHED_BLONE_STAIRS);
+        addDrop(ModBlocks.POLISHED_BLONE_SLAB, slabDrops(ModBlocks.POLISHED_BLONE_SLAB));
+        addDrop(ModBlocks.POLISHED_BLONE_WALL);
+
+        addDrop(ModBlocks.PLONE_BRICKS);
+        addDrop(ModBlocks.PLONE_BRICK_STAIRS);
+        addDrop(ModBlocks.PLONE_BRICK_SLAB, slabDrops(ModBlocks.PLONE_BRICK_SLAB));
+        addDrop(ModBlocks.PLONE_BRICK_WALL);
+        addDrop(ModBlocks.POLISHED_PLONE);
+        addDrop(ModBlocks.POLISHED_PLONE_STAIRS);
+        addDrop(ModBlocks.POLISHED_PLONE_SLAB, slabDrops(ModBlocks.POLISHED_PLONE_SLAB));
+        addDrop(ModBlocks.POLISHED_PLONE_WALL);
+
+        addDrop(ModBlocks.RONE_BRICKS);
+        addDrop(ModBlocks.RONE_BRICK_STAIRS);
+        addDrop(ModBlocks.RONE_BRICK_SLAB, slabDrops(ModBlocks.RONE_BRICK_SLAB));
+        addDrop(ModBlocks.RONE_BRICK_WALL);
+        addDrop(ModBlocks.POLISHED_RONE);
+        addDrop(ModBlocks.POLISHED_RONE_STAIRS);
+        addDrop(ModBlocks.POLISHED_RONE_SLAB, slabDrops(ModBlocks.POLISHED_RONE_SLAB));
+        addDrop(ModBlocks.POLISHED_RONE_WALL);
+
+        //silk touch
+        addDropWithSilkTouch(ModBlocks.FISH_BLOCK);
+
         //ore
         addDrop(ModBlocks.SLIPULON_ORE, multiOreDrops(ModBlocks.SLIPULON_ORE, ModItems.RAW_SLIPULON, 2.0f, 5.0f));
         addDrop(ModBlocks.ALB_GEM_ORE, multiOreDrops(ModBlocks.ALB_GEM_ORE, ModItems.ALB_GEM, 1.0f, 4.0f));

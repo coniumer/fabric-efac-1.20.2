@@ -27,6 +27,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUTTER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ETHER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FISH_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GEUMB_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUDDING_GEUMB);
@@ -60,6 +61,36 @@ public class ModModelProvider extends FabricModelProvider {
         gelwood_pool.fenceGate(ModBlocks.GELWOOD_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.GELWOOD_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GELWOOD_TRAPDOOR);
+
+        BlockStateModelGenerator.BlockTexturePool blone_brick_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLONE_BRICKS);
+        blone_brick_pool.stairs(ModBlocks.BLONE_BRICK_STAIRS);
+        blone_brick_pool.slab(ModBlocks.BLONE_BRICK_SLAB);
+        blone_brick_pool.wall(ModBlocks.BLONE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool polished_blone_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_BLONE);
+        polished_blone_pool.stairs(ModBlocks.POLISHED_BLONE_STAIRS);
+        polished_blone_pool.slab(ModBlocks.POLISHED_BLONE_SLAB);
+        polished_blone_pool.wall(ModBlocks.POLISHED_BLONE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool plone_brick_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PLONE_BRICKS);
+        plone_brick_pool.stairs(ModBlocks.PLONE_BRICK_STAIRS);
+        plone_brick_pool.slab(ModBlocks.PLONE_BRICK_SLAB);
+        plone_brick_pool.wall(ModBlocks.PLONE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool polished_plone_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_PLONE);
+        polished_plone_pool.stairs(ModBlocks.POLISHED_PLONE_STAIRS);
+        polished_plone_pool.slab(ModBlocks.POLISHED_PLONE_SLAB);
+        polished_plone_pool.wall(ModBlocks.POLISHED_PLONE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool rone_brick_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RONE_BRICKS);
+        rone_brick_pool.stairs(ModBlocks.RONE_BRICK_STAIRS);
+        rone_brick_pool.slab(ModBlocks.RONE_BRICK_SLAB);
+        rone_brick_pool.wall(ModBlocks.RONE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool polished_rone_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_RONE);
+        polished_rone_pool.stairs(ModBlocks.POLISHED_RONE_STAIRS);
+        polished_rone_pool.slab(ModBlocks.POLISHED_RONE_SLAB);
+        polished_rone_pool.wall(ModBlocks.POLISHED_RONE_WALL);
 
         blockStateModelGenerator.registerCrop(ModBlocks.CLUMBROT_CROP, ClumbrotCropBlock.AGE, 0,1,2,3,4,5);
     }

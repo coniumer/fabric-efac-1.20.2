@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_rone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efac:polished_rone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rone_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_rone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rone_bricks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

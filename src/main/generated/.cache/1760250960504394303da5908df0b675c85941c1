@@ -1,11 +1,11 @@
-// 1.20.2	2025-12-27T20:07:31.799885	EFAC/World Gen
+// 1.20.2	2026-01-22T15:11:59.752252	EFAC/World Gen
 6a67d36c8c056312c64e9bd2a51f25046fa1b547 data/efac/worldgen/configured_feature/butter.json
 293a8400aa63d1ae9bf3d7cf1f941cec7c1ed28d data/efac/worldgen/configured_feature/slipulon_ore.json
 0be58143d0d5eff2284eb940dc92c297ff682ffe data/efac/worldgen/placed_feature/geumb_blocks_placed.json
 556e4952ef5c8d028304a22b6aa558007b420e12 data/efac/worldgen/configured_feature/geumb_block_key.json
 41caa2c891faa79a276233c78604f129a6bb1737 data/efac/dimension_type/scarydim_type.json
-8ce9c2df320795f520fa637f570b5a0c3b5bcd8f data/efac/worldgen/placed_feature/rub_gem_ore_placed.json
 96cbcb28079856d16d5c979132ac439fd9daccec data/efac/worldgen/placed_feature/slipulon_ore_placed.json
+8ce9c2df320795f520fa637f570b5a0c3b5bcd8f data/efac/worldgen/placed_feature/rub_gem_ore_placed.json
 cb80412c355f77906c1dd5a04eaf5aba5249bfa9 data/efac/worldgen/configured_feature/cit_gem_ore.json
 df5c92ecb54a7441cf1090a79324531f0ee9011f data/efac/dimension_type/thinkdim_type.json
 4ddf223791b3958205c6b60f6f2b6261cf80fdec data/efac/worldgen/configured_feature/end_ether_vein_key.json

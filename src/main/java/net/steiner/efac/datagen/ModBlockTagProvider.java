@@ -71,7 +71,31 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COMPACT_DOM)
                 .add(ModBlocks.ETHER)
                 .add(ModBlocks.CLUMB_BLOCK)
-                .add(ModBlocks.BUTTER);
+                .add(ModBlocks.BUTTER)
+                .add(ModBlocks.BLONE_BRICKS)
+                .add(ModBlocks.BLONE_BRICK_STAIRS)
+                .add(ModBlocks.BLONE_BRICK_SLAB)
+                .add(ModBlocks.BLONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_BLONE)
+                .add(ModBlocks.POLISHED_BLONE_STAIRS)
+                .add(ModBlocks.POLISHED_BLONE_SLAB)
+                .add(ModBlocks.POLISHED_BLONE_WALL)
+                .add(ModBlocks.PLONE_BRICKS)
+                .add(ModBlocks.PLONE_BRICK_STAIRS)
+                .add(ModBlocks.PLONE_BRICK_SLAB)
+                .add(ModBlocks.PLONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_PLONE)
+                .add(ModBlocks.POLISHED_PLONE_STAIRS)
+                .add(ModBlocks.POLISHED_PLONE_SLAB)
+                .add(ModBlocks.POLISHED_PLONE_WALL)
+                .add(ModBlocks.RONE_BRICKS)
+                .add(ModBlocks.RONE_BRICK_STAIRS)
+                .add(ModBlocks.RONE_BRICK_SLAB)
+                .add(ModBlocks.RONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_RONE)
+                .add(ModBlocks.POLISHED_RONE_STAIRS)
+                .add(ModBlocks.POLISHED_RONE_SLAB)
+                .add(ModBlocks.POLISHED_RONE_WALL);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SLIPULON_BLOCK)
@@ -92,6 +116,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RUB_GEM_ORE);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.BLONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_BLONE_WALL)
+                .add(ModBlocks.PLONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_PLONE_WALL)
+                .add(ModBlocks.RONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_RONE_WALL);
 
         //wood stuff
         getOrCreateTagBuilder(BlockTags.FENCES)

@@ -49,6 +49,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEUMB_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.CLUMB_MATERIA,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLUMB_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.TROPICAL_FISH,
+                RecipeCategory.MISC, ModBlocks.FISH_BLOCK);
 
         //gelwood
         createDoorRecipe(ModBlocks.GELWOOD_DOOR, Ingredient.ofItems(ModBlocks.GELWOOD_PLANKS))
@@ -115,6 +117,76 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('L', ModBlocks.STRIPPED_PRIMA_LOG)
                 .criterion(hasItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()), conditionsFromItem(ModBlocks.STRIPPED_PRIMA_LOG.asItem()))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STRIPPED_PRIMA_WOOD)));
+
+        //-one recipes
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLONE_BRICKS, 4)
+                .pattern("BB")
+                .pattern("BB")
+                .input('B', ModBlocks.POLISHED_BLONE)
+                .criterion(hasItem(ModBlocks.POLISHED_BLONE.asItem()), conditionsFromItem(ModBlocks.POLISHED_BLONE.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLONE_BRICKS)));
+        createStairsRecipe(ModBlocks.BLONE_BRICK_STAIRS, Ingredient.ofItems(ModBlocks.BLONE_BRICKS))
+                .criterion(hasItem(ModBlocks.BLONE_BRICKS), conditionsFromItem(ModBlocks.BLONE_BRICKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLONE_BRICK_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLONE_BRICK_SLAB, ModBlocks.BLONE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLONE_BRICK_WALL, ModBlocks.BLONE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_BLONE, 3)
+                .pattern("BB")
+                .pattern("B ")
+                .input('B', Blocks.GRAVEL)
+                .criterion(hasItem(Blocks.GRAVEL.asItem()), conditionsFromItem(Blocks.GRAVEL.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_BLONE)));
+        createStairsRecipe(ModBlocks.POLISHED_BLONE_STAIRS, Ingredient.ofItems(ModBlocks.POLISHED_BLONE))
+                .criterion(hasItem(ModBlocks.POLISHED_BLONE), conditionsFromItem(ModBlocks.POLISHED_BLONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_BLONE_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_BLONE_SLAB, ModBlocks.POLISHED_BLONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_BLONE_WALL, ModBlocks.POLISHED_BLONE);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLONE_BRICKS, 4)
+                .pattern("BB")
+                .pattern("BB")
+                .input('B', ModBlocks.POLISHED_PLONE)
+                .criterion(hasItem(ModBlocks.POLISHED_PLONE.asItem()), conditionsFromItem(ModBlocks.POLISHED_PLONE.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PLONE_BRICKS)));
+        createStairsRecipe(ModBlocks.PLONE_BRICK_STAIRS, Ingredient.ofItems(ModBlocks.PLONE_BRICKS))
+                .criterion(hasItem(ModBlocks.PLONE_BRICKS), conditionsFromItem(ModBlocks.PLONE_BRICKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PLONE_BRICK_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLONE_BRICK_SLAB, ModBlocks.PLONE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLONE_BRICK_WALL, ModBlocks.PLONE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PLONE, 3)
+                .pattern("BB")
+                .pattern("B ")
+                .input('B', Blocks.SAND)
+                .criterion(hasItem(Blocks.SAND.asItem()), conditionsFromItem(Blocks.SAND.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_PLONE)));
+        createStairsRecipe(ModBlocks.POLISHED_PLONE_STAIRS, Ingredient.ofItems(ModBlocks.POLISHED_PLONE))
+                .criterion(hasItem(ModBlocks.POLISHED_PLONE), conditionsFromItem(ModBlocks.POLISHED_PLONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_PLONE_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PLONE_SLAB, ModBlocks.POLISHED_PLONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_PLONE_WALL, ModBlocks.POLISHED_PLONE);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RONE_BRICKS, 4)
+                .pattern("BB")
+                .pattern("BB")
+                .input('B', ModBlocks.POLISHED_RONE)
+                .criterion(hasItem(ModBlocks.POLISHED_RONE.asItem()), conditionsFromItem(ModBlocks.POLISHED_RONE.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RONE_BRICKS)));
+        createStairsRecipe(ModBlocks.RONE_BRICK_STAIRS, Ingredient.ofItems(ModBlocks.RONE_BRICKS))
+                .criterion(hasItem(ModBlocks.RONE_BRICKS), conditionsFromItem(ModBlocks.RONE_BRICKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RONE_BRICK_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RONE_BRICK_SLAB, ModBlocks.RONE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RONE_BRICK_WALL, ModBlocks.RONE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RONE, 3)
+                .pattern("BB")
+                .pattern("B ")
+                .input('B', Blocks.RED_SAND)
+                .criterion(hasItem(Blocks.RED_SAND.asItem()), conditionsFromItem(Blocks.RED_SAND.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_RONE)));
+        createStairsRecipe(ModBlocks.POLISHED_RONE_STAIRS, Ingredient.ofItems(ModBlocks.POLISHED_RONE))
+                .criterion(hasItem(ModBlocks.POLISHED_RONE), conditionsFromItem(ModBlocks.POLISHED_RONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_RONE_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RONE_SLAB, ModBlocks.POLISHED_RONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RONE_WALL, ModBlocks.POLISHED_RONE);
 
         //clumb foods
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CLUMBELON, 1)
@@ -638,5 +710,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CLUMB_MATERIA), conditionsFromItem(ModItems.CLUMB_MATERIA))
                 .criterion(hasItem(ModItems.SLIPULON_INGOT), conditionsFromItem(ModItems.SLIPULON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CLUMB_HARVESTER)));
+
+
     }
 }

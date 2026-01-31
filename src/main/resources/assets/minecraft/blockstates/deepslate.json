@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/deepslate"
+      },
+      {
+        "model": "minecraft:block/deepslate_1"
+      },
+      {
+        "model": "minecraft:block/deepslate_2"
+      }
+    ]
+  }
+}

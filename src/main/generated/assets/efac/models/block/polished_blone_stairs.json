@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "efac:block/polished_blone",
+    "side": "efac:block/polished_blone",
+    "top": "efac:block/polished_blone"
+  }
+}

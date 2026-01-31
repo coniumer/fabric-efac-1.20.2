@@ -147,11 +147,36 @@ public class ModItemGroups {
                         entries.add(ModItems.PRIMA_HANGING_SIGN);
                         entries.add(ModItems.PRIMA_BOAT);
                         entries.add(ModItems.PRIMA_CHEST_BOAT);
+                        entries.add(ModBlocks.POLISHED_BLONE);
+                        entries.add(ModBlocks.POLISHED_BLONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_BLONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_BLONE_WALL);
+                        entries.add(ModBlocks.BLONE_BRICKS);
+                        entries.add(ModBlocks.BLONE_BRICK_STAIRS);
+                        entries.add(ModBlocks.BLONE_BRICK_SLAB);
+                        entries.add(ModBlocks.BLONE_BRICK_WALL);
+                        entries.add(ModBlocks.POLISHED_PLONE);
+                        entries.add(ModBlocks.POLISHED_PLONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_PLONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_PLONE_WALL);
+                        entries.add(ModBlocks.PLONE_BRICKS);
+                        entries.add(ModBlocks.PLONE_BRICK_STAIRS);
+                        entries.add(ModBlocks.PLONE_BRICK_SLAB);
+                        entries.add(ModBlocks.PLONE_BRICK_WALL);
+                        entries.add(ModBlocks.POLISHED_RONE);
+                        entries.add(ModBlocks.POLISHED_RONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_RONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_RONE_WALL);
+                        entries.add(ModBlocks.RONE_BRICKS);
+                        entries.add(ModBlocks.RONE_BRICK_STAIRS);
+                        entries.add(ModBlocks.RONE_BRICK_SLAB);
+                        entries.add(ModBlocks.RONE_BRICK_WALL);
                         entries.add(ModBlocks.COMPACT_DOM);
                         entries.add(ModBlocks.BUTTER);
                         entries.add(ModBlocks.YES);
                         entries.add(ModBlocks.ETHER);
                         entries.add(ModBlocks.CLUMB_BLOCK);
+                        entries.add(ModBlocks.FISH_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {
