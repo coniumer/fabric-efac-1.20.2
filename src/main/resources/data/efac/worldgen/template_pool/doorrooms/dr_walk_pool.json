@@ -1,0 +1,33 @@
+{
+  "name": "efac:doorrooms/dr_walk_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 20,
+      "element": {
+        "location": "efac:doorrooms/dr_walksm1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "efac:doorrooms/dr_walkbg1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "efac:doorrooms/dr_walkturn1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -18,11 +18,10 @@ public class ModEffects {
     public static StatusEffect TOOTH_RESISTANCE;
     public static StatusEffect TOOTH_REGEN;
     public static StatusEffect TOOTH_SLOWNESS;
-
     public static StatusEffect FATIGUE;
     public static StatusEffect HASTE;
-
     public static StatusEffect BEAMS;
+    public static StatusEffect VENOM;
 
     public static StatusEffect registerFreezeEffect(String name) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(EFAC.MOD_ID, name),
@@ -63,6 +62,10 @@ public class ModEffects {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(EFAC.MOD_ID, name),
                 new ToothEffect(StatusEffectCategory.BENEFICIAL, 3124687));
     }
+    public static StatusEffect registerVenomEffect(String name) {
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(EFAC.MOD_ID, name),
+                new ToothEffect(StatusEffectCategory.BENEFICIAL, 3124687));
+    }
 
     public static void registerModEffects() {
         FREEZE = registerFreezeEffect("freeze");
@@ -72,11 +75,10 @@ public class ModEffects {
         TOOTH_RESISTANCE = registerToothResistanceEffect("tooth_resistance");
         TOOTH_REGEN = registerToothRegenEffect("tooth_regen");
         TOOTH_SLOWNESS = registerToothSlownessEffect("tooth_slowness");
-
         FATIGUE = registerToothFatigueEffect("tooth_fatigue");
         HASTE = registerToothHasteEffect("tooth_haste");
-
         BEAMS = registerBeamsEffect("beams");
+        VENOM = registerVenomEffect("venom");
 
         EFAC.LOGGER.info("Registering Mod Effects for " + EFAC.MOD_ID);
     }

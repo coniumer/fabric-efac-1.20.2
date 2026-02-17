@@ -14,6 +14,7 @@ public class ModMessages {
     public static final Identifier SET_MAX_CLUMB_ID = new Identifier(EFAC.MOD_ID, "set_max_clumb");
 
     public static final Identifier CLUMB_BUTTON_PAYLOAD_ID = new Identifier(EFAC.MOD_ID, "clumb_button_payload");
+    public static final Identifier BEAM_PAYLOAD_ID = new Identifier(EFAC.MOD_ID, "beam_payload");
 
     public static final Identifier SET_DASH_USES_ID = new Identifier(EFAC.MOD_ID, "set_dash_uses");
     public static final Identifier SET_REGEN_PROGRESS_ID = new Identifier(EFAC.MOD_ID, "set_regen_progress");
@@ -39,6 +40,7 @@ public class ModMessages {
         ServerPlayNetworking.registerGlobalReceiver(SET_MAX_CLUMB_ID, SetMaxClumbC2SPacket::receive);
 
         ServerPlayNetworking.registerGlobalReceiver(CLUMB_BUTTON_PAYLOAD_ID, ClumbButtonPayloadC2SPacket::receive);
+        ServerPlayNetworking.registerGlobalReceiver(BEAM_PAYLOAD_ID, BeamPayloadC2SPacket::receive);
 
         ServerPlayNetworking.registerGlobalReceiver(SET_DASH_USES_ID, SetDashUsesC2SPacket::receive);
         ServerPlayNetworking.registerGlobalReceiver(SET_REGEN_PROGRESS_ID, SetRegenProgressC2SPacket::receive);

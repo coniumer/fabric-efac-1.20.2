@@ -65,13 +65,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SMALL_GEUMB_BUD)
                 .add(ModBlocks.BUDDING_GEUMB)
                 .add(ModBlocks.CLUMB_HARVESTER)
-                .add(ModBlocks.YES);
-
-        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
-                .add(ModBlocks.COMPACT_DOM)
-                .add(ModBlocks.ETHER)
-                .add(ModBlocks.CLUMB_BLOCK)
-                .add(ModBlocks.BUTTER)
+                .add(ModBlocks.YES)
                 .add(ModBlocks.BLONE_BRICKS)
                 .add(ModBlocks.BLONE_BRICK_STAIRS)
                 .add(ModBlocks.BLONE_BRICK_SLAB)
@@ -96,6 +90,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_RONE_STAIRS)
                 .add(ModBlocks.POLISHED_RONE_SLAB)
                 .add(ModBlocks.POLISHED_RONE_WALL);
+
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+                .add(ModBlocks.COMPACT_DOM)
+                .add(ModBlocks.ETHER)
+                .add(ModBlocks.CLUMB_BLOCK)
+                .add(ModBlocks.BUTTER);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SLIPULON_BLOCK)

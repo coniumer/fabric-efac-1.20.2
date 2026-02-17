@@ -1,4 +1,4 @@
-// 1.20.2	2026-01-22T15:11:59.752516	EFAC/Model Definitions
+// 1.20.2	2026-02-04T17:11:38.088177	EFAC/Model Definitions
 84f513436f2ea06e3eddc2d616546ab73996e6b6 assets/efac/models/item/philosophers_boots_emerald_trim.json
 2425e2e5736a30e96b042b9e05700a20720c0f9e assets/efac/models/block/cit_gem_ore.json
 ab2e1a33ccda6b307f0515c83575ae460a15bf11 assets/efac/models/item/midas_tooth.json
@@ -91,8 +91,8 @@ b9550c86a92a67ea83f400a7336b216668431902 assets/efac/models/item/philosophers_bo
 4008938bada5968885ded857df26cee8609326d4 assets/efac/models/item/philosophers_helmet_emerald_trim.json
 a5628567692828d6e9105cd140f853ffd73af31a assets/efac/blockstates/prima_planks.json
 0ba6d2b833cc6f3d4cea45102b35149d58767d2b assets/efac/blockstates/prima_trapdoor.json
-61158b458f5b290598b5f4a8a01e3cd5ddb614df assets/efac/blockstates/stripped_prima_log.json
 677f464891dec867d999f258b9920e4cdbf9a1cd assets/efac/models/item/bomb_charm.json
+61158b458f5b290598b5f4a8a01e3cd5ddb614df assets/efac/blockstates/stripped_prima_log.json
 80717d64244d230ab94a400c1a1aa9aab4a59d3d assets/efac/models/item/philosophers_helmet_diamond_trim.json
 4cc68a9ed8a88d2efb4b7caac911c126c4b64e9f assets/efac/models/item/philosophers_leggings_netherite_trim.json
 c79efa7c79773c3d3129e0a6b1bb7900725a6f39 assets/efac/models/item/prima_button.json
@@ -181,8 +181,8 @@ f3f92980ea190972343f6730046e1842d57279fd assets/efac/models/block/stripped_prima
 059864cecd510983252e286c0a3b1209fa4ea754 assets/efac/models/item/geumb_block.json
 e63cb34a92fe1e47c5798b9856e2b944470cf89e assets/efac/models/item/philosophers_leggings_copper_trim.json
 6f41f6611976e44bfe1e2384e3f5fad56338c60c assets/efac/models/item/philosophers_chestplate_amethyst_trim.json
-b7623b5deff1703cac7adc65e921c155dde4fe4f assets/efac/models/block/stripped_prima_wood.json
 f02a1c694a2c026dc9d9080836afcb6532f8944a assets/efac/models/item/adventurers_tooth.json
+b7623b5deff1703cac7adc65e921c155dde4fe4f assets/efac/models/block/stripped_prima_wood.json
 59220fe539eef8c58ca3e296642d2bf92a8d21ef assets/efac/blockstates/prima_door.json
 881bf03b48dd3f742373fe9b137848d74f56ac26 assets/efac/models/item/blone_bricks.json
 69ed46585cfc5563e949c94a00463426e3dae636 assets/efac/models/item/philosophers_boots_quartz_trim.json
@@ -192,6 +192,7 @@ f02a1c694a2c026dc9d9080836afcb6532f8944a assets/efac/models/item/adventurers_too
 f85b9f73025a74d400e97f1c4ca73502534ef64f assets/efac/models/item/philosophers_upgrade_smithing_template.json
 e659f42ef801f694c10f423c010ffca153160772 assets/efac/blockstates/rone_brick_stairs.json
 c0104ad0033da4acfbebb4579e515cc52495b827 assets/efac/models/block/polished_rone.json
+c8a0dafc0ea8cb19704f33c7aaacf1f2d656af23 assets/efac/models/item/burned_chicken.json
 655f72a9795a676d50054ecd0a43a1647137656f assets/efac/models/item/alb_gem_ore.json
 ec0653bbb70a000c856060082b495abc8ad446b7 assets/efac/models/block/plone_brick_wall_side_tall.json
 2160421efb6ff152ed54bb8aece8ee1327f5af1d assets/efac/models/block/slipulon_block.json
@@ -336,8 +337,8 @@ e546b3b8e89ac8b2c6b1f917d5f0aed999e6c988 assets/efac/models/block/blone_brick_sl
 1460f49cfe52cff205db20c263fa356ad6e4dfa0 assets/efac/models/block/polished_plone_stairs_outer.json
 8c82a32a44116b1b825a3cb6e29f8ba3c2a4f1de assets/efac/blockstates/prima_stairs.json
 16fe03afa59ae7087608e061e9c0c5e01c822c26 assets/efac/models/item/prima_fence_gate.json
-e335234651fea9390b5c2e9873566dd37034dd5e assets/efac/models/item/awesome_sauce.json
 0b47136583dee1a404a0a43b65214cb6c6346d94 assets/efac/models/item/clumble.json
+e335234651fea9390b5c2e9873566dd37034dd5e assets/efac/models/item/awesome_sauce.json
 e3145454b46ae9ca8c334ae5d2f86af905c9f065 assets/efac/models/item/polished_blone_stairs.json
 d624cc2cf725a90905de27ce3e038dfaebe6467a assets/efac/models/item/philosophers_chestplate_gold_trim.json
 001ec702c1f77bfb21b25b279987337c12cb5f3d assets/efac/models/block/fish_block.json

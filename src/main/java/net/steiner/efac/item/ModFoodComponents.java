@@ -32,4 +32,7 @@ public class ModFoodComponents {
             .build();
     public static final FoodComponent CLUMBURGER = new FoodComponent.Builder().hunger(8).saturationModifier(0.9f)
             .meat().alwaysEdible().build();
+
+    public static final FoodComponent BURNED_CHICKEN = new FoodComponent.Builder().hunger(1).saturationModifier(0.1f)
+            .meat().build();
 }

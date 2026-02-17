@@ -1,4 +1,4 @@
-// 1.20.2	2026-01-22T15:11:59.74982	EFAC/Tags for minecraft:block
+// 1.20.2	2026-02-04T17:11:38.084825	EFAC/Tags for minecraft:block
 cf5d8f856baa8674f958af2fd6e8411a10784bfd data/minecraft/tags/blocks/needs_diamond_tool.json
 a03b922a55a24e4c9703329897ee79051f03c836 data/efac/tags/blocks/provides_charge_always.json
 327fe38e20f4199e346ec7c7a4dc91ea4f0068ff data/minecraft/tags/blocks/logs.json

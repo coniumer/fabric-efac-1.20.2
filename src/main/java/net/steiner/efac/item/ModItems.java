@@ -52,6 +52,7 @@ public class ModItems {
     public static final Item CLUMBLE = registerItem("clumble", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMBLE)));
     public static final Item GOLD_CLUMBLE = registerItem("gold_clumble", new Item(new FabricItemSettings().food(ModFoodComponents.GOLD_CLUMBLE)));
     public static final Item CLUMBURGER = registerItem("clumburger", new Item(new FabricItemSettings().food(ModFoodComponents.CLUMBURGER)));
+    public static final Item BURNED_CHICKEN = registerItem("burned_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.BURNED_CHICKEN)));
     //teeth
     public static final Item TOOTH = registerItem("tooth",
             new ToothItem(1f, new FabricItemSettings()));

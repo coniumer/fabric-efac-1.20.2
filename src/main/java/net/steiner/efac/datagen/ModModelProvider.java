@@ -135,6 +135,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CLUMBLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLD_CLUMBLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLUMBURGER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BURNED_CHICKEN, Models.GENERATED);
             //teeth
         itemModelGenerator.register(ModItems.TOOTH, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNIPERS_TOOTH, Models.GENERATED);

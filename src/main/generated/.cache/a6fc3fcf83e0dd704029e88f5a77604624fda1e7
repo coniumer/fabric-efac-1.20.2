@@ -1,20 +1,20 @@
-// 1.20.2	2026-01-22T15:11:59.753981	EFAC/Block Loot Tables
+// 1.20.2	2026-02-04T17:11:38.090257	EFAC/Block Loot Tables
 eac27d731e4f7595ec0f5529f830b648d76f1816 data/efac/loot_tables/blocks/prima_slab.json
 4ad6dbb4a3569eba9666aecbf9e86cee2b8b81c3 data/efac/loot_tables/blocks/prima_fence_gate.json
 1315f90c4e286b709222ecc44a16b9d47ab67067 data/efac/loot_tables/blocks/compact_dom.json
-e620e1cc061c14bd76aa60a4c2517e1d7198d548 data/efac/loot_tables/blocks/clumb_block.json
 c6ede21919e27efa1e2ccbb40c81150dc445ea6d data/efac/loot_tables/blocks/polished_rone_stairs.json
-875e317062a11e6e7554393e64aaa7e6e71020e7 data/efac/loot_tables/blocks/yes.json
+e620e1cc061c14bd76aa60a4c2517e1d7198d548 data/efac/loot_tables/blocks/clumb_block.json
 41fc56a3e04e1ec22285ff503a173a481b86da2e data/efac/loot_tables/blocks/prima_door.json
+875e317062a11e6e7554393e64aaa7e6e71020e7 data/efac/loot_tables/blocks/yes.json
 e9bd9b8c0ec8a9e65c8e6581e36143906621ce0e data/efac/loot_tables/blocks/gelwood_planks.json
 fa896b743325814b75ed11ddb1ea8d8c98719b61 data/efac/loot_tables/blocks/blone_brick_slab.json
 8dafb9d89e4015e8bec50a20462aff162c0cacb2 data/efac/loot_tables/blocks/medium_geumb_bud.json
 7423ee15d2d68a0e4890c4cf13d0ba96c7757182 data/efac/loot_tables/blocks/small_geumb_bud.json
 95bbe02265bf5bcfa49dae964d14d4a09653c459 data/efac/loot_tables/blocks/slipulon_ore.json
-f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 42628c6879dc0e9f43b570a1c620d408b99db874 data/efac/loot_tables/blocks/butter.json
-22819cf817b3320f854d1624d65b8a686cdca1b5 data/efac/loot_tables/blocks/prima_leaves.json
+f0bb057cda962e90b338272c5cd34ffa76e57153 data/efac/loot_tables/blocks/gelwood_pressure_plate.json
 22c6f83b8b76ea5106d5cc982351b7a7f6fc899e data/efac/loot_tables/blocks/slipulon_block.json
+22819cf817b3320f854d1624d65b8a686cdca1b5 data/efac/loot_tables/blocks/prima_leaves.json
 e0161514ba00840225cbead223d7fcf8eaf3f384 data/efac/loot_tables/blocks/gelwood_fence_gate.json
 349e9c77816e8d0d72e39e021224e8a47bf6b157 data/efac/loot_tables/blocks/gelwood_trapdoor.json
 a2ac50419f7e607542fcfef77aa45b0d149c370e data/efac/loot_tables/blocks/geumb_block.json

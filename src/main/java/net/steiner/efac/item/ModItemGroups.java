@@ -66,6 +66,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CIT_CLUMB_MATERIA);
                         entries.add(ModItems.RUB_CLUMB_MATERIA);
                         entries.add(ModItems.BUTTER_STICK);
+                        entries.add(ModItems.BURNED_CHICKEN);
                         entries.add(ModItems.CLUMBELON);
                         entries.add(ModItems.CLUMBKIE);
                         entries.add(ModItems.BLUMB);

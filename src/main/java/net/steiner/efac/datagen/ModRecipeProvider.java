@@ -26,6 +26,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> SLIPULON_SMELTABLES = List.of(ModItems.RAW_SLIPULON,
             ModBlocks.SLIPULON_ORE);
     private static final List<ItemConvertible> CLUMB_MATERIA_SMELTABLES = List.of(ModBlocks.COMPACT_DOM);
+    private static final List<ItemConvertible> CHICKEN_SMELTABLES = List.of(Items.COOKED_CHICKEN);
 
     @Override
     public void generate(RecipeExporter exporter) {
@@ -33,11 +34,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, SLIPULON_SMELTABLES, RecipeCategory.MISC, ModItems.SLIPULON_INGOT,
                 0.7f, 200, "slipulon_ingot");
         offerBlasting(exporter, SLIPULON_SMELTABLES, RecipeCategory.MISC, ModItems.SLIPULON_INGOT,
-                0.7f, 200, "slipulon_ingot");
+                0.7f, 100, "slipulon_ingot");
         offerSmelting(exporter, CLUMB_MATERIA_SMELTABLES, RecipeCategory.MISC, ModItems.CLUMB_MATERIA,
                 0.7f, 200, "clumb_materia");
         offerBlasting(exporter, CLUMB_MATERIA_SMELTABLES, RecipeCategory.MISC, ModItems.CLUMB_MATERIA,
-                0.7f, 200, "clumb_materia");
+                0.7f, 100, "clumb_materia");
 
         //compacting
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GELWOOD_PLANKS,

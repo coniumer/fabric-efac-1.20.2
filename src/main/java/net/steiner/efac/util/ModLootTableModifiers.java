@@ -22,6 +22,8 @@ public class ModLootTableModifiers {
             "minecraft", "entities/husk");
     private static final Identifier SKELETON_ID = new Identifier(
             "minecraft", "entities/skeleton");
+    private static final Identifier WITHER_SKELETON_ID = new Identifier(
+            "minecraft", "entities/wither_skeleton");
     private static final Identifier STRAY_ID = new Identifier(
             "minecraft", "entities/stray");
     private static final Identifier CREEPER_ID = new Identifier(
@@ -30,6 +32,14 @@ public class ModLootTableModifiers {
             "minecraft", "entities/spider");
     private static final Identifier CAVE_SPIDER_ID = new Identifier(
             "minecraft", "entities/cave_spider");
+
+    //bosses
+    private static final Identifier WARDEN_ID = new Identifier(
+            "minecraft", "entities/warden");
+    private static final Identifier WITHER_ID = new Identifier(
+            "minecraft", "entities/wither");
+    private static final Identifier ENDER_DRAGON_ID = new Identifier(
+            "minecraft", "entities/ender_dragon");
 
     //blocks
     private static final Identifier DIRT_ID = new Identifier(
@@ -147,6 +157,22 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(builder.build());
                 tableBuilder.pool(builder2.build());
             }
+            if (WITHER_SKELETON_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.35f, 3f))
+                        .with(ItemEntry.builder(ModItems.ALB_CLUMB_MATERIA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 5.0f))
+                        .build());
+                LootPool.Builder builder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.35f, 3f))
+                        .with(ItemEntry.builder(ModItems.AWESOME_SAUCE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+                tableBuilder.pool(builder2.build());
+            }
 
             if (SPIDER_ID.equals(id) && source.isBuiltin()) {
                 LootPool.Builder builder = LootPool.builder()
@@ -196,6 +222,35 @@ public class ModLootTableModifiers {
                         .build());
                 tableBuilder.pool(builder.build());
                 tableBuilder.pool(builder2.build());
+            }
+
+            //bosses
+            if (WARDEN_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(UniformLootNumberProvider.create(1, 3))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.5f, 3f))
+                        .with(ItemEntry.builder(ModItems.AWESOME_SAUCE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+            }
+            if (WITHER_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(UniformLootNumberProvider.create(1, 3))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.5f, 3f))
+                        .with(ItemEntry.builder(ModItems.EPIC_SAUCE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
+            }
+            if (ENDER_DRAGON_ID.equals(id) && source.isBuiltin()) {
+                LootPool.Builder builder = LootPool.builder()
+                        .rolls(UniformLootNumberProvider.create(3, 9))
+                        .conditionally(RandomChanceWithLootingLootCondition.builder(1f, 3f))
+                        .with(ItemEntry.builder(ModItems.EPIC_SAUCE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f))
+                        .build());
+                tableBuilder.pool(builder.build());
             }
 
             //blocks
