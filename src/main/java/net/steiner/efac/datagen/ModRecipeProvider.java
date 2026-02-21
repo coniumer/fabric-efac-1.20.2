@@ -25,8 +25,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     private static final List<ItemConvertible> SLIPULON_SMELTABLES = List.of(ModItems.RAW_SLIPULON,
             ModBlocks.SLIPULON_ORE);
+    private static final List<ItemConvertible> PHILOSOPHERS_SMELTABLES = List.of(ModBlocks.PHILOSOPHERS_ORE);
     private static final List<ItemConvertible> CLUMB_MATERIA_SMELTABLES = List.of(ModBlocks.COMPACT_DOM);
-    private static final List<ItemConvertible> CHICKEN_SMELTABLES = List.of(Items.COOKED_CHICKEN);
 
     @Override
     public void generate(RecipeExporter exporter) {
@@ -39,6 +39,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 0.7f, 200, "clumb_materia");
         offerBlasting(exporter, CLUMB_MATERIA_SMELTABLES, RecipeCategory.MISC, ModItems.CLUMB_MATERIA,
                 0.7f, 100, "clumb_materia");
+        offerSmelting(exporter, PHILOSOPHERS_SMELTABLES, RecipeCategory.MISC, ModItems.PHILOSOPHERS_STONE,
+                0.7f, 200, "slipulon_ingot");
+        offerBlasting(exporter, PHILOSOPHERS_SMELTABLES, RecipeCategory.MISC, ModItems.PHILOSOPHERS_STONE,
+                0.7f, 100, "slipulon_ingot");
 
         //compacting
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GELWOOD_PLANKS,
@@ -46,6 +50,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, ModBlocks.COMPACT_DOM, Blocks.DIRT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SLIPULON_INGOT,
                 RecipeCategory.DECORATIONS, ModBlocks.SLIPULON_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.PHILOSOPHERS_STONE,
+                RecipeCategory.DECORATIONS, ModBlocks.PHILOSOPHERS_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GEUMB_SHARD,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEUMB_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.CLUMB_MATERIA,
@@ -188,6 +194,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_RONE_STAIRS)));
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RONE_SLAB, ModBlocks.POLISHED_RONE);
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RONE_WALL, ModBlocks.POLISHED_RONE);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRONE_BRICKS, 4)
+                .pattern("BB")
+                .pattern("BB")
+                .input('B', ModBlocks.POLISHED_GRONE)
+                .criterion(hasItem(ModBlocks.POLISHED_GRONE.asItem()), conditionsFromItem(ModBlocks.POLISHED_GRONE.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRONE_BRICKS)));
+        createStairsRecipe(ModBlocks.GRONE_BRICK_STAIRS, Ingredient.ofItems(ModBlocks.GRONE_BRICKS))
+                .criterion(hasItem(ModBlocks.GRONE_BRICKS), conditionsFromItem(ModBlocks.GRONE_BRICKS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRONE_BRICK_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRONE_BRICK_SLAB, ModBlocks.GRONE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRONE_BRICK_WALL, ModBlocks.GRONE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRONE, 3)
+                .pattern("BB")
+                .pattern("B ")
+                .input('B', ModBlocks.GRONE)
+                .criterion(hasItem(ModBlocks.GRONE.asItem()), conditionsFromItem(ModBlocks.GRONE.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_GRONE)));
+        createStairsRecipe(ModBlocks.POLISHED_GRONE_STAIRS, Ingredient.ofItems(ModBlocks.POLISHED_GRONE))
+                .criterion(hasItem(ModBlocks.POLISHED_GRONE), conditionsFromItem(ModBlocks.POLISHED_GRONE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.POLISHED_GRONE_STAIRS)));
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRONE_SLAB, ModBlocks.POLISHED_GRONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRONE_WALL, ModBlocks.POLISHED_GRONE);
 
         //clumb foods
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CLUMBELON, 1)

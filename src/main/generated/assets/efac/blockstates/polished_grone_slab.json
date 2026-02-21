@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "efac:block/polished_grone_slab"
+    },
+    "type=double": {
+      "model": "efac:block/polished_grone"
+    },
+    "type=top": {
+      "model": "efac:block/polished_grone_slab_top"
+    }
+  }
+}

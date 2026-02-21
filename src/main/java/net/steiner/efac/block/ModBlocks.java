@@ -22,7 +22,7 @@ import net.steiner.efac.world.tree.PrimaSaplingGenerator;
 
 public class ModBlocks {
 
-    //functional
+    //workstations
     public static final Block CLUMB_HARVESTER = registerBlock("clumb_harvester",
             new ClumbHarvesterBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
 
@@ -39,58 +39,79 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
     //decor
     public static final Block BLONE_BRICKS = registerBlock("blone_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block BLONE_BRICK_STAIRS = registerBlock("blone_brick_stairs",
-            new StairsBlock(ModBlocks.BLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new StairsBlock(ModBlocks.BLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block BLONE_BRICK_SLAB = registerBlock("blone_brick_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block BLONE_BRICK_WALL = registerBlock("blone_brick_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
 
     public static final Block POLISHED_BLONE = registerBlock("polished_blone",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_BLONE_STAIRS = registerBlock("polished_blone_stairs",
-            new StairsBlock(ModBlocks.POLISHED_BLONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new StairsBlock(ModBlocks.POLISHED_BLONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_BLONE_SLAB = registerBlock("polished_blone_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_BLONE_WALL = registerBlock("polished_blone_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
 
     public static final Block RONE_BRICKS = registerBlock("rone_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block RONE_BRICK_STAIRS = registerBlock("rone_brick_stairs",
-            new StairsBlock(ModBlocks.RONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new StairsBlock(ModBlocks.RONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block RONE_BRICK_SLAB = registerBlock("rone_brick_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block RONE_BRICK_WALL = registerBlock("rone_brick_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
 
     public static final Block POLISHED_RONE = registerBlock("polished_rone",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_RONE_STAIRS = registerBlock("polished_rone_stairs",
-            new StairsBlock(ModBlocks.POLISHED_RONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new StairsBlock(ModBlocks.POLISHED_RONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_RONE_SLAB = registerBlock("polished_rone_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_RONE_WALL = registerBlock("polished_rone_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
 
     public static final Block PLONE_BRICKS = registerBlock("plone_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block PLONE_BRICK_STAIRS = registerBlock("plone_brick_stairs",
-            new StairsBlock(ModBlocks.PLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new StairsBlock(ModBlocks.PLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block PLONE_BRICK_SLAB = registerBlock("plone_brick_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block PLONE_BRICK_WALL = registerBlock("plone_brick_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
 
     public static final Block POLISHED_PLONE = registerBlock("polished_plone",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_PLONE_STAIRS = registerBlock("polished_plone_stairs",
-            new StairsBlock(ModBlocks.POLISHED_PLONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new StairsBlock(ModBlocks.POLISHED_PLONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_PLONE_SLAB = registerBlock("polished_plone_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
     public static final Block POLISHED_PLONE_WALL = registerBlock("polished_plone_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+    public static final Block GRONE = registerBlock("grone",
+            new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
+
+    public static final Block GRONE_BRICKS = registerBlock("grone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+    public static final Block GRONE_BRICK_STAIRS = registerBlock("grone_brick_stairs",
+            new StairsBlock(ModBlocks.BLONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+    public static final Block GRONE_BRICK_SLAB = registerBlock("grone_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+    public static final Block GRONE_BRICK_WALL = registerBlock("grone_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+
+    public static final Block POLISHED_GRONE = registerBlock("polished_grone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+    public static final Block POLISHED_GRONE_STAIRS = registerBlock("polished_grone_stairs",
+            new StairsBlock(ModBlocks.POLISHED_GRONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+    public static final Block POLISHED_GRONE_SLAB = registerBlock("polished_grone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
+    public static final Block POLISHED_GRONE_WALL = registerBlock("polished_grone_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS)));
 
     //gems
     public static final Block ALB_GEM_ORE = registerBlock("alb_gem_ore",

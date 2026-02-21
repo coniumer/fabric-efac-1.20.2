@@ -113,6 +113,8 @@ public class ModItemGroups {
                         // Blocks
                         entries.add(ModBlocks.SLIPULON_ORE);
                         entries.add(ModBlocks.SLIPULON_BLOCK);
+                        entries.add(ModBlocks.PHILOSOPHERS_ORE);
+                        entries.add(ModBlocks.PHILOSOPHERS_BLOCK);
                         entries.add(ModBlocks.ALB_GEM_ORE);
                         entries.add(ModBlocks.CIT_GEM_ORE);
                         entries.add(ModBlocks.RUB_GEM_ORE);
@@ -172,6 +174,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RONE_BRICK_STAIRS);
                         entries.add(ModBlocks.RONE_BRICK_SLAB);
                         entries.add(ModBlocks.RONE_BRICK_WALL);
+                        entries.add(ModBlocks.GRONE);
+                        entries.add(ModBlocks.POLISHED_GRONE);
+                        entries.add(ModBlocks.POLISHED_GRONE_STAIRS);
+                        entries.add(ModBlocks.POLISHED_GRONE_SLAB);
+                        entries.add(ModBlocks.POLISHED_GRONE_WALL);
+                        entries.add(ModBlocks.GRONE_BRICKS);
+                        entries.add(ModBlocks.GRONE_BRICK_STAIRS);
+                        entries.add(ModBlocks.GRONE_BRICK_SLAB);
+                        entries.add(ModBlocks.GRONE_BRICK_WALL);
                         entries.add(ModBlocks.COMPACT_DOM);
                         entries.add(ModBlocks.BUTTER);
                         entries.add(ModBlocks.YES);

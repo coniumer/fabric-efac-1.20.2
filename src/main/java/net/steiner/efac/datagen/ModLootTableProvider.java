@@ -31,6 +31,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         //regular
         addDrop(ModBlocks.SLIPULON_BLOCK);
+        addDrop(ModBlocks.PHILOSOPHERS_BLOCK);
         addDrop(ModBlocks.COMPACT_DOM);
         addDrop(ModBlocks.GELWOOD_PLANKS);
         addDrop(ModBlocks.GELWOOD_STAIRS);
@@ -91,11 +92,34 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.POLISHED_RONE_SLAB, slabDrops(ModBlocks.POLISHED_RONE_SLAB));
         addDrop(ModBlocks.POLISHED_RONE_WALL);
 
+        addDrop(ModBlocks.GRONE);
+        addDrop(ModBlocks.GRONE_BRICKS);
+        addDrop(ModBlocks.GRONE_BRICK_STAIRS);
+        addDrop(ModBlocks.GRONE_BRICK_SLAB, slabDrops(ModBlocks.GRONE_BRICK_SLAB));
+        addDrop(ModBlocks.GRONE_BRICK_WALL);
+        addDrop(ModBlocks.POLISHED_GRONE);
+        addDrop(ModBlocks.POLISHED_GRONE_STAIRS);
+        addDrop(ModBlocks.POLISHED_GRONE_SLAB, slabDrops(ModBlocks.POLISHED_GRONE_SLAB));
+        addDrop(ModBlocks.POLISHED_GRONE_WALL);
+
         //silk touch
         addDropWithSilkTouch(ModBlocks.FISH_BLOCK);
 
         //ore
         addDrop(ModBlocks.SLIPULON_ORE, multiOreDrops(ModBlocks.SLIPULON_ORE, ModItems.RAW_SLIPULON, 2.0f, 5.0f));
+        addDrop(ModBlocks.PHILOSOPHERS_ORE,
+                block -> dropsWithSilkTouch(
+                        block,
+                        ItemEntry.builder(ModItems.PHILOSOPHERS_STONE)
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F)))
+                                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
+                                .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().tag(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .alternatively(
+                                        this.applyExplosionDecay(
+                                                block, ItemEntry.builder(ModItems.PHILOSOPHERS_STONE).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F)))
+                                        )
+                                )
+                ));
         addDrop(ModBlocks.ALB_GEM_ORE, multiOreDrops(ModBlocks.ALB_GEM_ORE, ModItems.ALB_GEM, 1.0f, 4.0f));
         addDrop(ModBlocks.CIT_GEM_ORE, multiOreDrops(ModBlocks.CIT_GEM_ORE, ModItems.CIT_GEM, 1.0f, 4.0f));
         addDrop(ModBlocks.RUB_GEM_ORE, multiOreDrops(ModBlocks.RUB_GEM_ORE, ModItems.RUB_GEM, 1.0f, 4.0f));
@@ -118,7 +142,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().tag(ItemTags.CLUSTER_MAX_HARVESTABLES)))
                                 .alternatively(
                                         this.applyExplosionDecay(
-                                                block, ItemEntry.builder(Items.AMETHYST_SHARD).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2.0F)))
+                                                block, ItemEntry.builder(ModItems.GEUMB_SHARD).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2.0F)))
                                         )
                                 )
                 )

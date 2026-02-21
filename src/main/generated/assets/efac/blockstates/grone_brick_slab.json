@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "efac:block/grone_brick_slab"
+    },
+    "type=double": {
+      "model": "efac:block/grone_bricks"
+    },
+    "type=top": {
+      "model": "efac:block/grone_brick_slab_top"
+    }
+  }
+}

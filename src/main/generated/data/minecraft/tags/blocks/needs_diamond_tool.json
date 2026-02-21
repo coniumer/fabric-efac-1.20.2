@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "efac:rub_gem_ore"
+    "efac:rub_gem_ore",
+    "efac:philosophers_block"
   ]
 }

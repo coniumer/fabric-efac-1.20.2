@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "efac:block/grone_bricks",
+    "side": "efac:block/grone_bricks",
+    "top": "efac:block/grone_bricks"
+  }
+}

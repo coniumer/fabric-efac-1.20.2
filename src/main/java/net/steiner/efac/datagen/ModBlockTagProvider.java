@@ -54,6 +54,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.SLIPULON_BLOCK)
                 .add(ModBlocks.SLIPULON_ORE)
+                .add(ModBlocks.PHILOSOPHERS_BLOCK)
+                .add(ModBlocks.PHILOSOPHERS_ORE)
                 .add(ModBlocks.ALB_GEM_ORE)
                 .add(ModBlocks.CIT_GEM_ORE)
                 .add(ModBlocks.RUB_GEM_ORE)
@@ -89,12 +91,21 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_RONE)
                 .add(ModBlocks.POLISHED_RONE_STAIRS)
                 .add(ModBlocks.POLISHED_RONE_SLAB)
-                .add(ModBlocks.POLISHED_RONE_WALL);
+                .add(ModBlocks.POLISHED_RONE_WALL)
+                .add(ModBlocks.GRONE_BRICKS)
+                .add(ModBlocks.GRONE_BRICK_STAIRS)
+                .add(ModBlocks.GRONE_BRICK_SLAB)
+                .add(ModBlocks.GRONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_GRONE)
+                .add(ModBlocks.POLISHED_GRONE_STAIRS)
+                .add(ModBlocks.POLISHED_GRONE_SLAB)
+                .add(ModBlocks.POLISHED_GRONE_WALL);
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.COMPACT_DOM)
                 .add(ModBlocks.ETHER)
                 .add(ModBlocks.CLUMB_BLOCK)
+                .add(ModBlocks.GRONE)
                 .add(ModBlocks.BUTTER);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
@@ -115,7 +126,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CIT_GEM_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.RUB_GEM_ORE);
+                .add(ModBlocks.RUB_GEM_ORE)
+                .add(ModBlocks.PHILOSOPHERS_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.BLONE_BRICK_WALL)
@@ -123,7 +135,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PLONE_BRICK_WALL)
                 .add(ModBlocks.POLISHED_PLONE_WALL)
                 .add(ModBlocks.RONE_BRICK_WALL)
-                .add(ModBlocks.POLISHED_RONE_WALL);
+                .add(ModBlocks.POLISHED_RONE_WALL)
+                .add(ModBlocks.GRONE_BRICK_WALL)
+                .add(ModBlocks.POLISHED_GRONE_WALL);
 
         //wood stuff
         getOrCreateTagBuilder(BlockTags.FENCES)

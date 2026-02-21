@@ -6,6 +6,8 @@
     "efac:plone_brick_wall",
     "efac:polished_plone_wall",
     "efac:rone_brick_wall",
-    "efac:polished_rone_wall"
+    "efac:polished_rone_wall",
+    "efac:grone_brick_wall",
+    "efac:polished_grone_wall"
   ]
 }
